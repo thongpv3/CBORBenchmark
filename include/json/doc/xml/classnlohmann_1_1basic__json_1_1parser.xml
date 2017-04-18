@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classnlohmann_1_1basic__json_1_1parser" kind="class" language="C++" prot="private">
+    <compoundname>nlohmann::basic_json::parser</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1parser_1a8ea1870aa64698f46b777e2863fde801" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classnlohmann_1_1basic__json_aecae491e175f8767c550ae3c59e180e3_1aecae491e175f8767c550ae3c59e180e3" kindref="member">parser_callback_t</ref></type>
+        <definition>const parser_callback_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>callback function </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12484" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1parser_1af10c872a9549a4d5aa3775ffdbb09e4c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>current level of recursion </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12482" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1parser_1ace0babedd22742bbb5f31d35d1d5baa9" prot="private" static="no" mutable="no">
+        <type>lexer::token_type</type>
+        <definition>lexer::token_type nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::last_token</definition>
+        <argsstring></argsstring>
+        <name>last_token</name>
+        <initializer>= lexer::token_type::uninitialized</initializer>
+        <briefdescription>
+<para>the type of the last read token </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12486" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1parser_1a8419745c712b365ccf3d87abc7586e08" prot="private" static="no" mutable="no">
+        <type>lexer</type>
+        <definition>lexer nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::m_lexer</definition>
+        <argsstring></argsstring>
+        <name>m_lexer</name>
+        <briefdescription>
+<para>the lexer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12488" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12488" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1parser_aac563319f4df894ab542a2b6d19209ae_1aac563319f4df894ab542a2b6d19209ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::parser</definition>
+        <argsstring>(const char *buff, const parser_callback_t cb=nullptr)</argsstring>
+        <name>parser</name>
+        <param>
+          <type>const char *</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnlohmann_1_1basic__json_aecae491e175f8767c550ae3c59e180e3_1aecae491e175f8767c550ae3c59e180e3" kindref="member">parser_callback_t</ref></type>
+          <declname>cb</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>a parser reading from a string literal </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12195" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12195" bodyend="12198"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1parser_a2fb8e838d9d27dd7fc0dc3f7935a0ad8_1a2fb8e838d9d27dd7fc0dc3f7935a0ad8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::parser</definition>
+        <argsstring>(std::istream &amp;is, const parser_callback_t cb=nullptr)</argsstring>
+        <name>parser</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnlohmann_1_1basic__json_aecae491e175f8767c550ae3c59e180e3_1aecae491e175f8767c550ae3c59e180e3" kindref="member">parser_callback_t</ref></type>
+          <declname>cb</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>a parser reading from an input stream </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>parse_error.111</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if input stream is in a bad state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12204" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12204" bodyend="12206"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1parser_a25e0dba43264cb2e57beba2d5757f9f0_1a25e0dba43264cb2e57beba2d5757f9f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class IteratorType</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_same&lt; typename std::iterator_traits&lt; IteratorType &gt;::iterator_category, std::random_access_iterator_tag &gt;::<ref refid="classnlohmann_1_1basic__json_a9fa223b26419f018f9b18cc516e3a8e5_1a9fa223b26419f018f9b18cc516e3a8e5" kindref="member">value</ref>, int &gt;::<ref refid="classnlohmann_1_1basic__json_a2b2d781d7f2a4ee41bc0016e931cadf7_1a2b2d781d7f2a4ee41bc0016e931cadf7" kindref="member">type</ref></type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::parser</definition>
+        <argsstring>(IteratorType first, IteratorType last, const parser_callback_t cb=nullptr)</argsstring>
+        <name>parser</name>
+        <param>
+          <type>IteratorType</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>IteratorType</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnlohmann_1_1basic__json_aecae491e175f8767c550ae3c59e180e3_1aecae491e175f8767c550ae3c59e180e3" kindref="member">parser_callback_t</ref></type>
+          <declname>cb</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>a parser reading from an iterator range with contiguous storage </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12213" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12213" bodyend="12217"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1parser_ad93c24f1a1b0ac2f557e6ea34deffd63_1ad93c24f1a1b0ac2f557e6ea34deffd63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classnlohmann_1_1basic__json" kindref="compound">basic_json</ref></type>
+        <definition>basic_json nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::parse</definition>
+        <argsstring>()</argsstring>
+        <name>parse</name>
+        <briefdescription>
+<para>public parser interface </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>parse_error.101</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of an unexpected token </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parse_error.102</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if to_unicode fails or surrogate error </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parse_error.103</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if to_unicode fails </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12225" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12225" bodyend="12238"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1parser_1a11cdcac2a8d2907739ed4629ce676bcd" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::expect</definition>
+        <argsstring>(typename lexer::token_type t) const </argsstring>
+        <name>expect</name>
+        <param>
+          <type>typename lexer::token_type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>parse_error.101</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if expected token did not occur </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12452" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12452" bodyend="12463"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1parser_1ab00b85e650dc89c39ae02539ec5f41d4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>lexer::token_type</type>
+        <definition>lexer::token_type nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::get_token</definition>
+        <argsstring>()</argsstring>
+        <name>get_token</name>
+        <briefdescription>
+<para>get next token from lexer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12443" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12443" bodyend="12447"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1parser_1a86e95a2b7b47c89135c41295949bcf0a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classnlohmann_1_1basic__json" kindref="compound">basic_json</ref></type>
+        <definition>basic_json nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::parse_internal</definition>
+        <argsstring>(bool keep)</argsstring>
+        <name>parse_internal</name>
+        <param>
+          <type>bool</type>
+          <declname>keep</declname>
+        </param>
+        <briefdescription>
+<para>the actual parser </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>parse_error.101</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of an unexpected token </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parse_error.102</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if to_unicode fails or surrogate error </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parse_error.103</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if to_unicode fails </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12247" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12247" bodyend="12440"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1parser_1a9bae004ca9bda143ba7becef302c508a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser::unexpect</definition>
+        <argsstring>(typename lexer::token_type t) const </argsstring>
+        <name>unexpect</name>
+        <param>
+          <type>typename lexer::token_type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>parse_error.101</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if unexpected token occurred </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12468" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12468" bodyend="12478"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>syntax analysis </para>    </briefdescription>
+    <detaileddescription>
+<para>This class implements a recursive decent parser. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="28">
+        <label>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::parser</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12192" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12191" bodyend="12489"/>
+    <listofallmembers>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_1a8ea1870aa64698f46b777e2863fde801" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>callback</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_1af10c872a9549a4d5aa3775ffdbb09e4c" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>depth</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_1a11cdcac2a8d2907739ed4629ce676bcd" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>expect</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_1ab00b85e650dc89c39ae02539ec5f41d4" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>get_token</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_1ace0babedd22742bbb5f31d35d1d5baa9" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>last_token</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_1a8419745c712b365ccf3d87abc7586e08" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>m_lexer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_ad93c24f1a1b0ac2f557e6ea34deffd63_1ad93c24f1a1b0ac2f557e6ea34deffd63" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>parse</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_1a86e95a2b7b47c89135c41295949bcf0a" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>parse_internal</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_aac563319f4df894ab542a2b6d19209ae_1aac563319f4df894ab542a2b6d19209ae" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>parser</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_a2fb8e838d9d27dd7fc0dc3f7935a0ad8_1a2fb8e838d9d27dd7fc0dc3f7935a0ad8" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>parser</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_a25e0dba43264cb2e57beba2d5757f9f0_1a25e0dba43264cb2e57beba2d5757f9f0" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>parser</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1parser_1a9bae004ca9bda143ba7becef302c508a" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::parser</scope><name>unexpect</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

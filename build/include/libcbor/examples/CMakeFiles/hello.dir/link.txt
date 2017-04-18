@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=c99  -rdynamic CMakeFiles/hello.dir/hello.c.o  -o hello ../src/libcbor.a 

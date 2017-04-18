@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacenlohmann_1_1anonymous__namespace_02json_8hpp_03" kind="namespace" language="C++">
+    <compoundname>nlohmann::anonymous_namespace{json.hpp}</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacenlohmann_1_1anonymous__namespace_02json_8hpp_03_a69afe041fa2aeac2239b65ae88b64af8_1a69afe041fa2aeac2239b65ae88b64af8" prot="public" static="no" mutable="no">
+        <type>constexpr const auto &amp;</type>
+        <definition>constexpr const auto&amp; nlohmann::anonymous_namespace{json.hpp}::from_json</definition>
+        <argsstring></argsstring>
+        <name>from_json</name>
+        <initializer>= detail::static_const&lt;detail::from_json_fn&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="1148" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="1148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenlohmann_1_1anonymous__namespace_02json_8hpp_03_a455d0daa616e67bbb74d81cf3ba15e79_1a455d0daa616e67bbb74d81cf3ba15e79" prot="public" static="no" mutable="no">
+        <type>constexpr const auto &amp;</type>
+        <definition>constexpr const auto&amp; nlohmann::anonymous_namespace{json.hpp}::to_json</definition>
+        <argsstring></argsstring>
+        <name>to_json</name>
+        <initializer>= detail::static_const&lt;detail::to_json_fn&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="1147" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="1147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>namespace to hold default <computeroutput>to_json</computeroutput> / <computeroutput>from_json</computeroutput> functions </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="1146" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,630 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classnlohmann_1_1basic__json_1_1lexer" kind="class" language="C++" prot="private">
+    <compoundname>nlohmann::basic_json::lexer</compoundname>
+    <innerclass refid="structnlohmann_1_1basic__json_1_1lexer_1_1strtonum" prot="public">nlohmann::basic_json::lexer::strtonum</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classnlohmann_1_1basic__json_1_1lexer_abe04be04d0575249f8806c334bacbc80_1abe04be04d0575249f8806c334bacbc80" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>using nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::lexer_char_t =  unsigned char</definition>
+        <argsstring></argsstring>
+        <name>lexer_char_t</name>
+        <briefdescription>
+<para>the char type to use in the lexer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10404" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="10404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="enum" id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7" prot="public" static="no">
+        <name>token_type</name>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a42dd1a73d072bb6bf3f494f22b15db8e" prot="public">
+          <name>uninitialized</name>
+          <briefdescription>
+<para>indicating the scanner is uninitialized </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a85cc1a37b0aaa52de40e72f0ed4e0c0d" prot="public">
+          <name>literal_true</name>
+          <briefdescription>
+<para>the <computeroutput>true</computeroutput> literal </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7afab1694b1b3937a079f4625fe0b6108b" prot="public">
+          <name>literal_false</name>
+          <briefdescription>
+<para>the <computeroutput>false</computeroutput> literal </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7ab7ae4c0e46d86f884677768160b26e9e" prot="public">
+          <name>literal_null</name>
+          <briefdescription>
+<para>the <computeroutput>null</computeroutput> literal </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a2b490e8bf366b4cbe3ebd99b26ce15ce" prot="public">
+          <name>value_string</name>
+          <briefdescription>
+<para>a string <ndash/> use get_string() for actual value </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7aaf1f040fcd2f674d2e5893d7a731078f" prot="public">
+          <name>value_unsigned</name>
+          <briefdescription>
+<para>an unsigned integer <ndash/> use get_number() for actual value </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a5064b6655d88a50ae16665cf7751c0ee" prot="public">
+          <name>value_integer</name>
+          <briefdescription>
+<para>a signed integer <ndash/> use get_number() for actual value </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a0d2671a6f81efb91e77f6ac3bdb11443" prot="public">
+          <name>value_float</name>
+          <briefdescription>
+<para>an floating point number <ndash/> use get_number() for actual value </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a16c226b4425b68560fea322b46dabe01" prot="public">
+          <name>begin_array</name>
+          <briefdescription>
+<para>the character for array begin <computeroutput>[</computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a9a9ffd53b6869d4eca271b1ed5b57fe8" prot="public">
+          <name>begin_object</name>
+          <briefdescription>
+<para>the character for object begin <computeroutput>{</computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a2f3e68e7f111a1e5c7728742b3ca2b7f" prot="public">
+          <name>end_array</name>
+          <briefdescription>
+<para>the character for array end <computeroutput>]</computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a7d5b4427866814de4d8f132721d59c87" prot="public">
+          <name>end_object</name>
+          <briefdescription>
+<para>the character for object end <computeroutput>}</computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7acc3c64f8ae08c00de1b33f19a4d2913a" prot="public">
+          <name>name_separator</name>
+          <briefdescription>
+<para>the name separator <computeroutput>:</computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a745373036100d7392ad62c617cab59af" prot="public">
+          <name>value_separator</name>
+          <briefdescription>
+<para>the value separator <computeroutput>,</computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7a456e19aeafa334241c7ff3f589547f9d" prot="public">
+          <name>parse_error</name>
+          <briefdescription>
+<para>indicating a parse error </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7aca11f56dd477c09e06583dbdcda0985f" prot="public">
+          <name>end_of_input</name>
+          <briefdescription>
+<para>indicating the end of the input buffer </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>token types for the parser </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10384" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="10383" bodyend="10401"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1a2ad8bad3a2224be7fdd4e4bb0f757a0e" prot="private" static="no" mutable="no">
+        <type>token_type</type>
+        <definition>token_type nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::last_token_type</definition>
+        <argsstring></argsstring>
+        <name>last_token_type</name>
+        <initializer>= token_type::end_of_input</initializer>
+        <briefdescription>
+<para>the last token type </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12181" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1a3fdf69ff3f266c23ee351cde2ce44ad6" prot="private" static="no" mutable="no">
+        <type>const lexer_char_t *</type>
+        <definition>const lexer_char_t* nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::m_content</definition>
+        <argsstring></argsstring>
+        <name>m_content</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>the buffer pointer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12171" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1a13872f4378b6a140e1125160bfa8e92e" prot="private" static="no" mutable="no">
+        <type>const lexer_char_t *</type>
+        <definition>const lexer_char_t* nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::m_cursor</definition>
+        <argsstring></argsstring>
+        <name>m_cursor</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>pointer to the current symbol </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12177" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1a460d53a59d243782845ab6571e53dcc1" prot="private" static="no" mutable="no">
+        <type>const lexer_char_t *</type>
+        <definition>const lexer_char_t* nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::m_limit</definition>
+        <argsstring></argsstring>
+        <name>m_limit</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>pointer to the end of the buffer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12179" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1aeba256e545e3362795f90bf3aafe18d5" prot="private" static="no" mutable="no">
+        <type><ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref></type>
+        <definition>string_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::m_line_buffer</definition>
+        <argsstring></argsstring>
+        <name>m_line_buffer</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>line buffer buffer for m_stream </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12167" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1a6cab4622ed1fb6525a11e86ef789581d" prot="private" static="no" mutable="no">
+        <type><ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref></type>
+        <definition>string_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::m_line_buffer_tmp</definition>
+        <argsstring></argsstring>
+        <name>m_line_buffer_tmp</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>used for filling m_line_buffer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12169" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1a1a9ad4e31a33a32943f1c102f1fa7d59" prot="private" static="no" mutable="no">
+        <type>const lexer_char_t *</type>
+        <definition>const lexer_char_t* nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::m_marker</definition>
+        <argsstring></argsstring>
+        <name>m_marker</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>pointer for backtracking information </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12175" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1ace4ad69e8cd3f4686260b6e504f6a37e" prot="private" static="no" mutable="no">
+        <type>const lexer_char_t *</type>
+        <definition>const lexer_char_t* nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::m_start</definition>
+        <argsstring></argsstring>
+        <name>m_start</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>pointer to the beginning of the current symbol </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12173" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1af71aa97e4a1f04c2b891856228f57cc4" prot="private" static="no" mutable="no">
+        <type>std::istream *</type>
+        <definition>std::istream* nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::m_stream</definition>
+        <argsstring></argsstring>
+        <name>m_stream</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>optional input stream </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12165" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1lexer_1afd4162b8e604ee35b3f19c6c540a8237" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>current position in the input (read bytes) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12183" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12183" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_a6f8eac8d6d2b95ce3f10b04104ecda8d_1a6f8eac8d6d2b95ce3f10b04104ecda8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::lexer</definition>
+        <argsstring>(const lexer_char_t *buff, const size_t len) noexcept</argsstring>
+        <name>lexer</name>
+        <param>
+          <type>const lexer_char_t *</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>a lexer from a buffer with given length </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10407" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="10407" bodyend="10413"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_aa85fafea3a014e6226be866d33112c49_1aa85fafea3a014e6226be866d33112c49" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::lexer</definition>
+        <argsstring>(std::istream &amp;s)</argsstring>
+        <name>lexer</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>a lexer from an input stream </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>parse_error.111</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if input stream is in a bad state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10419" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="10419" bodyend="10438"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_a45c85aa63e95ac8640449e6643c61414_1a45c85aa63e95ac8640449e6643c61414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::lexer</definition>
+        <argsstring>()=delete</argsstring>
+        <name>lexer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10441" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_a771415d8d7ef845c1969fa67b67877c2_1a771415d8d7ef845c1969fa67b67877c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::lexer</definition>
+        <argsstring>(const lexer &amp;)=delete</argsstring>
+        <name>lexer</name>
+        <param>
+          <type>const lexer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10442" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_a0b137b9457f558c4b2352259b12ed5ff_1a0b137b9457f558c4b2352259b12ed5ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::fill_line_buffer</definition>
+        <argsstring>(size_t n=0)</argsstring>
+        <name>fill_line_buffer</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>append data from the stream to the line buffer </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called by the scan() function when the end of the buffer (<computeroutput>m_limit</computeroutput>) is reached and the <computeroutput>m_cursor</computeroutput> pointer cannot be incremented without leaving the limits of the line buffer. Note re2c decides when to call this function.</para><para>If the lexer reads from contiguous storage, there is no trailing null byte. Therefore, this function must make sure to add these padding null bytes.</para><para>If the lexer reads from an input stream, this function reads the next line of the input.</para><para><simplesect kind="pre"><para>p p p p p p u u u u u x . . . . . . ^ ^ ^ ^ m_content m_start | m_limit m_cursor</para></simplesect>
+<simplesect kind="post"><para>u u u u u x x x x x x x . . . . . . ^ ^ ^ | m_cursor m_limit m_start m_content </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="11673" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="11673" bodyend="11739"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_abe1d6e77b940f27146b806662695627b_1abe1d6e77b940f27146b806662695627b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::get_number</definition>
+        <argsstring>(basic_json &amp;result, const token_type token) const </argsstring>
+        <name>get_number</name>
+        <param>
+          <type><ref refid="classnlohmann_1_1basic__json" kindref="compound">basic_json</ref> &amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>const token_type</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+<para>return number value for number tokens </para>        </briefdescription>
+        <detaileddescription>
+<para>This function translates the last token into the most appropriate number type (either integer, unsigned integer or floating point), which is passed back to the caller via the result parameter.</para><para>integral numbers that don&apos;t fit into the the range of the respective type are parsed as number_float_t</para><para>floating-point values do not satisfy std::isfinite predicate are converted to value_t::null</para><para>throws if the entire string [m_start .. m_cursor) cannot be interpreted as a number</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classnlohmann_1_1basic__json" kindref="compound">basic_json</ref> object to receive the number. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the number token </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12091" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12091" bodyend="12156"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_ae7974a78e6a4148721527bac50c68188_1ae7974a78e6a4148721527bac50c68188" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::get_position</definition>
+        <argsstring>() const </argsstring>
+        <name>get_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="12158" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="12158" bodyend="12161"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_a45a2921e42cb5fa3a23ccb48fd9bb399_1a45a2921e42cb5fa3a23ccb48fd9bb399" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref></type>
+        <definition>string_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::get_string</definition>
+        <argsstring>() const </argsstring>
+        <name>get_string</name>
+        <briefdescription>
+<para>return string value for string tokens </para>        </briefdescription>
+        <detaileddescription>
+<para>The function iterates the characters between the opening and closing quotes of the string value. The complete string is the range [m_start,m_cursor). Consequently, we iterate from m_start+1 to m_cursor-1.</para><para>We differentiate two cases:</para><para><orderedlist>
+<listitem><para>Escaped characters. In this case, a new character is constructed according to the nature of the escape. Some escapes create new characters (e.g., <computeroutput>&quot;\\\\n&quot;</computeroutput> is replaced by <computeroutput>&quot;\\n&quot;</computeroutput>), some are copied as is (e.g., <computeroutput>&quot;\\\\\\\\&quot;</computeroutput>). Furthermore, Unicode escapes of the shape <computeroutput>&quot;\\\\uxxxx&quot;</computeroutput> need special care. In this case, to_unicode takes care of the construction of the values.</para></listitem><listitem><para>Unescaped characters are copied as is.</para></listitem></orderedlist>
+</para><para><simplesect kind="pre"><para><computeroutput>m_cursor - m_start &gt;= 2</computeroutput>, meaning the length of the last token is at least 2 bytes which is trivially true for any string (which consists of at least two quotes). <verbatim>&quot; c1 c2 c3 ... &quot;
+^                ^
+m_start          m_cursor
+</verbatim></para></simplesect>
+<simplesect kind="par"><title>Complexity</title><para>Linear in the length of the string.<linebreak/>
+ Lemma: The loop body will always terminate.<linebreak/>
+ Proof (by contradiction): Assume the loop body does not terminate. As the loop body does not contain another loop, one of the called functions must never return. The called functions are <computeroutput>std::strtoul</computeroutput> and to_unicode. Neither function can loop forever, so the loop body will never loop forever which contradicts the assumption that the loop body does not terminate, q.e.d.<linebreak/>
+ Lemma: The loop condition for the for loop is eventually false.<linebreak/>
+ Proof (by contradiction): Assume the loop does not terminate. Due to the above lemma, this can only be due to a tautological loop condition; that is, the loop condition i &lt; m_cursor - 1 must always be true. Let x be the change of i for any loop iteration. Then m_start + 1 + x &lt; m_cursor - 1 must hold to loop indefinitely. This can be rephrased to m_cursor - m_start - 2 &gt; x. With the precondition, we x &lt;= 0, meaning that the loop condition holds indefinitely if i is always decreased. However, observe that the value of i is strictly increasing with each iteration, as it is incremented by 1 in the iteration expression and never decremented inside the loop body. Hence, the loop condition will eventually be false which contradicts the assumption that the loop condition is a tautology, q.e.d.</para></simplesect>
+<simplesect kind="return"><para>string value of current token without opening and closing quotes </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>parse_error.102</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if to_unicode fails or surrogate error </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parse_error.103</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if to_unicode fails </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="11807" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="11807" bodyend="11920"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_a62944f4b11d68b335827dc4fe706b5f5_1a62944f4b11d68b335827dc4fe706b5f5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref></type>
+        <definition>string_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::get_token_string</definition>
+        <argsstring>() const </argsstring>
+        <name>get_token_string</name>
+        <briefdescription>
+<para>return string representation of last read token </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="11742" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="11742" bodyend="11747"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_aec615034104f3b6b68343f14908df04d_1aec615034104f3b6b68343f14908df04d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lexer</type>
+        <definition>lexer nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::operator=</definition>
+        <argsstring>(const lexer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const lexer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10443" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_aa2bf285bc6ee37e2af87dfd627224b41_1aa2bf285bc6ee37e2af87dfd627224b41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>token_type</type>
+        <definition>token_type nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::scan</definition>
+        <argsstring>()</argsstring>
+        <name>scan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function implements a scanner for JSON. It is specified using regular expressions that try to follow RFC 7159 as close as possible. These regular expressions are then translated into a minimized deterministic finite automaton (DFA) by the tool <ulink url="http://re2c.org">re2c</ulink>. As a result, the translated code for this function consists of a large block of code with <computeroutput>goto</computeroutput> jumps.</para><para><simplesect kind="return"><para>the class of the next token read from the buffer</para></simplesect>
+<simplesect kind="par"><title>Complexity</title><para>Linear in the length of the input.<linebreak/>
+ Proposition: The loop below will always terminate for finite input.<linebreak/>
+ Proof (by contradiction): Assume a finite input. To loop forever, the loop must never hit code with a <computeroutput>break</computeroutput> statement. The only code snippets without a <computeroutput>break</computeroutput> statement is the continue statement for whitespace. To loop forever, the input must be an infinite sequence whitespace. This contradicts the assumption of finite input, q.e.d. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10595" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="10595" bodyend="11643"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_ae0ccb76156cc495a344b688e06fb5912_1ae0ccb76156cc495a344b688e06fb5912" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref></type>
+        <definition>string_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::to_unicode</definition>
+        <argsstring>(const std::size_t codepoint1, const std::size_t codepoint2=0) const </argsstring>
+        <name>to_unicode</name>
+        <param>
+          <type>const std::size_t</type>
+          <declname>codepoint1</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>codepoint2</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>create a string from one or two Unicode code points </para>        </briefdescription>
+        <detaileddescription>
+<para>There are two cases: (1) <emphasis>codepoint1</emphasis> is in the Basic Multilingual Plane (U+0000 through U+FFFF) and <emphasis>codepoint2</emphasis> is 0, or (2) <emphasis>codepoint1</emphasis> and <emphasis>codepoint2</emphasis> are a UTF-16 surrogate pair to represent a code point above U+FFFF.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">codepoint1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the code point (can be high surrogate) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">codepoint2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the code point (can be low surrogate or 0)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string representation of the code point; the length of the result string is between 1 and 4 characters.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>parse_error.102</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the low surrogate is invalid; example: <computeroutput>&quot;&quot;missing or wrong low surrogate&quot;&quot;</computeroutput> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parse_error.103</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if code point is &gt; 0x10ffff; example: <computeroutput>&quot;code
+points above 0x10FFFF are invalid&quot;</computeroutput></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Complexity</title><para>Constant.</para></simplesect>
+<simplesect kind="see"><para><ulink url="http://en.wikipedia.org/wiki/UTF-8#Sample_code">http://en.wikipedia.org/wiki/UTF-8#Sample_code</ulink> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10468" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="10468" bodyend="10530"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1lexer_a381fb4f4ec1501fd8327c317c9085628_1a381fb4f4ec1501fd8327c317c9085628" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer::token_type_name</definition>
+        <argsstring>(const token_type t)</argsstring>
+        <name>token_type_name</name>
+        <param>
+          <type>const token_type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>return name of values of type token_type (only used for errors) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10533" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="10533" bodyend="10573"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>lexical analysis </para>    </briefdescription>
+    <detaileddescription>
+<para>This class organizes the lexical analysis during JSON deserialization. The core of it is a scanner generated by <ulink url="http://re2c.org">re2c</ulink> that processes a buffer and recognizes tokens according to RFC 7159. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="26">
+        <label>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::lexer</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="10380" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="10379" bodyend="12184"/>
+    <listofallmembers>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_a0b137b9457f558c4b2352259b12ed5ff_1a0b137b9457f558c4b2352259b12ed5ff" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>fill_line_buffer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_abe1d6e77b940f27146b806662695627b_1abe1d6e77b940f27146b806662695627b" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>get_number</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_ae7974a78e6a4148721527bac50c68188_1ae7974a78e6a4148721527bac50c68188" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>get_position</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_a45a2921e42cb5fa3a23ccb48fd9bb399_1a45a2921e42cb5fa3a23ccb48fd9bb399" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>get_string</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_a62944f4b11d68b335827dc4fe706b5f5_1a62944f4b11d68b335827dc4fe706b5f5" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>get_token_string</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1a2ad8bad3a2224be7fdd4e4bb0f757a0e" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>last_token_type</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_a6f8eac8d6d2b95ce3f10b04104ecda8d_1a6f8eac8d6d2b95ce3f10b04104ecda8d" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>lexer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_aa85fafea3a014e6226be866d33112c49_1aa85fafea3a014e6226be866d33112c49" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>lexer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_a45c85aa63e95ac8640449e6643c61414_1a45c85aa63e95ac8640449e6643c61414" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>lexer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_a771415d8d7ef845c1969fa67b67877c2_1a771415d8d7ef845c1969fa67b67877c2" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>lexer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_abe04be04d0575249f8806c334bacbc80_1abe04be04d0575249f8806c334bacbc80" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>lexer_char_t</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1a3fdf69ff3f266c23ee351cde2ce44ad6" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>m_content</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1a13872f4378b6a140e1125160bfa8e92e" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>m_cursor</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1a460d53a59d243782845ab6571e53dcc1" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>m_limit</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1aeba256e545e3362795f90bf3aafe18d5" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>m_line_buffer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1a6cab4622ed1fb6525a11e86ef789581d" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>m_line_buffer_tmp</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1a1a9ad4e31a33a32943f1c102f1fa7d59" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>m_marker</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1ace4ad69e8cd3f4686260b6e504f6a37e" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>m_start</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1af71aa97e4a1f04c2b891856228f57cc4" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>m_stream</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_aec615034104f3b6b68343f14908df04d_1aec615034104f3b6b68343f14908df04d" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>operator=</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_1afd4162b8e604ee35b3f19c6c540a8237" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>position</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_aa2bf285bc6ee37e2af87dfd627224b41_1aa2bf285bc6ee37e2af87dfd627224b41" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>scan</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_ae0ccb76156cc495a344b688e06fb5912_1ae0ccb76156cc495a344b688e06fb5912" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>to_unicode</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_a96887d6cd131e3d3a85a9d71fbdbcdf7_1a96887d6cd131e3d3a85a9d71fbdbcdf7" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>token_type</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1lexer_a381fb4f4ec1501fd8327c317c9085628_1a381fb4f4ec1501fd8327c317c9085628" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::lexer</scope><name>token_type_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

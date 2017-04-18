@@ -1,0 +1,1 @@
+/usr/bin/cc   -std=c99 -g -O0 -Wall -pedantic -g -ggdb -DDEBUG=true  -g CMakeFiles/hello.dir/hello.c.o  -o hello -rdynamic ../src/libcbor.a 

@@ -1,0 +1,6 @@
+#add_subdirectory(cJSON)
+add_subdirectory(json)
+add_library(json ALIAS nlohmann_json)
+add_subdirectory(libcbor)
+add_subdirectory(tinycbor)
+add_subdirectory(nonius)

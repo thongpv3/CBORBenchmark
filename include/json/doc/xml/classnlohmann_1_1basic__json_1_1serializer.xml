@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classnlohmann_1_1basic__json_1_1serializer" kind="class" language="C++" prot="private">
+    <compoundname>nlohmann::basic_json::serializer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1serializer_1a8a27e96ec0866584c0aa15f79e56f687" prot="private" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::decimal_point</definition>
+        <argsstring></argsstring>
+        <name>decimal_point</name>
+        <initializer>= &apos;\0&apos;</initializer>
+        <briefdescription>
+<para>the locale&apos;s decimal point character </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="7143" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="7143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1serializer_1ae5eae2822788dfd04bd00357f08184d5" prot="private" static="no" mutable="no">
+        <type><ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref></type>
+        <definition>string_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::indent_string</definition>
+        <argsstring></argsstring>
+        <name>indent_string</name>
+        <initializer>= <ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref>(512, &apos; &apos;)</initializer>
+        <briefdescription>
+<para>the indentation string </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="7146" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="7146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1serializer_1aa11332d616d63c6223292d65895b84dd" prot="private" static="no" mutable="no">
+        <type>const std::lconv *</type>
+        <definition>const std::lconv* nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::loc</definition>
+        <argsstring></argsstring>
+        <name>loc</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>the locale </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="7139" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="7139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1serializer_1a6f98a228177d7898cf5bd9f9bd1a335c" prot="private" static="no" mutable="no">
+        <type>std::array&lt; char, 64 &gt;</type>
+        <definition>std::array&lt;char, 64&gt; nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::number_buffer</definition>
+        <argsstring></argsstring>
+        <name>number_buffer</name>
+        <initializer>{{}}</initializer>
+        <briefdescription>
+<para>a (hopefully) large enough character buffer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="7136" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="7136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1serializer_1a11f18c03ad64b5ec6d29b7fb6992f5b4" prot="private" static="no" mutable="no">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::o</definition>
+        <argsstring></argsstring>
+        <name>o</name>
+        <briefdescription>
+<para>the output of the serializer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="7133" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="7133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnlohmann_1_1basic__json_1_1serializer_1acfb129312eee67fcc1fabeb879fa80c9" prot="private" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::thousands_sep</definition>
+        <argsstring></argsstring>
+        <name>thousands_sep</name>
+        <initializer>= &apos;\0&apos;</initializer>
+        <briefdescription>
+<para>the locale&apos;s thousand separator character </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="7141" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="7141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1serializer_1acd61905c803828f3c95fdb9668ac20bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::serializer</definition>
+        <argsstring>(const serializer &amp;)=delete</argsstring>
+        <name>serializer</name>
+        <param>
+          <type>const serializer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="6570" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1serializer_1a7a792eec9cde063f1960c5d508dd1b03" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::dump_escaped</definition>
+        <argsstring>(const string_t &amp;s) const </argsstring>
+        <name>dump_escaped</name>
+        <param>
+          <type>const <ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>dump escaped string </para>        </briefdescription>
+        <detaileddescription>
+<para>Escape a string by replacing certain special characters by a sequence of an escape character (backslash) and another character and other control characters by a sequence of &quot;\u&quot; followed by a four-digit hex representation. The escaped string is written to output stream <emphasis>o</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string to escape</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Complexity</title><para>Linear in the length of string <emphasis>s</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="6868" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="6868" bodyend="7000"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1serializer_1aab725bd1be7745629f23b371aac0939e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::dump_float</definition>
+        <argsstring>(number_float_t x)</argsstring>
+        <name>dump_float</name>
+        <param>
+          <type><ref refid="classnlohmann_1_1basic__json_a88d6103cb3620410b35200ee8e313d97_1a88d6103cb3620410b35200ee8e313d97" kindref="member">number_float_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>dump a floating-point number </para>        </briefdescription>
+        <detaileddescription>
+<para>Dump a given floating-point number to output stream <emphasis>o</emphasis>. Works internally with <emphasis>number_buffer</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>floating-point number to dump </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="7056" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="7056" bodyend="7129"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1serializer_1ad430d4d4c7b29739fcad97ba481bff50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NumberType</type>
+          </param>
+          <param>
+            <type>detail::enable_if_t&lt; std::is_same&lt; NumberType, <ref refid="classnlohmann_1_1basic__json_ab906e29b5d83ac162e823ada2156b989_1ab906e29b5d83ac162e823ada2156b989" kindref="member">number_unsigned_t</ref> &gt;::<ref refid="classnlohmann_1_1basic__json_a9fa223b26419f018f9b18cc516e3a8e5_1a9fa223b26419f018f9b18cc516e3a8e5" kindref="member">value</ref> orstd::is_same&lt; NumberType, <ref refid="classnlohmann_1_1basic__json_a98e611d67b7bd75307de99c9358ab2dc_1a98e611d67b7bd75307de99c9358ab2dc" kindref="member">number_integer_t</ref> &gt;::<ref refid="classnlohmann_1_1basic__json_a9fa223b26419f018f9b18cc516e3a8e5_1a9fa223b26419f018f9b18cc516e3a8e5" kindref="member">value</ref>, int &gt;</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::dump_integer</definition>
+        <argsstring>(NumberType x)</argsstring>
+        <name>dump_integer</name>
+        <param>
+          <type>NumberType</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>dump an integer </para>        </briefdescription>
+        <detaileddescription>
+<para>Dump a given integer to output stream <emphasis>o</emphasis>. Works internally with <emphasis>number_buffer</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integer number (signed or unsigned) to dump </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NumberType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>either <emphasis>number_integer_t</emphasis> or <emphasis>number_unsigned_t</emphasis> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="7014" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="7014" bodyend="7046"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1serializer_1a0416bcaa6188a2daccf12e353e4a3150" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>serializer &amp;</type>
+        <definition>serializer&amp; nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::operator=</definition>
+        <argsstring>(const serializer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const serializer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="6571" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1serializer_a62bc58cab64948b1099bcf319a8cc7eb_1a62bc58cab64948b1099bcf319a8cc7eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::serializer</definition>
+        <argsstring>(std::ostream &amp;s)</argsstring>
+        <name>serializer</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output stream to serialize to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="6577" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="6577" bodyend="6581"/>
+      </memberdef>
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1serializer_a313f4ec456be4ac307c2f02a08273ee3_1a313f4ec456be4ac307c2f02a08273ee3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::dump</definition>
+        <argsstring>(const basic_json &amp;val, const bool pretty_print, const unsigned int indent_step, const unsigned int current_indent=0)</argsstring>
+        <name>dump</name>
+        <param>
+          <type>const <ref refid="classnlohmann_1_1basic__json" kindref="compound">basic_json</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>pretty_print</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>indent_step</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>current_indent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>internal implementation of the serialization function </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called by the public member function dump and organizes the serialization internally. The indentation level is propagated as additional parameter. In case of arrays and objects, the function is called recursively.</para><para><itemizedlist>
+<listitem><para>strings and object keys are escaped using <computeroutput>escape_string()</computeroutput></para></listitem><listitem><para>integer numbers are converted implicitly via <computeroutput>operator&lt;&lt;</computeroutput></para></listitem><listitem><para>floating-point numbers are converted to a string using <computeroutput>&quot;%g&quot;</computeroutput> format</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to serialize </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pretty_print</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether the output shall be pretty-printed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">indent_step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the indent level </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">current_indent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current indent level (only used internally) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="6600" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="6600" bodyend="6786"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classnlohmann_1_1basic__json_1_1serializer_1a41e4517b4182bf20d264c7b285a93172" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer::extra_space</definition>
+        <argsstring>(const string_t &amp;s) noexcept</argsstring>
+        <name>extra_space</name>
+        <param>
+          <type>const <ref refid="classnlohmann_1_1basic__json_a61f8566a1a85a424c7266fb531dca005_1a61f8566a1a85a424c7266fb531dca005" kindref="member">string_t</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>calculates the extra space to escape a JSON string </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string to escape </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of characters required to escape string <emphasis>s</emphasis> </para></simplesect>
+<simplesect kind="par"><title>Complexity</title><para>Linear in the length of string <emphasis>s</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="6797" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="6797" bodyend="6854"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>wrapper around the serialization functions </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="32">
+        <label>nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer &gt;::serializer</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" line="6568" column="1" bodyfile="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src/json.hpp" bodystart="6567" bodyend="7147"/>
+    <listofallmembers>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1a8a27e96ec0866584c0aa15f79e56f687" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>decimal_point</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_a313f4ec456be4ac307c2f02a08273ee3_1a313f4ec456be4ac307c2f02a08273ee3" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>dump</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1a7a792eec9cde063f1960c5d508dd1b03" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>dump_escaped</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1aab725bd1be7745629f23b371aac0939e" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>dump_float</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1ad430d4d4c7b29739fcad97ba481bff50" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>dump_integer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1a41e4517b4182bf20d264c7b285a93172" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>extra_space</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1ae5eae2822788dfd04bd00357f08184d5" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>indent_string</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1aa11332d616d63c6223292d65895b84dd" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>loc</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1a6f98a228177d7898cf5bd9f9bd1a335c" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>number_buffer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1a11f18c03ad64b5ec6d29b7fb6992f5b4" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>o</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1a0416bcaa6188a2daccf12e353e4a3150" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>operator=</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1acd61905c803828f3c95fdb9668ac20bb" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>serializer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_a62bc58cab64948b1099bcf319a8cc7eb_1a62bc58cab64948b1099bcf319a8cc7eb" prot="public" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>serializer</name></member>
+      <member refid="classnlohmann_1_1basic__json_1_1serializer_1acfb129312eee67fcc1fabeb879fa80c9" prot="private" virt="non-virtual"><scope>nlohmann::basic_json::serializer</scope><name>thousands_sep</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
