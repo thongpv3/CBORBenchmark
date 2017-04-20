@@ -57,39 +57,40 @@ include benchmarks/CMakeFiles/TestJsonAPI.dir/progress.make
 # Include the compile flags for this target's objects.
 include benchmarks/CMakeFiles/TestJsonAPI.dir/flags.make
 
-benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o: benchmarks/CMakeFiles/TestJsonAPI.dir/flags.make
-benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o: ../benchmarks/json/TestAPI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o"
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/benchmarks && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o -c /home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/json/TestAPI.cpp
+benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o: benchmarks/CMakeFiles/TestJsonAPI.dir/flags.make
+benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o: ../benchmarks/libcbor/TestAPI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o"
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/benchmarks && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o -c /home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/libcbor/TestAPI.cpp
 
-benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.i"
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/benchmarks && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/json/TestAPI.cpp > CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.i
+benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.i"
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/benchmarks && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/libcbor/TestAPI.cpp > CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.i
 
-benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.s"
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/benchmarks && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/json/TestAPI.cpp -o CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.s
+benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.s"
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/benchmarks && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/libcbor/TestAPI.cpp -o CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.s
 
-benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o.requires:
+benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o.requires:
 
-.PHONY : benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o.requires
+.PHONY : benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o.requires
 
-benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o.provides: benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o.requires
-	$(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o.provides.build
-.PHONY : benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o.provides
+benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o.provides: benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o.requires
+	$(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o.provides.build
+.PHONY : benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o.provides
 
-benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o.provides.build: benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o
+benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o.provides.build: benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o
 
 
 # Object files for target TestJsonAPI
 TestJsonAPI_OBJECTS = \
-"CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o"
+"CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o"
 
 # External object files for target TestJsonAPI
 TestJsonAPI_EXTERNAL_OBJECTS =
 
-benchmarks/TestJsonAPI: benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o
+benchmarks/TestJsonAPI: benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o
 benchmarks/TestJsonAPI: benchmarks/CMakeFiles/TestJsonAPI.dir/build.make
+benchmarks/TestJsonAPI: include/libcbor/src/libcbor.a
 benchmarks/TestJsonAPI: benchmarks/CMakeFiles/TestJsonAPI.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TestJsonAPI"
 	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/benchmarks && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TestJsonAPI.dir/link.txt --verbose=$(VERBOSE)
@@ -99,7 +100,7 @@ benchmarks/CMakeFiles/TestJsonAPI.dir/build: benchmarks/TestJsonAPI
 
 .PHONY : benchmarks/CMakeFiles/TestJsonAPI.dir/build
 
-benchmarks/CMakeFiles/TestJsonAPI.dir/requires: benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o.requires
+benchmarks/CMakeFiles/TestJsonAPI.dir/requires: benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o.requires
 
 .PHONY : benchmarks/CMakeFiles/TestJsonAPI.dir/requires
 

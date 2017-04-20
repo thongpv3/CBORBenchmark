@@ -1,0 +1,45 @@
+{
+  "_id": "58f5f672cac5799a4fe2e414",
+  "index": 0,
+  "guid": "2581df5c-6b32-44e9-a06b-9e003ef2d46e",
+  "isActive": false,
+  "balance": "$2,749.62",
+  "picture": "http://placehold.it/32x32",
+  "age": 32,
+  "eyeColor": "blue",
+  "name": "Angela Carson",
+  "gender": "female",
+  "company": "AEORA",
+  "email": "angelacarson@aeora.com",
+  "phone": "+1 (997) 575-3259",
+  "address": "930 Atkins Avenue, Sunriver, Indiana, 4641",
+  "about": "Minim adipisicing fugiat irure tempor id ipsum ex do consectetur irure laborum nostrud excepteur. Ex sint sit ex cupidatat. Ullamco sint esse id amet ullamco exercitation et voluptate.\r\n",
+  "registered": "2015-10-19T03:44:23 -07:00",
+  "latitude": -19.257799,
+  "longitude": -79.607493,
+  "tags": [
+    "excepteur",
+    "amet",
+    "fugiat",
+    "aliqua",
+    "veniam",
+    "veniam",
+    "laboris"
+  ],
+  "friends": [
+    {
+      "id": 0,
+      "name": "Agnes Welch"
+    },
+    {
+      "id": 1,
+      "name": "Teri Boyle"
+    },
+    {
+      "id": 2,
+      "name": "Willie Duke"
+    }
+  ],
+  "greeting": "Hello, Angela Carson! You have 8 unread messages.",
+  "favoriteFruit": "apple"
+}

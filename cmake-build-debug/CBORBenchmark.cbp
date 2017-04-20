@@ -5,7 +5,7 @@
 		<Option title="CBORBenchmark"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\include\;CMake Files\include\json\;CMake Files\include\json\cmake\;CMake Files\include\json\test\;CMake Files\include\libcbor\;CMake Files\include\libcbor\src\;CMake Files\include\libcbor\src\cbor\;CMake Files\include\libcbor\examples\;CMake Files\include\tinycbor\;CMake Files\include\nonius\;CMake Files\benchmarks\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\include\;CMake Files\include\libcbor\;CMake Files\include\libcbor\src\;CMake Files\include\libcbor\src\cbor\;CMake Files\include\libcbor\examples\;CMake Files\include\tinycbor\;CMake Files\include\nonius\;CMake Files\benchmarks\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug"/>
@@ -95,106 +95,6 @@
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="json_unit">
-				<Option output="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/json_unit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src"/>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/thirdparty/catch"/>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 json_unit"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="json_unit/fast">
-				<Option output="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/json_unit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src"/>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/thirdparty/catch"/>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 json_unit/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="catch_main">
-				<Option output="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/CMakeFiles/catch_main.dir/catch_main.objlib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/thirdparty/catch"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 catch_main"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="catch_main/fast">
-				<Option output="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/CMakeFiles/catch_main.dir/catch_main.objlib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/thirdparty/catch"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 catch_main/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="coverage">
@@ -636,7 +536,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src"/>
+					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/src"/>
+					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/libcbor"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -660,7 +561,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src"/>
+					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/src"/>
+					<Add directory="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/libcbor"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -678,119 +580,14 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/json/TestAPI.cpp">
+		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/libcbor/TestAPI.cpp">
 			<Option target="TestJsonAPI"/>
 		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/test/CMakeFiles/catch_main.dir/src/unit.cpp.o">
-			<Option target="json_unit"/>
+		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/people.h">
+			<Option target="TestJsonAPI"/>
 		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-algorithms.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-allocator.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-capacity.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-cbor.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-class_const_iterator.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-class_iterator.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-class_lexer.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-class_parser.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-comparison.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-concepts.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-constructor1.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-constructor2.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-convenience.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-conversions.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-deserialization.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-element_access1.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-element_access2.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-inspection.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-iterator_wrapper.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-iterators1.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-iterators2.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-json_patch.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-json_pointer.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-meta.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-modifiers.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-msgpack.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-noexcept.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-pointer_access.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-readme.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-reference_access.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-regression.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-serialization.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-testsuites.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-udt.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-unicode.cpp">
-			<Option target="json_unit"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit.cpp">
-			<Option target="catch_main"/>
+		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/benchmarks/person_info.h">
+			<Option target="TestJsonAPI"/>
 		</Unit>
 		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/examples/create_items.c">
 			<Option target="create_items"/>
@@ -964,24 +761,6 @@
 		</Unit>
 		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\json\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\json\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/cmake/config.cmake.in">
-			<Option virtualFolder="CMake Files\include\json\cmake\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/cmake/config.cmake.in">
-			<Option virtualFolder="CMake Files\include\json\cmake\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\json\test\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\json\test\"/>
 		</Unit>
 		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\libcbor\"/>

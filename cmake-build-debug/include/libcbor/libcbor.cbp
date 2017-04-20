@@ -5,7 +5,7 @@
 		<Option title="libcbor"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\include\;CMake Files\include\json\;CMake Files\include\json\cmake\;CMake Files\include\json\test\;CMake Files\include\libcbor\;CMake Files\include\libcbor\src\;CMake Files\include\libcbor\src\cbor\;CMake Files\include\libcbor\examples\;CMake Files\include\tinycbor\;CMake Files\include\nonius\;CMake Files\benchmarks\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\include\;CMake Files\include\libcbor\;CMake Files\include\libcbor\src\;CMake Files\include\libcbor\src\cbor\;CMake Files\include\libcbor\examples\;CMake Files\include\tinycbor\;CMake Files\include\nonius\;CMake Files\benchmarks\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/libcbor"/>
@@ -622,24 +622,6 @@
 		</Unit>
 		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\json\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\json\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/cmake/config.cmake.in">
-			<Option virtualFolder="CMake Files\include\json\cmake\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/cmake/config.cmake.in">
-			<Option virtualFolder="CMake Files\include\json\cmake\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\json\test\"/>
-		</Unit>
-		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\json\test\"/>
 		</Unit>
 		<Unit filename="/home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\libcbor\"/>

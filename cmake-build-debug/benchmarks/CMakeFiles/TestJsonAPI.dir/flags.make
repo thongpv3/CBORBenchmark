@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/thongpv3/CLionProjects/CBORBenchmark/include/json/src 
+CXX_INCLUDES = -I/home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/src -I/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/libcbor 
 

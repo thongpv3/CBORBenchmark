@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o  -o TestJsonAPI 
+/usr/bin/c++   -g   CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o  -o TestJsonAPI ../include/libcbor/src/libcbor.a 

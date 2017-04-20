@@ -1,2 +1,2 @@
-add_executable(TestJsonAPI json/TestAPI.cpp)
-target_link_libraries(TestJsonAPI PRIVATE json)
+add_executable(TestJsonAPI libcbor/TestAPI.cpp people.h person_info.h)
+target_link_libraries(TestJsonAPI PRIVATE cbor)

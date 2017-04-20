@@ -191,32 +191,32 @@ TestJsonAPI/fast:
 	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug && $(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/build
 .PHONY : TestJsonAPI/fast
 
-json/TestAPI.o: json/TestAPI.cpp.o
+libcbor/TestAPI.o: libcbor/TestAPI.cpp.o
 
-.PHONY : json/TestAPI.o
+.PHONY : libcbor/TestAPI.o
 
 # target to build an object file
-json/TestAPI.cpp.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug && $(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o
-.PHONY : json/TestAPI.cpp.o
+libcbor/TestAPI.cpp.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug && $(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o
+.PHONY : libcbor/TestAPI.cpp.o
 
-json/TestAPI.i: json/TestAPI.cpp.i
+libcbor/TestAPI.i: libcbor/TestAPI.cpp.i
 
-.PHONY : json/TestAPI.i
+.PHONY : libcbor/TestAPI.i
 
 # target to preprocess a source file
-json/TestAPI.cpp.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug && $(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.i
-.PHONY : json/TestAPI.cpp.i
+libcbor/TestAPI.cpp.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug && $(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.i
+.PHONY : libcbor/TestAPI.cpp.i
 
-json/TestAPI.s: json/TestAPI.cpp.s
+libcbor/TestAPI.s: libcbor/TestAPI.cpp.s
 
-.PHONY : json/TestAPI.s
+.PHONY : libcbor/TestAPI.s
 
 # target to generate assembly for a file
-json/TestAPI.cpp.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug && $(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.s
-.PHONY : json/TestAPI.cpp.s
+libcbor/TestAPI.cpp.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug && $(MAKE) -f benchmarks/CMakeFiles/TestJsonAPI.dir/build.make benchmarks/CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.s
+.PHONY : libcbor/TestAPI.cpp.s
 
 # Help Target
 help:
@@ -233,9 +233,9 @@ help:
 	@echo "... package_source"
 	@echo "... package"
 	@echo "... TestJsonAPI"
-	@echo "... json/TestAPI.o"
-	@echo "... json/TestAPI.i"
-	@echo "... json/TestAPI.s"
+	@echo "... libcbor/TestAPI.o"
+	@echo "... libcbor/TestAPI.i"
+	@echo "... libcbor/TestAPI.s"
 .PHONY : help
 
 

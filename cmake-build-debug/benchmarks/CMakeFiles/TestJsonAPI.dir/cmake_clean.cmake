@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TestJsonAPI.dir/json/TestAPI.cpp.o"
+  "CMakeFiles/TestJsonAPI.dir/libcbor/TestAPI.cpp.o"
   "TestJsonAPI.pdb"
   "TestJsonAPI"
 )

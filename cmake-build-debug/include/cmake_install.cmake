@@ -34,7 +34,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/json/cmake_install.cmake")
   include("/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/libcbor/cmake_install.cmake")
   include("/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/tinycbor/cmake_install.cmake")
   include("/home/thongpv3/CLionProjects/CBORBenchmark/cmake-build-debug/include/nonius/cmake_install.cmake")

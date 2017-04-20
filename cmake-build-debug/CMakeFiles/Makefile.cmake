@@ -13,9 +13,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.7.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.7.1/CMakeSystem.cmake"
   "../include/CMakeLists.txt"
-  "../include/json/CMakeLists.txt"
-  "../include/json/cmake/config.cmake.in"
-  "../include/json/test/CMakeLists.txt"
   "../include/libcbor/CMakeLists.txt"
   "../include/libcbor/examples/CMakeLists.txt"
   "../include/libcbor/src/CMakeLists.txt"
@@ -23,7 +20,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../include/libcbor/src/libcbor.pc.in"
   "../include/nonius/CMakeLists.txt"
   "../include/tinycbor/CMakeLists.txt"
-  "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeCInformation.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeCXXInformation.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake"
@@ -31,7 +27,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeFindCodeBlocks.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeGenericSystem.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeLanguageInformation.cmake"
-  "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakePackageConfigHelpers.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeParseArguments.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CMakeSystemSpecificInitialize.cmake"
@@ -59,7 +54,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/Platform/UnixPaths.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/ProcessorCount.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/TestBigEndian.cmake"
-  "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/WriteBasicConfigVersionFile.cmake"
   "/opt/clion-2017.1/bin/cmake/share/cmake-3.7/Templates/CPackConfig.cmake.in"
   )
 
@@ -73,8 +67,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "include/json/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "include/json/test/CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/libcbor/CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/libcbor/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/libcbor/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -85,8 +77,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "include/json/test/CMakeFiles/json_unit.dir/DependInfo.cmake"
-  "include/json/test/CMakeFiles/catch_main.dir/DependInfo.cmake"
   "include/libcbor/CMakeFiles/coverage.dir/DependInfo.cmake"
   "include/libcbor/CMakeFiles/ContinuousSubmit.dir/DependInfo.cmake"
   "include/libcbor/CMakeFiles/ContinuousCoverage.dir/DependInfo.cmake"

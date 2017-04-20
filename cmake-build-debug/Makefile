@@ -177,32 +177,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named json_unit
-
-# Build rule for target.
-json_unit: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 json_unit
-.PHONY : json_unit
-
-# fast build rule for target.
-json_unit/fast:
-	$(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/build
-.PHONY : json_unit/fast
-
-#=============================================================================
-# Target rules for targets named catch_main
-
-# Build rule for target.
-catch_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 catch_main
-.PHONY : catch_main
-
-# fast build rule for target.
-catch_main/fast:
-	$(MAKE) -f include/json/test/CMakeFiles/catch_main.dir/build.make include/json/test/CMakeFiles/catch_main.dir/build
-.PHONY : catch_main/fast
-
-#=============================================================================
 # Target rules for targets named coverage
 
 # Build rule for target.
@@ -697,8 +671,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... package"
-	@echo "... json_unit"
-	@echo "... catch_main"
 	@echo "... coverage"
 	@echo "... ContinuousSubmit"
 	@echo "... ContinuousCoverage"
