@@ -42,20 +42,3 @@ std::unique_ptr<cbor_item> create_map() {
     );
     return std::move(map);
 }
-
-//std::unique_ptr<cbor_map> create_personal_info() {
-//    std::unique_ptr<cbor_map> map = std::make_unique<cbor_map>(
-//            "name", cbor_text("Pham Van Thong"),
-//            "age", cbor_arithmetic<uint8_t>(22),
-//            "friends", cbor_map(
-//                    "1", cbor_map(
-//                            "name", cbor_text("Nguyen Huu Tung"),
-//                            "age", cbor_arithmetic<uint8_t>(21)),
-//                    "2", cbor_map(
-//                            "name", cbor_text("Nguyen Dinh Ky"),
-//                            "age", cbor_arithmetic<uint8_t>(23)
-//                    )
-//            )
-//    );
-//    return std::move(map);
-//}
