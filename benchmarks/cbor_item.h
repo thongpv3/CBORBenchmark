@@ -15,26 +15,34 @@ namespace bm {
 
     class cbor_item {
     public:
+        using string_type = std::string;
+        using map_type = std::map<string_type, std::shared_ptr<cbor_item>>;
+        using map_ptr = std::shared_ptr<map_type>;
+        using array_type = std::vector<std::shared_ptr<cbor_item>>;
+        using array_ptr = std::shared_ptr<array_type>;
+
         enum class cbor_type : int8_t {
             UINT, INT, BYTE_STRING, TEXT_STRING, ARRAY, MAP, TAGGING, FLOAT
         };
 
         virtual cbor_type type() = 0;
 
-        std::shared_ptr<std::map<const std::string, std::shared_ptr<cbor_item>>> as_map();
-        std::shared_ptr<std::vector<std::shared_ptr<cbor_item>>> as_array();
+        map_ptr as_map();
+
+        array_ptr as_array();
+
         template <typename T>
         T as_integral();
-        std::string as_text();
+
+        string_type as_text();
     };
 
     class cbor_map : public cbor_item {
     public:
-        using key_type = const std::string;
-        using value_type = std::shared_ptr<cbor_item>;
-        using map_type = std::map<key_type, value_type>;
+        using key_type = map_type::key_type;
+        using value_type = map_type::value_type;
 
-        std::shared_ptr<map_type> items = std::make_shared<map_type>();
+        map_ptr items = std::make_shared<map_type>();
         template <typename T, typename ...Args>
         void insert(key_type key, T value, Args &&...args) {
             static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
@@ -53,29 +61,15 @@ namespace bm {
             insert(key, value, std::forward<Args>(args)...);
         }
 
-        //todo I don't need this, remove
-//        template<typename T>
-//        cbor_map(key_type key, T value) {
-//            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
-//            items->emplace(key, std::shared_ptr<T>(new T(value)));
-//        }
 
         cbor_map() {}
-
-
-        //old insert style
-//        template<typename T, typename ...Args>
-//        void insert(const key_type &key, Args &&... args) {
-//            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
-//            items->emplace(key, std::make_shared<T>(std::forward<Args>(args)...));
-//        }
 
         cbor_type type() override {
             return cbor_type::MAP;
         }
 
     private:
-        std::shared_ptr<map_type> map() {
+        map_ptr map() {
             return std::shared_ptr<map_type>(items);
         }
         friend class cbor_item;
@@ -86,7 +80,7 @@ namespace bm {
     template<typename T>
     class cbor_arithmetic : public cbor_item {
     public:
-        static_assert(std::is_arithmetic<T>::value, "T must be an integral type");
+        static_assert(std::is_arithmetic<T>::value, "T must be an arithmetic type");
         using value_type = T;
 
     private:
@@ -95,7 +89,7 @@ namespace bm {
     public:
         cbor_arithmetic(T value) : v(value) {}
 
-        long value() {
+        T value() {
             return v;
         }
 
@@ -106,10 +100,10 @@ namespace bm {
 
     class cbor_text : public cbor_item {
     private:
-        std::string v;
+        string_type v;
 
     public:
-        using value_type = std::string;
+        using value_type = string_type;
 
         cbor_text(const value_type &value) : v(value) {}
 
@@ -126,16 +120,15 @@ namespace bm {
 
     class cbor_array : public cbor_item {
     public:
-        using value_type = std::shared_ptr<cbor_item>;
-        using array_type = std::vector<value_type>;
+        using value_type = array_type::value_type;
 
     private:
-        std::shared_ptr<std::vector<value_type>> items = std::make_shared<std::vector<value_type>>();
+        array_ptr items = std::make_shared<array_type>();
 
     public:
         template <typename T, typename ...Args>
         void insert(T value, Args &&...args) {
-            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
+            static_assert(std::is_base_of<cbor_item, T>::value, "T must derived from bm::cbor_item");
             items->emplace_back(std::shared_ptr<cbor_item>(new T(value)));
             insert(std::forward<Args>(args)...);
         };
@@ -150,11 +143,6 @@ namespace bm {
             insert(value, std::forward<Args>(args)...);
         };
 
-//        template<typename T>
-//        void insert(std::shared_ptr<T> value) {
-//            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
-//            items->emplace_back(value);
-//        }
 
         cbor_type type() override {
             return cbor_type::ARRAY;
@@ -167,11 +155,11 @@ namespace bm {
         friend class cbor_item;
     };
 
-    std::shared_ptr<std::map<const std::string, std::shared_ptr<cbor_item>>> cbor_item::as_map()  {
+    cbor_item::map_ptr cbor_item::as_map()  {
         return static_cast<cbor_map*>(this)->map();
     }
 
-    std::shared_ptr<std::vector<std::shared_ptr<cbor_item>>> cbor_item::as_array() {
+    cbor_item::array_ptr cbor_item::as_array() {
         return static_cast<cbor_array*>(this)->array();
     }
 
@@ -181,7 +169,7 @@ namespace bm {
         return static_cast<cbor_arithmetic<T>*>(this)->value();
     }
 
-    std::string cbor_item::as_text() {
+    cbor_item::string_type cbor_item::as_text() {
         return static_cast<cbor_text*>(this)->value();
     }
 
