@@ -11,6 +11,7 @@
 namespace bm {
 
     class cbor_map;
+    class cbor_text;
 
     class cbor_item {
     public:
@@ -24,6 +25,7 @@ namespace bm {
         std::shared_ptr<std::vector<std::shared_ptr<cbor_item>>> as_array();
         template <typename T>
         T as_integral();
+        std::string as_text();
     };
 
     class cbor_map : public cbor_item {
@@ -51,11 +53,12 @@ namespace bm {
             insert(key, value, std::forward<Args>(args)...);
         }
 
-        template<typename T>
-        cbor_map(key_type key, T value) {
-            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
-            items->emplace(key, std::shared_ptr<T>(new T(value)));
-        }
+        //todo I don't need this, remove
+//        template<typename T>
+//        cbor_map(key_type key, T value) {
+//            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
+//            items->emplace(key, std::shared_ptr<T>(new T(value)));
+//        }
 
         cbor_map() {}
 
@@ -130,11 +133,28 @@ namespace bm {
         std::shared_ptr<std::vector<value_type>> items = std::make_shared<std::vector<value_type>>();
 
     public:
-        template<typename T>
-        void insert(std::shared_ptr<T> value) {
+        template <typename T, typename ...Args>
+        void insert(T value, Args &&...args) {
             static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
-            items->emplace_back(value);
+            items->emplace_back(std::shared_ptr<cbor_item>(new T(value)));
+            insert(std::forward<Args>(args)...);
+        };
+
+        template <typename T>
+        void insert(T value) {
+            items->emplace_back(std::shared_ptr<T>(new T(value)));
         }
+
+        template <typename T, typename ...Args>
+        cbor_array(T value, Args&& ...args) {
+            insert(value, std::forward<Args>(args)...);
+        };
+
+//        template<typename T>
+//        void insert(std::shared_ptr<T> value) {
+//            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
+//            items->emplace_back(value);
+//        }
 
         cbor_type type() override {
             return cbor_type::ARRAY;
@@ -160,4 +180,9 @@ namespace bm {
         static_assert(std::is_arithmetic<T>::value, "T must be an integral type");
         return static_cast<cbor_arithmetic<T>*>(this)->value();
     }
+
+    std::string cbor_item::as_text() {
+        return static_cast<cbor_text*>(this)->value();
+    }
+
 }

@@ -8,7 +8,7 @@
 
 using namespace bm;
 
-std::unique_ptr<cbor_item> create_person_info() {
+std::unique_ptr<cbor_item> create_map() {
     std::unique_ptr<cbor_map> map = std::make_unique<cbor_map>("_id", cbor_text("58f5f672cac5799a4fe2e414"));
     map->insert(
         "index", cbor_arithmetic<unsigned>(0),
@@ -28,24 +28,34 @@ std::unique_ptr<cbor_item> create_person_info() {
         "about", cbor_text("Minim adipisicing fugiat irure tempor id ipsum ex do consectetur irure laborum nostrud excepteur. Ex sint sit ex cupidatat. Ullamco sint esse id amet ullamco exercitation et voluptate.\r\n"),
         "registered", cbor_text("2015-10-19T03:44:23 -07:00"),
         "latitude", cbor_arithmetic<double>(-19.257799),
-        "longitude", cbor_arithmetic<double>(-79.607493)
+        "longitude", cbor_arithmetic<double>(-79.607493),
+        "friends", cbor_array(
+                    cbor_map("id", cbor_arithmetic<unsigned>(0),
+                             "name", cbor_text("Agnes Welch")),
+                    cbor_map("id", cbor_arithmetic<unsigned>(1),
+                             "name", cbor_text("Teri Boyle")),
+                    cbor_map("id", cbor_arithmetic<unsigned>(2),
+                             "name", cbor_text("Willie Duke"))
+            ),
+        "greeting", cbor_text("Hello, Angela Carson! You have 8 unread messages."),
+        "favoriteFruit", cbor_text("apple")
     );
     return std::move(map);
 }
 
-std::unique_ptr<cbor_map> create_map() {
-    std::unique_ptr<cbor_map> map = std::make_unique<cbor_map>(
-            "name", cbor_text("Pham Van Thong"),
-            "age", cbor_arithmetic<uint8_t>(22),
-            "friends", cbor_map(
-                    "1", cbor_map(
-                            "name", cbor_text("Nguyen Huu Tung"),
-                            "age", cbor_arithmetic<uint8_t>(21)),
-                    "2", cbor_map(
-                            "name", cbor_text("Nguyen Dinh Ky"),
-                            "age", cbor_arithmetic<uint8_t>(23)
-                    )
-            )
-    );
-    return std::move(map);
-}
+//std::unique_ptr<cbor_map> create_personal_info() {
+//    std::unique_ptr<cbor_map> map = std::make_unique<cbor_map>(
+//            "name", cbor_text("Pham Van Thong"),
+//            "age", cbor_arithmetic<uint8_t>(22),
+//            "friends", cbor_map(
+//                    "1", cbor_map(
+//                            "name", cbor_text("Nguyen Huu Tung"),
+//                            "age", cbor_arithmetic<uint8_t>(21)),
+//                    "2", cbor_map(
+//                            "name", cbor_text("Nguyen Dinh Ky"),
+//                            "age", cbor_arithmetic<uint8_t>(23)
+//                    )
+//            )
+//    );
+//    return std::move(map);
+//}
