@@ -49,6 +49,11 @@ public:
 
     cbor_text(const value_type& value) : v(value) {}
 
+//    template <typename ...Args>
+//    cbor_text(Args&&... args) {
+//
+//    }
+
     value_type value() {
         return v;
     }
@@ -72,7 +77,7 @@ public:
     template <typename T, typename ...Args>
     void insert(const key_type& key, Args&&... args) {
         static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
-        items.emplace(key, std::make_shared<T>(std::forward<Args>(args...)));
+        items.emplace(key, std::make_shared<T>(std::forward<Args>(args)...));
     }
 
     cbor_type type() override {
