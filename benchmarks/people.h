@@ -74,6 +74,7 @@ private:
     map_type items;
 
 public:
+    
     template <typename T, typename ...Args>
     void insert(const key_type& key, Args&&... args) {
         static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");

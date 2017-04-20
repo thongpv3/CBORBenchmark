@@ -1,1 +1,0 @@
-/usr/bin/cc   -std=c99 -g -O0 -Wall -pedantic -g -ggdb -DDEBUG=true  -g CMakeFiles/create_items.dir/create_items.c.o  -o create_items -rdynamic ../src/libcbor.a 
