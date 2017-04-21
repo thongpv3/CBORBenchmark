@@ -36,8 +36,14 @@ namespace cbor {
 
         array_ptr as_array();
 
-        template <typename T>
-        T as_arithmetic();
+        template <typename T=int>
+        T as_signed();
+
+        template <typename T=unsigned>
+        T as_unsigned();
+
+        template <typename T=double>
+        T as_floating_point();
 
         string_type as_text();
 
@@ -90,43 +96,6 @@ namespace cbor {
         friend class cbor_item;
     };
 
-
-
-    template<typename T>
-    class cbor_arithmetic : public cbor_item {
-    public:
-        static_assert(std::is_arithmetic<T>::value, "T must be an arithmetic type");
-        using value_type = T;
-
-    private:
-        value_type v;
-        uint8_t byte_width;
-    public:
-        cbor_arithmetic(T value) : v(value), byte_width(sizeof(T)) {}
-
-        T value() {
-            return v;
-        }
-
-        cbor_type type() override {
-            cbor_type detail;
-            if (std::is_signed<T>::value) {
-                return cbor_type::INT;
-            } else if (std::is_unsigned<T>::value) {
-                return cbor_type::UINT;
-            } else
-                return cbor_type::FLOAT;
-        }
-
-        std::string to_string() override {
-            return std::to_string(v);
-        }
-    };
-
-    using cbor_float = cbor_arithmetic<float>;
-    using cbor_int = cbor_arithmetic<int>;
-    using cbor_byte = cbor_arithmetic<char>;
-
     class cbor_text : public cbor_item {
     private:
         string_type v;
@@ -148,6 +117,103 @@ namespace cbor {
             return "\"" +v +"\"";
         }
     };
+
+    class cbor_int : public cbor_item {
+    public:
+        using value_type = long;
+
+    private:
+        value_type v;
+        uint8_t bw;
+    public:
+        template <typename T>
+        cbor_int(T value) : v(value), bw(sizeof(T)){
+            static_assert(std::is_signed<T>::value, "T must be a signed type");
+        }
+
+        template <typename T = int>
+        T value() {
+            static_assert(std::is_arithmetic<T>::value, "T must be an arithmetic type");
+            return static_cast<T>(v);
+        }
+
+        cbor_type type() override {
+                return cbor_type::INT;
+        }
+
+        uint8_t byte_width() {
+            return bw;
+        }
+
+        std::string to_string() override {
+            return std::to_string(v);
+        }
+    };
+
+    class cbor_uint : public cbor_item {
+    public:
+        using value_type = unsigned long;
+
+    private:
+        value_type v;
+        uint8_t bw;
+    public:
+        template <typename T>
+        cbor_uint(T value) : v(value), bw(sizeof(T)){
+            static_assert(std::is_unsigned<T>::value, "T must be an unsigned type");
+        }
+
+        template <typename T = unsigned>
+        T value() {
+            static_assert(std::is_arithmetic<T>::value, "T must be an arithmetic type");
+            return static_cast<T>(v);
+        }
+
+        cbor_type type() override {
+            return cbor_type::UINT;
+        }
+
+        uint8_t byte_width() {
+            return bw;
+        }
+
+        std::string to_string() override {
+            return std::to_string(v);
+        }
+    };
+
+    class cbor_float : public cbor_item {
+    public:
+        using value_type = double;
+
+    private:
+        value_type v;
+        uint8_t bw;
+    public:
+        template <typename T>
+        cbor_float(T value) : v(value), bw(sizeof(T)){
+            static_assert(std::is_floating_point<T>::value, "T must be a floating point type");
+        }
+
+        template <typename T = float>
+        T value() {
+            static_assert(std::is_arithmetic<T>::value, "T must be an arithmetic type");
+            return static_cast<T>(v);
+        }
+
+        cbor_type type() override {
+            return cbor_type::FLOAT;
+        }
+
+        uint8_t byte_width() {
+            return bw;
+        }
+
+        std::string to_string() override {
+            return std::to_string(v);
+        }
+    };
+
 
 
     class cbor_array : public cbor_item {
@@ -203,10 +269,22 @@ namespace cbor {
         return static_cast<cbor_array*>(this)->array();
     }
 
-    template<typename T>
-    T cbor_item::as_arithmetic() {
-        static_assert(std::is_arithmetic<T>::value, "T must be an integral type");
-        return static_cast<cbor_arithmetic<T>*>(this)->value();
+    template<typename T=int>
+    T cbor_item::as_signed() {
+        static_assert(std::is_signed<T>::value, "T must be a signed type");
+        return static_cast<T>(static_cast<cbor_int*>(this)->value());
+    }
+
+    template<typename T=unsigned>
+    T cbor_item::as_unsigned() {
+        static_assert(std::is_unsigned<T>::value, "T must be an unsigned type");
+        return static_cast<T>(static_cast<cbor_uint*>(this)->value());
+    }
+
+    template<typename T=float>
+    T cbor_item::as_floating_point() {
+        static_assert(std::is_floating_point<T>::value, "T must be a floating point type");
+        return static_cast<T>(static_cast<cbor_float*>(this)->value());
     }
 
     cbor_item::string_type cbor_item::as_text() {

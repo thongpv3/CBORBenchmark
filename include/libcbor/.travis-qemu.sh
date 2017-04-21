@@ -118,7 +118,7 @@ else
 
 	ctest -VV
 
-	ctest -T memcheck | tee memcheck.out
+	ctest -V memcheck | tee memcheck.out
 	if grep -q 'Memory Leak\|IPW\|Uninitialized Memory Conditional\|Uninitialized Memory Read' memcheck.out; then
 		exit 1
 	fi

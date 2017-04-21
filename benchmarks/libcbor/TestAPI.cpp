@@ -22,18 +22,18 @@ void test_cbor_item() {
 
 void test_libcbor_serializer_map() {
     std::shared_ptr<cbor_map> item_ptr = std::make_shared<cbor_map>(
-        "id", cbor_arithmetic<int>(20136495),
+        "id", cbor_uint(20136495u),
         "name", cbor_text("Pham Van Thong"),
-        "age", cbor_arithmetic<int>(1995),
+        "age", cbor_uint(1995u),
         "education", cbor_map(
             "university", cbor_text("Hanoi University of Science and Technology"),
             "industry", cbor_text("Computer Science")
             ),
         "friends", cbor_array(
                 cbor_map("name", cbor_text("Nguyen Dinh Ky"),
-                         "birthyear", cbor_arithmetic<int>(1994)),
+                         "birthyear", cbor_int(1994)),
                 cbor_map("name", cbor_text("Nguyen Huu Tung"),
-                         "birthyear", cbor_arithmetic<int>(1995))
+                         "birthyear", cbor_int(1995))
             )
     );
     bytes buffer = serializer<libcbor_serializer>::serialize(item_ptr);
@@ -44,34 +44,36 @@ void test_libcbor_serializer_map() {
 
 void test_libcbor_serializer_array() {
     std::shared_ptr<cbor_array> item_ptr = std::make_shared<cbor_array>(
-            cbor_map(
-                "id", cbor_arithmetic<int>(20136495),
+        cbor_map(
+                "id", cbor_uint(20136495u),
                 "name", cbor_text("Pham Van Thong"),
-                "age", cbor_arithmetic<int>(1995),
+                "age", cbor_uint(1995u),
                 "education", cbor_map(
-                    "university", cbor_text("Hanoi University of Science and Technology"),
-                    "industry", cbor_text("Computer Science")
+                        "university", cbor_text("Hanoi University of Science and Technology"),
+                        "industry", cbor_text("Computer Science")
                 ),
                 "friends", cbor_array(
-                    cbor_map("name", cbor_text("Nguyen Dinh Ky"),
-                             "birthyear", cbor_arithmetic<int>(1994)),
-                    cbor_map("name", cbor_text("Nguyen Huu Tung"),
-                             "birthyear", cbor_arithmetic<int>(1995))
-            )),
-            cbor_map(
-                    "id", cbor_arithmetic<int>(20133120),
-                    "name", cbor_text("Nguyen Hoang Quan"),
-                    "age", cbor_arithmetic<int>(1992),
-                    "education", cbor_map(
-                            "university", cbor_text("Hanoi University of Science and Technology"),
-                            "industry", cbor_text("Computer Science")
-                    ),
-                    "friends", cbor_array(
-                            cbor_map("name", cbor_text("Nguyen Dinh Ky"),
-                                     "birthyear", cbor_arithmetic<int>(1994)),
-                            cbor_map("name", cbor_text("Nguyen Huu Tung"),
-                                     "birthyear", cbor_arithmetic<int>(1995))
-                    ))
+                        cbor_map("name", cbor_text("Nguyen Dinh Ky"),
+                                 "birthyear", cbor_int(1994)),
+                        cbor_map("name", cbor_text("Nguyen Huu Tung"),
+                                 "birthyear", cbor_int(1995))
+                )
+        ),
+        cbor_map(
+                "id", cbor_uint(20133210u),
+                "name", cbor_text("Nguyen Hoang Quan"),
+                "age", cbor_uint(1992u),
+                "education", cbor_map(
+                        "university", cbor_text("Hanoi University of Science and Technology"),
+                        "industry", cbor_text("Computer Science")
+                ),
+                "friends", cbor_array(
+                        cbor_map("name", cbor_text("Nguyen Dinh Ky"),
+                                 "birthyear", cbor_int(1994)),
+                        cbor_map("name", cbor_text("Nguyen Huu Tung"),
+                                 "birthyear", cbor_int(1995))
+                         )
+                 )
     );
     bytes buffer = serializer<libcbor_serializer>::serialize(item_ptr);
     std::ofstream of("test_libcbor_serializer_array.cbor");
@@ -82,6 +84,6 @@ int main() {
     using namespace cbor;
     std::cout << std::is_same<uint8_t, char>::value << std::endl;
     test_libcbor_serializer_map();
-    test_libcbor_serializer_array();
+//    test_libcbor_serializer_array();
     return 0;
 }

@@ -25,7 +25,63 @@ namespace cbor {
                     break;
                 }
                 case cbor_type::INT: {
-                    _cbor_map_add_value(root, cbor_move(cbor_build_negint32((unsigned) item->as_arithmetic<int>())));
+                    auto&& int_ptr = std::static_pointer_cast<cbor_int>(item);
+                    switch (int_ptr->byte_width()) {
+                        case 4: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_negint32(int_ptr->value())));
+                            break;
+                        }
+                        case 1: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_negint8(int_ptr->value<char>())));
+                            break;
+                        }
+                        case 2: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_negint16(int_ptr->value<short>())));
+                            break;
+                        }
+                        case 8: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_negint64(int_ptr->value<long>())));
+                            break;
+                        };
+
+                    }
+                    break;
+                }
+                case cbor_type::UINT: {
+                    auto&& int_ptr = std::static_pointer_cast<cbor_uint>(item);
+                    switch (int_ptr->byte_width()) {
+                        case 4: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_uint32(int_ptr->value())));
+                            break;
+                        }
+                        case 1: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_uint8(int_ptr->value<uint8_t>())));
+                            break;
+                        }
+                        case 2: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_uint16(int_ptr->value<uint16_t>())));
+                            break;
+                        }
+                        case 8: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_uint64(int_ptr->value<uint32_t>())));
+                            break;
+                        };
+
+                    }
+                    break;
+                }
+                case cbor_type::FLOAT: {
+                    auto&& int_ptr = std::static_pointer_cast<cbor_float>(item);
+                    switch (int_ptr->byte_width()) {
+                        case 8: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_uint32(int_ptr->value())));
+                            break;
+                        }
+                        case 4: {
+                            _cbor_map_add_value(root, cbor_move(cbor_build_uint8(int_ptr->value<float>())));
+                            break;
+                        }
+                    }
                     break;
                 }
                 case cbor_type::MAP: {
@@ -57,8 +113,63 @@ namespace cbor {
                     break;
                 }
                 case cbor_type::INT: {
-                    //max bit width is 64bit integer
-                    cbor_array_push(root, cbor_move(cbor_build_negint32((unsigned) item->as_arithmetic<int>())));
+                    auto&& int_ptr = std::static_pointer_cast<cbor_int>(item);
+                    switch (int_ptr->byte_width()) {
+                        case 4: {
+                            cbor_array_push(root, cbor_move(cbor_build_negint32(int_ptr->value())));
+                            break;
+                        }
+                        case 1: {
+                            cbor_array_push(root, cbor_move(cbor_build_negint8(int_ptr->value<char>())));
+                            break;
+                        }
+                        case 2: {
+                            cbor_array_push(root, cbor_move(cbor_build_negint16(int_ptr->value<short>())));
+                            break;
+                        }
+                        case 8: {
+                            cbor_array_push(root, cbor_move(cbor_build_negint64(int_ptr->value<long>())));
+                            break;
+                        };
+
+                    }
+                    break;
+                }
+                case cbor_type::UINT: {
+                    auto&& int_ptr = std::static_pointer_cast<cbor_uint>(item);
+                    switch (int_ptr->byte_width()) {
+                        case 4: {
+                            cbor_array_push(root, cbor_move(cbor_build_uint32(int_ptr->value())));
+                            break;
+                        }
+                        case 1: {
+                            cbor_array_push(root, cbor_move(cbor_build_uint8(int_ptr->value<uint8_t>())));
+                            break;
+                        }
+                        case 2: {
+                            cbor_array_push(root, cbor_move(cbor_build_uint16(int_ptr->value<uint16_t>())));
+                            break;
+                        }
+                        case 8: {
+                            cbor_array_push(root, cbor_move(cbor_build_uint64(int_ptr->value<uint32_t>())));
+                            break;
+                        };
+
+                    }
+                    break;
+                }
+                case cbor_type::FLOAT: {
+                    auto&& int_ptr = std::static_pointer_cast<cbor_float>(item);
+                    switch (int_ptr->byte_width()) {
+                        case 8: {
+                            cbor_array_push(root, cbor_move(cbor_build_uint32(int_ptr->value())));
+                            break;
+                        }
+                        case 4: {
+                            cbor_array_push(root, cbor_move(cbor_build_uint8(int_ptr->value<float>())));
+                            break;
+                        }
+                    }
                     break;
                 }
                 case cbor_type::MAP: {
