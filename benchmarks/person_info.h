@@ -8,8 +8,8 @@
 
 using namespace bm;
 
-std::unique_ptr<cbor_item> create_map() {
-    std::unique_ptr<cbor_map> map = std::make_unique<cbor_map>("_id", cbor_text("58f5f672cac5799a4fe2e414"));
+std::shared_ptr<cbor_item> create_map() {
+    std::shared_ptr<cbor_map> map = std::make_shared<cbor_map>("_id", cbor_text("58f5f672cac5799a4fe2e414"));
     map->insert(
         "index", cbor_arithmetic<unsigned>(0),
         "guid", cbor_text("2581df5c-6b32-44e9-a06b-9e003ef2d46e"),
@@ -40,5 +40,5 @@ std::unique_ptr<cbor_item> create_map() {
         "greeting", cbor_text("Hello, Angela Carson! You have 8 unread messages."),
         "favoriteFruit", cbor_text("apple")
     );
-    return std::move(map);
+    return map;
 }

@@ -7,6 +7,7 @@
 #include <zconf.h>
 #include <map>
 #include <memory>
+#include <unordered_map>
 
 namespace bm {
 
@@ -16,7 +17,7 @@ namespace bm {
     class cbor_item {
     public:
         using string_type = std::string;
-        using map_type = std::map<string_type, std::shared_ptr<cbor_item>>;
+        using map_type = std::unordered_map<string_type, std::shared_ptr<cbor_item>>;
         using map_ptr = std::shared_ptr<map_type>;
         using array_type = std::vector<std::shared_ptr<cbor_item>>;
         using array_ptr = std::shared_ptr<array_type>;
@@ -32,9 +33,11 @@ namespace bm {
         array_ptr as_array();
 
         template <typename T>
-        T as_integral();
+        T as_arithmetic();
 
         string_type as_text();
+
+        virtual std::string to_string() = 0;
     };
 
     class cbor_map : public cbor_item {
@@ -68,6 +71,14 @@ namespace bm {
             return cbor_type::MAP;
         }
 
+        std::string to_string() override {
+            std::string result = "{\n";
+            for (auto&& it : *items) {
+                result += it.first + " : " + it.second->to_string() +",\n";
+            }
+            return result+"}";
+        }
+
     private:
         map_ptr map() {
             return std::shared_ptr<map_type>(items);
@@ -96,7 +107,15 @@ namespace bm {
         cbor_type type() override {
             return cbor_type::INT;
         }
+
+        std::string to_string() override {
+            return std::to_string(v);
+        }
     };
+
+    using cbor_float = cbor_arithmetic<float>;
+    using cbor_int = cbor_arithmetic<int>;
+    using cbor_byte = cbor_arithmetic<char>;
 
     class cbor_text : public cbor_item {
     private:
@@ -115,6 +134,9 @@ namespace bm {
             return cbor_type::TEXT_STRING;
         }
 
+        std::string to_string() override {
+            return "\"" +v +"\"";
+        }
     };
 
 
@@ -148,6 +170,14 @@ namespace bm {
             return cbor_type::ARRAY;
         }
 
+        std::string to_string() override {
+            std::string result = "[";
+            for (auto it : *items) {
+                result += it->to_string() + ",\n";
+            }
+            return result + "]";
+        }
+
     private:
         std::shared_ptr<array_type> array() {
             return items;
@@ -164,7 +194,7 @@ namespace bm {
     }
 
     template<typename T>
-    T cbor_item::as_integral() {
+    T cbor_item::as_arithmetic() {
         static_assert(std::is_arithmetic<T>::value, "T must be an integral type");
         return static_cast<cbor_arithmetic<T>*>(this)->value();
     }
