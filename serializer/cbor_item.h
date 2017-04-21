@@ -21,6 +21,7 @@ namespace cbor {
         using map_ptr = std::shared_ptr<map_type>;
         using array_type = std::vector<std::shared_ptr<cbor_item>>;
         using array_ptr = std::shared_ptr<array_type>;
+        using item_ptr = std::shared_ptr<cbor_item>;
 
         enum class cbor_type : int8_t {
             /* arithmetic_type store in this format: [00xx][yyyy]
@@ -68,12 +69,15 @@ namespace cbor {
             items->emplace(key, std::shared_ptr<T>(new T(value)));
         }
 
+        void insert(key_type key, item_ptr p_item) {
+            items->emplace(key, p_item);
+        }
+
         template<typename T, typename ...Args>
         cbor_map(key_type key, T value, Args &&...args) {
             static_assert(std::is_base_of<cbor::cbor_item, T>::value, "T must derived from cbor::cbor_item");
             insert(key, value, std::forward<Args>(args)...);
         }
-
 
         cbor_map() {}
 
@@ -127,7 +131,7 @@ namespace cbor {
         uint8_t bw;
     public:
         template <typename T>
-        cbor_negint(T value) : v(std::abs(value)), bw(sizeof(T)){
+        cbor_negint(T value) : v(value>0?value:-value), bw(sizeof(T)){
             static_assert(std::is_integral<T>::value, "T must be a signed type");
         }
 
@@ -236,11 +240,16 @@ namespace cbor {
             items->emplace_back(std::shared_ptr<T>(new T(value)));
         }
 
+        void insert(item_ptr ptr_item) {
+            items->push_back(ptr_item);
+        }
+
         template <typename T, typename ...Args>
         cbor_array(T value, Args&& ...args) {
             insert(value, std::forward<Args>(args)...);
         };
 
+        cbor_array() {}
 
         cbor_type type() override {
             return cbor_type::ARRAY;

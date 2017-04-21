@@ -44,46 +44,82 @@ void test_libcbor_serializer_map() {
 
 void test_libcbor_serializer_array() {
     std::shared_ptr<cbor_array> item_ptr = std::make_shared<cbor_array>(
-        cbor_map(
-                "id", cbor_uint(20136495u),
-                "name", cbor_text("Pham Van Thong"),
-                "age", cbor_uint(1995u),
-                "education", cbor_map(
-                        "university", cbor_text("Hanoi University of Science and Technology"),
-                        "industry", cbor_text("Computer Science")
-                ),
-                "friends", cbor_array(
-                        cbor_map("name", cbor_text("Nguyen Dinh Ky"),
-                                 "birthyear", cbor_uint(1994u)),
-                        cbor_map("name", cbor_text("Nguyen Huu Tung"),
-                                 "birthyear", cbor_uint(1995u))
-                )
-        ),
-        cbor_map(
-                "id", cbor_uint(20133210u),
-                "name", cbor_text("Nguyen Hoang Quan"),
-                "age", cbor_uint(1992u),
-                "education", cbor_map(
-                        "university", cbor_text("Hanoi University of Science and Technology"),
-                        "industry", cbor_text("Computer Science")
-                ),
-                "friends", cbor_array(
-                        cbor_map("name", cbor_text("Nguyen Dinh Ky"),
-                                 "birthyear", cbor_uint(1994u)),
-                        cbor_map("name", cbor_text("Nguyen Huu Tung"),
-                                 "birthyear", cbor_uint(1995u))
-                         )
-                 )
+            cbor_map(
+                    "id", cbor_uint(20136495u),
+                    "name", cbor_text("Pham Van Thong"),
+                    "age", cbor_uint(1995u),
+                    "education", cbor_map(
+                            "university", cbor_text("Hanoi University of Science and Technology"),
+                            "industry", cbor_text("Computer Science")
+                    ),
+                    "friends", cbor_array(
+                            cbor_map("name", cbor_text("Nguyen Dinh Ky"),
+                                     "birthyear", cbor_uint(1994u)),
+                            cbor_map("name", cbor_text("Nguyen Huu Tung"),
+                                     "birthyear", cbor_uint(1995u))
+                    )
+            ),
+            cbor_map(
+                    "id", cbor_uint(20133210u),
+                    "name", cbor_text("Nguyen Hoang Quan"),
+                    "age", cbor_uint(1992u),
+                    "education", cbor_map(
+                            "university", cbor_text("Hanoi University of Science and Technology"),
+                            "industry", cbor_text("Computer Science")
+                    ),
+                    "friends", cbor_array(
+                            cbor_map("name", cbor_text("Nguyen Dinh Ky"),
+                                     "birthyear", cbor_uint(1994u)),
+                            cbor_map("name", cbor_text("Nguyen Huu Tung"),
+                                     "birthyear", cbor_uint(1995u))
+                    )
+            )
     );
     bytes buffer = serializer<libcbor_serializer>::serialize(item_ptr);
     std::ofstream of("test_libcbor_serializer_array.cbor");
     of.write(buffer.data(), buffer.size());
     of.close();
 }
+
+void test_libcbor_deserializer_map() {
+    std::shared_ptr<cbor_map> item_ptr = std::make_shared<cbor_map>(
+            "id", cbor_uint(20136495u),
+            "name", cbor_text("Pham Van Thong"),
+            "age", cbor_uint(1995u),
+            "education", cbor_map(
+                    "university", cbor_text("Hanoi University of Science and Technology"),
+                    "industry", cbor_text("Computer Science")
+            ),
+            "friends", cbor_array(
+                    cbor_map("name", cbor_text("Nguyen Dinh Ky"),
+                             "birthyear", cbor_uint(1994u)),
+                    cbor_map("name", cbor_text("Nguyen Huu Tung"),
+                             "birthyear", cbor_uint(1995u))
+            )
+    );
+    bytes buffer = serializer<libcbor_serializer>::serialize(item_ptr);
+    std::ofstream of("test_libcbor_deserializer_map.cbor");
+    of.write(buffer.data(), buffer.size());
+    of.close();
+    std::cout << "DESER\n:" << serializer<libcbor_serializer>::deserialize(buffer)->to_string() << std::endl;
+}
+
+void test_deser_simple() {
+    std::shared_ptr<cbor_map> map = std::make_shared<cbor_map>(
+            "name", cbor_text("Pham Van Thong"),
+            "company", cbor_text("VTTEK")
+    );
+    std::cout << "INPUT: \n" << map->to_string() << std::endl;
+    bytes  buffer = serializer<libcbor_serializer>::serialize(map);
+    auto&& cbor_it = serializer<libcbor_serializer>::deserialize(buffer);
+    std::cout << "DESER: \n" << cbor_it->to_string() << std::endl;
+}
 int main() {
     using namespace cbor;
     std::cout << std::is_same<uint8_t, char>::value << std::endl;
-    test_libcbor_serializer_map();
+//    test_deser_simple();
+    test_libcbor_deserializer_map();
+//    test_libcbor_serializer_map();
 //    test_libcbor_serializer_array();
     return 0;
 }

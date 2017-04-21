@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <stack>
 #include "serializer.h"
 #include "cbor_item.h"
 
@@ -237,8 +238,141 @@ namespace cbor {
             return result;
         }
 
-        void static deserialize(const bytes& buffer) {
+    private:
+        struct parsing_context {
+            enum class tag_type {MAP_KEY, MAP_VALUE, ARRAY};
+            enum class container {MAP, ARRAY};
+            tag_type tag;
+            size_t idx, size;
+            std::stack<std::shared_ptr<cbor_item>> prev_stack;
+            std::stack<container> container_stack;
+            std::shared_ptr<cbor_item> curr;
+            std::unique_ptr<std::string> key; //store map key before we can add
+        };
 
+        using tag_type = parsing_context::tag_type;
+
+        static void check_end_of_container(parsing_context* context) {
+            if (context->idx == context->size) {
+                context->curr = context->prev_stack.top();
+                context->prev_stack.pop();
+                context->idx = 0;
+                context->size = 0;
+                auto prev_container = context->container_stack.top();
+                context->container_stack.pop();
+                if (prev_container == parsing_context::container::MAP)
+                    context->tag = tag_type::MAP_KEY;
+                else if (prev_container == parsing_context::container::ARRAY)
+                    context->tag = tag_type::ARRAY;
+            }
+        }
+
+        static void on_map_start(void* ctx, size_t size) {
+            parsing_context* context = (parsing_context*)ctx;
+            auto&& map_ptr = std::make_shared<cbor_map>();
+
+            if (context->tag == tag_type::MAP_VALUE) {
+                std::static_pointer_cast<cbor_map>(context->curr)->insert(*context->key, map_ptr);
+                context->idx++;
+                context->tag = tag_type::MAP_KEY;
+            } else if (context->tag == tag_type::ARRAY) {
+                std::static_pointer_cast<cbor_array>(context->curr)->insert(map_ptr);
+            }
+
+        }
+
+        static void on_array_start(void* ctx, size_t size) {
+            parsing_context* context = (parsing_context*)ctx;
+            auto&& arr_ptr = std::make_shared<cbor_array>();
+
+            if (context->tag == tag_type::MAP_VALUE) {
+                std::static_pointer_cast<cbor_map>(context->curr)->insert(*context->key, arr_ptr);
+                context->tag = tag_type::MAP_KEY;
+            } else if (context->tag == tag_type::ARRAY) {
+                std::static_pointer_cast<cbor_array>(context->curr)->insert(arr_ptr);
+            }
+            context->tag = tag_type::ARRAY;
+        }
+
+        //todo static assert
+        template <typename T = uint32_t>
+        static void on_found_uint(void* ctx, T value) {
+            parsing_context* context = (parsing_context*)ctx;
+            if (context->tag == tag_type::MAP_VALUE) {
+                std::static_pointer_cast<cbor_map>(context->curr)->insert(*context->key, cbor_uint(value));
+                context->tag = tag_type::MAP_KEY;
+            } else if (context->tag == tag_type::ARRAY) {
+                std::static_pointer_cast<cbor_array>(context->curr)->insert(cbor_uint(value));
+            }
+        }
+
+        template <typename T = uint32_t>
+        static void on_found_negint(void* ctx, T value) {
+            parsing_context* context = (parsing_context*)ctx;
+            if (context->tag == tag_type::MAP_VALUE) {
+                std::static_pointer_cast<cbor_map>(context->curr)->insert(*context->key, cbor_negint(value));
+                context->tag = tag_type::MAP_KEY;
+            } else if (context->tag == tag_type::ARRAY) {
+                std::static_pointer_cast<cbor_array>(context->curr)->insert(cbor_negint(value));
+            }
+        }
+
+        template <typename T = double>
+        static void on_found_float(void* ctx, T value) {
+            parsing_context* context = (parsing_context*)ctx;
+            if (context->tag == tag_type::MAP_VALUE) {
+                std::static_pointer_cast<cbor_map>(context->curr)->insert(*context->key, cbor_float(value));
+                context->tag = tag_type::MAP_KEY;
+            } else if (context->tag == tag_type::ARRAY) {
+                std::static_pointer_cast<cbor_array>(context->curr)->insert(cbor_float(value));
+            }
+        }
+
+        static void on_found_string(void* ctx, cbor_data data, size_t size) {
+            parsing_context* context = (parsing_context*)ctx;
+            if (context->tag == tag_type::MAP_KEY) {
+                context->key = std::make_unique<std::string>((const char*)data, size);
+                context->tag = tag_type::MAP_VALUE;
+            } else if (context->tag == tag_type::MAP_VALUE) {
+                std::static_pointer_cast<cbor_map>(context->curr)->insert(*context->key, cbor_text((const char*)data));
+                context->tag = tag_type::MAP_KEY;
+            } else if (context->tag == tag_type::ARRAY) {
+                std::static_pointer_cast<cbor_array>(context->curr)->insert(cbor_text((const char*)data));
+            }
+        }
+        friend struct cbor_callbacks;
+
+    public:
+        std::shared_ptr<cbor_item> static deserialize(const bytes& buffer) {
+            parsing_context context;
+            context.prev_stack = nullptr;
+            context.curr = nullptr;
+            context.idx = 0;
+            context.size = 0;
+            context.tag = parsing_context::tag_type::MAP_KEY;
+
+            struct cbor_callbacks callbacks;
+            callbacks.map_start = on_map_start;
+            callbacks.array_start = on_array_start;
+            callbacks.uint32 = on_found_uint;
+            callbacks.negint32 = on_found_negint;
+            callbacks.float8 = on_found_float<double>;
+            callbacks.string = on_found_string;
+            callbacks.byte_string = on_found_string;
+
+
+            //assert cbor type is a map - todo check cbor root type
+
+            cbor_decoder_result result;
+            result.read = 0;
+            cbor_data data = (const unsigned char*) buffer.data();
+            do {
+                data +=result.read;
+                if ((const char*)data >= (buffer.data() + buffer.size()))
+                    break;
+                result = cbor_stream_decode(data, buffer.size(), &callbacks, &context);
+            } while (result.status == CBOR_DECODER_FINISHED);
+            return context.curr;
         }
     };
 }
