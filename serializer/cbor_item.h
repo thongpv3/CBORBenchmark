@@ -9,7 +9,7 @@
 #include <memory>
 #include <unordered_map>
 
-namespace bm {
+namespace cbor {
 
     class cbor_map;
     class cbor_text;
@@ -23,7 +23,11 @@ namespace bm {
         using array_ptr = std::shared_ptr<array_type>;
 
         enum class cbor_type : int8_t {
-            UINT, INT, BYTE_STRING, TEXT_STRING, ARRAY, MAP, TAGGING, FLOAT
+            /* arithmetic_type store in this format: [00xx][yyyy]
+            * xx = 1,2,3,4 corresponding to bitwidth = 8,16,32, 64
+            * yy = 0, 1, 7 corresponding too value of UINT, INT, FLOAT in cbor_type
+            * */
+            UINT=0, INT=1, BYTE_STRING=2, TEXT_STRING=3, ARRAY=4, MAP=5, TAGGING=6, FLOAT=7
         };
 
         virtual cbor_type type() = 0;
@@ -48,7 +52,7 @@ namespace bm {
         map_ptr items = std::make_shared<map_type>();
         template <typename T, typename ...Args>
         void insert(key_type key, T value, Args &&...args) {
-            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
+            static_assert(std::is_base_of<cbor::cbor_item, T>::value, "T must derived from cbor::cbor_item");
             items->emplace(key, std::shared_ptr<T>(new T(value)));
             insert(std::forward<Args>(args)...);
         };
@@ -60,7 +64,7 @@ namespace bm {
 
         template<typename T, typename ...Args>
         cbor_map(key_type key, T value, Args &&...args) {
-            static_assert(std::is_base_of<bm::cbor_item, T>::value, "T must derived from bm::cbor_item");
+            static_assert(std::is_base_of<cbor::cbor_item, T>::value, "T must derived from cbor::cbor_item");
             insert(key, value, std::forward<Args>(args)...);
         }
 
@@ -96,16 +100,22 @@ namespace bm {
 
     private:
         value_type v;
-
+        uint8_t byte_width;
     public:
-        cbor_arithmetic(T value) : v(value) {}
+        cbor_arithmetic(T value) : v(value), byte_width(sizeof(T)) {}
 
         T value() {
             return v;
         }
 
         cbor_type type() override {
-            return cbor_type::INT;
+            cbor_type detail;
+            if (std::is_signed<T>::value) {
+                return cbor_type::INT;
+            } else if (std::is_unsigned<T>::value) {
+                return cbor_type::UINT;
+            } else
+                return cbor_type::FLOAT;
         }
 
         std::string to_string() override {
@@ -150,7 +160,7 @@ namespace bm {
     public:
         template <typename T, typename ...Args>
         void insert(T value, Args &&...args) {
-            static_assert(std::is_base_of<cbor_item, T>::value, "T must derived from bm::cbor_item");
+            static_assert(std::is_base_of<cbor_item, T>::value, "T must derived from cbor::cbor_item");
             items->emplace_back(std::shared_ptr<cbor_item>(new T(value)));
             insert(std::forward<Args>(args)...);
         };

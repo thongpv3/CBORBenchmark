@@ -4,4 +4,5 @@ project(CBORBenchmark)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(include)
+add_subdirectory(serializer)
 add_subdirectory(benchmarks)
