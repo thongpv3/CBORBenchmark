@@ -31,9 +31,9 @@ void test_libcbor_serializer_map() {
             ),
         "friends", cbor_array(
                 cbor_map("name", cbor_text("Nguyen Dinh Ky"),
-                         "birthyear", cbor_int(1994)),
+                         "birthyear", cbor_uint(1994u)),
                 cbor_map("name", cbor_text("Nguyen Huu Tung"),
-                         "birthyear", cbor_int(1995))
+                         "birthyear", cbor_uint(1995u))
             )
     );
     bytes buffer = serializer<libcbor_serializer>::serialize(item_ptr);
@@ -54,9 +54,9 @@ void test_libcbor_serializer_array() {
                 ),
                 "friends", cbor_array(
                         cbor_map("name", cbor_text("Nguyen Dinh Ky"),
-                                 "birthyear", cbor_int(1994)),
+                                 "birthyear", cbor_uint(1994u)),
                         cbor_map("name", cbor_text("Nguyen Huu Tung"),
-                                 "birthyear", cbor_int(1995))
+                                 "birthyear", cbor_uint(1995u))
                 )
         ),
         cbor_map(
@@ -69,9 +69,9 @@ void test_libcbor_serializer_array() {
                 ),
                 "friends", cbor_array(
                         cbor_map("name", cbor_text("Nguyen Dinh Ky"),
-                                 "birthyear", cbor_int(1994)),
+                                 "birthyear", cbor_uint(1994u)),
                         cbor_map("name", cbor_text("Nguyen Huu Tung"),
-                                 "birthyear", cbor_int(1995))
+                                 "birthyear", cbor_uint(1995u))
                          )
                  )
     );

@@ -13,7 +13,7 @@ std::shared_ptr<cbor_item> create_map() {
     map->insert(
         "index", cbor_uint(0u),
         "guid", cbor_text("2581df5c-6b32-44e9-a06b-9e003ef2d46e"),
-        "isActive", cbor_int(0),
+        "isActive", cbor_uint(0u),
         "balance", cbor_text("$2,749.62"),
         "picture", cbor_text("http://placehold.it/32x32"),
         "age", cbor_uint(32u),

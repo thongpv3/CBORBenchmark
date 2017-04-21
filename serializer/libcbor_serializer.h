@@ -24,8 +24,8 @@ namespace cbor {
                     _cbor_map_add_value(root, cbor_move(cbor_build_string(item->as_text().data())));
                     break;
                 }
-                case cbor_type::INT: {
-                    auto&& int_ptr = std::static_pointer_cast<cbor_int>(item);
+                case cbor_type::NEGINT: {
+                    auto&& int_ptr = std::static_pointer_cast<cbor_negint>(item);
                     switch (int_ptr->byte_width()) {
                         case 4: {
                             _cbor_map_add_value(root, cbor_move(cbor_build_negint32(int_ptr->value())));
@@ -112,8 +112,8 @@ namespace cbor {
                     cbor_array_push(root, cbor_move(cbor_build_string(item->as_text().data())));
                     break;
                 }
-                case cbor_type::INT: {
-                    auto&& int_ptr = std::static_pointer_cast<cbor_int>(item);
+                case cbor_type::NEGINT: {
+                    auto&& int_ptr = std::static_pointer_cast<cbor_negint>(item);
                     switch (int_ptr->byte_width()) {
                         case 4: {
                             cbor_array_push(root, cbor_move(cbor_build_negint32(int_ptr->value())));
@@ -237,6 +237,8 @@ namespace cbor {
             return result;
         }
 
-        void static deserialize();
+        void static deserialize(const bytes& buffer) {
+
+        }
     };
 }

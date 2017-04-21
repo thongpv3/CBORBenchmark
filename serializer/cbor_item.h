@@ -25,9 +25,9 @@ namespace cbor {
         enum class cbor_type : int8_t {
             /* arithmetic_type store in this format: [00xx][yyyy]
             * xx = 1,2,3,4 corresponding to bitwidth = 8,16,32, 64
-            * yy = 0, 1, 7 corresponding too value of UINT, INT, FLOAT in cbor_type
+            * yy = 0, 1, 7 corresponding too value of UINT, NEGINT, FLOAT in cbor_type
             * */
-            UINT=0, INT=1, BYTE_STRING=2, TEXT_STRING=3, ARRAY=4, MAP=5, TAGGING=6, FLOAT=7
+            UINT=0, NEGINT=1, BYTE_STRING=2, TEXT_STRING=3, ARRAY=4, MAP=5, TAGGING=6, FLOAT=7
         };
 
         virtual cbor_type type() = 0;
@@ -118,27 +118,27 @@ namespace cbor {
         }
     };
 
-    class cbor_int : public cbor_item {
+    class cbor_negint : public cbor_item {
     public:
-        using value_type = long;
+        using value_type = unsigned long;
 
     private:
-        value_type v;
+        value_type v; //v represent a negative integer
         uint8_t bw;
     public:
         template <typename T>
-        cbor_int(T value) : v(value), bw(sizeof(T)){
-            static_assert(std::is_signed<T>::value, "T must be a signed type");
+        cbor_negint(T value) : v(std::abs(value)), bw(sizeof(T)){
+            static_assert(std::is_integral<T>::value, "T must be a signed type");
         }
 
         template <typename T = int>
         T value() {
             static_assert(std::is_arithmetic<T>::value, "T must be an arithmetic type");
-            return static_cast<T>(v);
+            return static_cast<T>(-v);
         }
 
         cbor_type type() override {
-                return cbor_type::INT;
+                return cbor_type::NEGINT;
         }
 
         uint8_t byte_width() {
@@ -272,7 +272,7 @@ namespace cbor {
     template<typename T=int>
     T cbor_item::as_signed() {
         static_assert(std::is_signed<T>::value, "T must be a signed type");
-        return static_cast<T>(static_cast<cbor_int*>(this)->value());
+        return static_cast<T>(static_cast<cbor_negint*>(this)->value());
     }
 
     template<typename T=unsigned>
