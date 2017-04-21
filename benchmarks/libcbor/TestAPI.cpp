@@ -101,6 +101,9 @@ void test_libcbor_deserializer_map() {
     std::ofstream of("test_libcbor_deserializer_map.cbor");
     of.write(buffer.data(), buffer.size());
     of.close();
+    cbor_load_result result;
+    cbor_item_t *item = cbor_load((const unsigned char*)buffer.data(), buffer.size(), &result);
+    cbor_describe(item, stdout);
     std::cout << "DESER\n:" << serializer<libcbor_serializer>::deserialize(buffer)->to_string() << std::endl;
 }
 
@@ -116,7 +119,6 @@ void test_deser_simple() {
 }
 int main() {
     using namespace cbor;
-    std::cout << std::is_same<uint8_t, char>::value << std::endl;
 //    test_deser_simple();
     test_libcbor_deserializer_map();
 //    test_libcbor_serializer_map();
