@@ -135,18 +135,18 @@ NONIUS_BENCHMARK("destroy", [](nonius::chronometer meter)
 })
 {% endhighlight %}
 
-`nonius::storage_for<T>` objects are just pieces of raw storage suitable for `T`
+`nonius::storage_for<V>` objects are just pieces of raw storage suitable for `V`
 objects. You can use the `nonius::storage_for::construct` member function to call a constructor and
 create an object in that storage. So if you want to measure the time it takes
 for a certain constructor to run, you can just measure the time it takes to run
 this function.
 
-When the lifetime of a `nonius::storage_for<T>` object ends, if an actual object was
+When the lifetime of a `nonius::storage_for<V>` object ends, if an actual object was
 constructed there it will be automatically destroyed, so nothing leaks.
 
 If you want to measure a destructor, though, we need to use
-`nonius::destructable_object<T>`. These objects are similar to
-`nonius::storage_for<T>` in that construction of the `T` object is manual, but
+`nonius::destructable_object<V>`. These objects are similar to
+`nonius::storage_for<V>` in that construction of the `V` object is manual, but
 it does not destroy anything automatically. Instead, you are required to call
 the `nonius::destructable_object::destruct` member function, which is what you
 can use to measure the destruction time.

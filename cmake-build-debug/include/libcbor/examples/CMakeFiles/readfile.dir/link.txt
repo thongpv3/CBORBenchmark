@@ -1,1 +1,0 @@
-/usr/bin/cc   -std=c99 -g -O0 -Wall -pedantic -g -ggdb -DDEBUG=true  -g CMakeFiles/readfile.dir/readfile.c.o  -o readfile -rdynamic ../src/libcbor.a 

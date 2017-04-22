@@ -37,7 +37,7 @@ To do so, I am signing this object:
         "hash": "bb676f7fa30f4e388e27fbf0bd738e727321cb3d7440a768fd087b233713c828bd8e760b3c987c7f64072bbf1cec38a17111f6f63e9be8ac7f622c3f324aba9f",
         "seqno": 740805
     },
-    "prev": "164c6bed7f607fa7ca4845b72f9a2a5a53a1c059cb7ca4f2f920e223b2dcb29d",
+    "prev_stack": "164c6bed7f607fa7ca4845b72f9a2a5a53a1c059cb7ca4f2f920e223b2dcb29d",
     "seqno": 60,
     "tag": "signature"
 }
