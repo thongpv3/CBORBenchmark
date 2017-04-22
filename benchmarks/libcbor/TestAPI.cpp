@@ -117,8 +117,16 @@ void test_deser_simple() {
     auto&& cbor_it = serializer<libcbor_serializer>::deserialize(buffer);
     std::cout << "DESER: \n" << cbor_it->to_string() << std::endl;
 }
+
+void test_tinycbor() {
+    
+}
 int main() {
     using namespace cbor;
+    /*TINYCBOR*/
+
+
+    /*LIBCBOR*/
 //    test_deser_simple();
 //    test_libcbor_deserializer_map();
 //    test_libcbor_serializer_map();

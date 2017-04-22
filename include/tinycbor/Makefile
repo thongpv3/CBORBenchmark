@@ -1,10 +1,10 @@
 # Variables:
-prefix = /usr/local
+prefix = ${CURDIR}
 exec_prefix = $(prefix)
 bindir = $(exec_prefix)/bin
 libdir = $(exec_prefix)/lib
-includedir = $(prefix)/include
-pkgconfigdir = $(libdir)/pkgconfig
+includedir = $(prefix)/src
+pkgconfigdir = $(prefix)
 
 CFLAGS = -Wall -Wextra
 LDFLAGS_GCSECTIONS = -Wl,--gc-sections
@@ -35,7 +35,10 @@ CBORDUMP_SOURCES = tools/cbordump/cbordump.c
 INSTALL_TARGETS += $(bindir)/cbordump
 INSTALL_TARGETS += $(libdir)/libtinycbor.a
 INSTALL_TARGETS += $(pkgconfigdir)/tinycbor.pc
-INSTALL_TARGETS += $(TINYCBOR_HEADERS:src/%=$(includedir)/tinycbor/%)
+
+#thongpv3 - I modified this to use this library on my project
+INSTALL_TARGETS += $(TINYCBOR_HEADERS:src/%=$(includedir)/%)
+#INSTALL_TARGETS += $(TINYCBOR_HEADERS:src/%=$(includedir)/tinycbor/%)
 
 # setup VPATH
 MAKEFILE := $(lastword $(MAKEFILE_LIST))
