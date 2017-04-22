@@ -17,7 +17,8 @@ namespace cbor {
     class cbor_item {
     public:
         using string_type = std::string;
-        using map_type = std::unordered_map<string_type, std::shared_ptr<cbor_item>>;
+        //todo use other data structure preserves order of insertion
+        using map_type = std::map<string_type, std::shared_ptr<cbor_item>>;
         using map_ptr = std::shared_ptr<map_type>;
         using array_type = std::vector<std::shared_ptr<cbor_item>>;
         using array_ptr = std::shared_ptr<array_type>;
@@ -60,8 +61,8 @@ namespace cbor {
         template <typename T, typename ...Args>
         void insert(key_type key, T value, Args &&...args) {
             static_assert(std::is_base_of<cbor::cbor_item, T>::value, "T must derived from cbor::cbor_item");
-            items->emplace(key, std::shared_ptr<T>(new T(value)));
             insert(std::forward<Args>(args)...);
+            items->emplace(key, std::shared_ptr<T>(new T(value)));
         };
 
         template <typename T>
@@ -278,19 +279,19 @@ namespace cbor {
         return static_cast<cbor_array*>(this)->array();
     }
 
-    template<typename T=int>
+    template<typename T>
     T cbor_item::as_signed() {
         static_assert(std::is_signed<T>::value, "T must be a signed type");
         return static_cast<T>(static_cast<cbor_negint*>(this)->value());
     }
 
-    template<typename T=unsigned>
+    template<typename T>
     T cbor_item::as_unsigned() {
         static_assert(std::is_unsigned<T>::value, "T must be an unsigned type");
         return static_cast<T>(static_cast<cbor_uint*>(this)->value());
     }
 
-    template<typename T=float>
+    template<typename T>
     T cbor_item::as_floating_point() {
         static_assert(std::is_floating_point<T>::value, "T must be a floating point type");
         return static_cast<T>(static_cast<cbor_float*>(this)->value());

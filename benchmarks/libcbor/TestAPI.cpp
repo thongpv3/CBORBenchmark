@@ -120,7 +120,7 @@ void test_deser_simple() {
 int main() {
     using namespace cbor;
 //    test_deser_simple();
-    test_libcbor_deserializer_map();
+//    test_libcbor_deserializer_map();
 //    test_libcbor_serializer_map();
 //    test_libcbor_serializer_array();
     return 0;
