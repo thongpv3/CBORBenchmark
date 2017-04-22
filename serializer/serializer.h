@@ -4,10 +4,8 @@
 
 #pragma once
 
-#include <bits/shared_ptr.h>
 #include <vector>
-#include <cbor.h>
-#include <cbor/maps.h>
+#include <memory>
 
 namespace cbor {
     struct libcbor_serializer;
@@ -18,6 +16,3 @@ namespace cbor {
 
     using bytes = std::vector<char>;
 }
-
-#include "libcbor_serializer.h"
-#include "cbor_item.h"

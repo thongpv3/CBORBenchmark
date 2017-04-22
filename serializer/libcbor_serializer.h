@@ -8,6 +8,7 @@
 #include <xen/xen.h>
 #include "serializer.h"
 #include "cbor_item.h"
+#include <cbor.h>
 
 namespace cbor {
     template<>

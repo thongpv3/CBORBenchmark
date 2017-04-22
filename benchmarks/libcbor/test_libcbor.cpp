@@ -6,9 +6,8 @@
 #include <boost/any.hpp>
 #include <iostream>
 #include <fstream>
-#include "../../serializer/cbor_item.h"
+#include <libcbor_serializer.h>
 #include "../person_info.h"
-#include "../../serializer/serializer.h"
 
 template <typename T>
 struct serialize;
@@ -101,9 +100,9 @@ void test_libcbor_deserializer_map() {
     std::ofstream of("test_libcbor_deserializer_map.cbor");
     of.write(buffer.data(), buffer.size());
     of.close();
-    cbor_load_result result;
-    cbor_item_t *item = cbor_load((const unsigned char*)buffer.data(), buffer.size(), &result);
-    cbor_describe(item, stdout);
+//    cbor_load_result result;
+//    cbor_item_t *item = cbor_load((const unsigned char*)buffer.data(), buffer.size(), &result);
+//    cbor_describe(item, stdout);
     std::cout << "DESER\n:" << serializer<libcbor_serializer>::deserialize(buffer)->to_string() << std::endl;
 }
 
@@ -118,9 +117,6 @@ void test_deser_simple() {
     std::cout << "DESER: \n" << cbor_it->to_string() << std::endl;
 }
 
-void test_tinycbor() {
-    
-}
 int main() {
     using namespace cbor;
     /*TINYCBOR*/
@@ -128,8 +124,19 @@ int main() {
 
     /*LIBCBOR*/
 //    test_deser_simple();
-//    test_libcbor_deserializer_map();
+    test_libcbor_deserializer_map();
 //    test_libcbor_serializer_map();
 //    test_libcbor_serializer_array();
+
+
+//    char buf[20];
+//    memset(buf, 0, 20);
+//    std::ifstream inf("test_tinycbor.cbor");
+//    inf.read(buf, 16);
+//    bytes buffer;
+//    buffer.assign(buf, buf+6);
+//    auto && item = serializer<libcbor_serializer>::deserialize(buffer);
+//    std::cout << item->to_string() << std::endl;
+//    inf.close();
     return 0;
 }
