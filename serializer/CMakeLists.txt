@@ -1,5 +1,5 @@
 set(CBOR_SERIALIZER_HEADERS
-        cbor_item.h
+        item.h
         libcbor_serializer.h
         serializer.h
         tinycbor_serializer.h

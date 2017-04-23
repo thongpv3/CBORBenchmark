@@ -1,11 +1,11 @@
-prefix=/home/thongpv3/CLionProjects/CBORBenchmark/include/tinycbor
-exec_prefix=/home/thongpv3/CLionProjects/CBORBenchmark/include/tinycbor
-libdir=/home/thongpv3/CLionProjects/CBORBenchmark/include/tinycbor/lib
-includedir=/home/thongpv3/CLionProjects/CBORBenchmark/include/tinycbor/src
+prefix=/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor
+exec_prefix=/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor
+libdir=/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor/lib
+includedir=/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor/src
 
 Name: TinyCBOR
 Description: A tiny CBOR encoder and decoder library
 Version: 
 Libs: -L${libdir} -ltinycbor
 Libs.private: -lm
-Cflags: -I${includedir}/tinycbor
+Cflags: -I${includedir}

@@ -8,4 +8,4 @@ Description: A tiny CBOR encoder and decoder library
 Version: @version@
 Libs: -L${libdir} -ltinycbor
 Libs.private: -lm
-Cflags: -I${includedir}/tinycbor
+Cflags: -I${includedir}

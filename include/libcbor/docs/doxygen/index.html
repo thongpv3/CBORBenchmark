@@ -69,29 +69,29 @@ $(function() {
 <h1>Where to start</h1>
 <p>A couple of pointers for you to start with: <code>0x00000000</code>, <code>0xDEADBEEF</code>.</p>
 <p>If you just want to peek under the hood, have a look at:</p><ul>
-<li><a class="el" href="common_8h.html">src/cbor/common.h</a></li>
-<li><a class="el" href="encoding_8h.html">src/cbor/encoding.h</a></li>
-<li><a class="el" href="cbor_8h.html">src/cbor.h</a></li>
+<li><a class="el" href="common_8h.html">src/serializer/common.h</a></li>
+<li><a class="el" href="encoding_8h.html">src/serializer/encoding.h</a></li>
+<li><a class="el" href="cbor_8h.html">src/serializer.h</a></li>
 </ul>
 <p>If you want to implement your own decoder or see how the default one is made:</p><ul>
-<li><a class="el" href="builder__callbacks_8h.html">src/cbor/internal/builder_callbacks.h</a></li>
-<li><a class="el" href="stack_8h.html">src/cbor/internal/stack.h</a></li>
+<li><a class="el" href="builder__callbacks_8h.html">src/serializer/internal/builder_callbacks.h</a></li>
+<li><a class="el" href="stack_8h.html">src/serializer/internal/stack.h</a></li>
 </ul>
 <p>For details on encoding and packing (could be useful when porting to exotic platforms):</p><ul>
-<li><a class="el" href="encoders_8h.html">src/cbor/internal/encoders.h</a></li>
-<li><a class="el" href="loaders_8h.html">src/cbor/internal/loaders.h</a></li>
+<li><a class="el" href="encoders_8h.html">src/serializer/internal/encoders.h</a></li>
+<li><a class="el" href="loaders_8h.html">src/serializer/internal/loaders.h</a></li>
 </ul>
 <p>Streaming driver:</p><ul>
-<li><a class="el" href="streaming_8h.html">src/cbor/streaming.h</a></li>
+<li><a class="el" href="streaming_8h.html">src/serializer/streaming.h</a></li>
 </ul>
 <p>Manipulation routines for particular types:</p><ul>
-<li><a class="el" href="ints_8h.html">src/cbor/ints.h</a></li>
-<li><a class="el" href="bytestrings_8h.html">src/cbor/bytestrings.h</a></li>
-<li><a class="el" href="strings_8h.html">src/cbor/strings.h</a></li>
-<li><a class="el" href="arrays_8h.html">src/cbor/arrays.h</a></li>
-<li><a class="el" href="maps_8h.html">src/cbor/maps.h</a></li>
-<li><a class="el" href="tags_8h.html">src/cbor/tags.h</a></li>
-<li><a class="el" href="floats__ctrls_8h.html">src/cbor/floats_ctrls.h</a></li>
+<li><a class="el" href="ints_8h.html">src/serializer/ints.h</a></li>
+<li><a class="el" href="bytestrings_8h.html">src/serializer/bytestrings.h</a></li>
+<li><a class="el" href="strings_8h.html">src/serializer/strings.h</a></li>
+<li><a class="el" href="arrays_8h.html">src/serializer/arrays.h</a></li>
+<li><a class="el" href="maps_8h.html">src/serializer/maps.h</a></li>
+<li><a class="el" href="tags_8h.html">src/serializer/tags.h</a></li>
+<li><a class="el" href="floats__ctrls_8h.html">src/serializer/floats_ctrls.h</a></li>
 </ul>
 <h1>How to contribute</h1>
 <p>Please refer to <a href="https://github.com/PJK/libcbor">the repository</a> </p>

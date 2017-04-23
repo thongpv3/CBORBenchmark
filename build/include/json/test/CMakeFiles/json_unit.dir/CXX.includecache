@@ -318,7 +318,7 @@ catch.hpp
 json.hpp
 /home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/json.hpp
 
-/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-cbor.cpp
+/home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-serializer.cpp
 catch.hpp
 /home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/catch.hpp
 json.hpp

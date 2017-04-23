@@ -38,7 +38,7 @@ Option                    Meaning                                               
 ``WITH_TESTS``            Build unit tests (see :doc:`development`)                 ``OFF``                   ``ON``, ``OFF``
 ========================  =======================================================   ======================  =====================================================================================================================
 
-The following configuration options will also be defined as macros[#]_ in ``<cbor/common.h>`` and can therefore be used in client code:
+The following configuration options will also be defined as macros[#]_ in ``<serializer/common.h>`` and can therefore be used in client code:
 
 ========================  =======================================================   ======================  =====================================================================================================================
 Option                    Meaning                                                   Default                 Possible values
@@ -67,7 +67,7 @@ Now, assuming you are in the directory where you want to build, execute the foll
 .. code-block:: bash
 
   cmake -DCMAKE_BUILD_TYPE=Release path_to_libcbor_dir
-  make cbor cbor_shared
+  make serializer cbor_shared
 
 Both the shared (``libcbor.so``) and the static (``libcbor.a``) libraries should now be in the ``src`` subdirectory.
 
@@ -99,7 +99,7 @@ You can verify that everything has been set up properly by creating a file with 
 
 .. code-block:: c
 
-    #include <cbor.h>
+    #include <serializer.h>
     #include <stdio.h>
 
     int main(int argc, char * argv[])
@@ -146,7 +146,7 @@ You can then adjust the build options. The defaults will work just fine. Hit 'Ge
 
 You can then adjust the build options. The defaults will work just fine. Hit 'Generate' when you are done.
 
-Open the shell, navigate to the output directory, and run ``mingw32-make cbor cbor_shared``.
+Open the shell, navigate to the output directory, and run ``mingw32-make serializer cbor_shared``.
 
 .. image:: img/win_4.png
 
@@ -162,15 +162,15 @@ Feel free to also try building and running some of the examples, e.g. ``mingw32-
 Troubleshooting
 ---------------------
 
-**cbor.h not found**: The headers directory is probably not in your include path. First, verify the installation
+**serializer.h not found**: The headers directory is probably not in your include path. First, verify the installation
 location by checking the installation log. If you used make, it will look something like
 
 .. code-block:: text
 
     ...
-    -- Installing: /usr/local/include/cbor
-    -- Installing: /usr/local/include/cbor/callbacks.h
-    -- Installing: /usr/local/include/cbor/encoding.h
+    -- Installing: /usr/local/include/serializer
+    -- Installing: /usr/local/include/serializer/callbacks.h
+    -- Installing: /usr/local/include/serializer/encoding.h
     ...
 
 Make sure that ``CMAKE_INSTALL_PREFIX`` (if you provided it) was correct. Including the path path during compilation should suffice, e.g.:

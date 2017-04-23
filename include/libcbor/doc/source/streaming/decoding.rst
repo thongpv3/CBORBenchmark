@@ -10,7 +10,7 @@ To get started, you might want to have a look at the simple streaming example:
 
 .. code-block:: c
 
-    #include "cbor.h"
+    #include "serializer.h"
     #include <stdio.h>
     #include <string.h>
 
@@ -18,7 +18,7 @@ To get started, you might want to have a look at the simple streaming example:
      * Illustrates how one might skim through a map (which is assumed to have
      * string keys and values only), looking for the value of a specific key
      *
-     * Use the examples/data/map.cbor input to test this.
+     * Use the examples/data/map.serializer input to test this.
      */
 
     const char * key = "a secret key";

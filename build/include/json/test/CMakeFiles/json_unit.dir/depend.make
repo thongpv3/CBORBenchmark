@@ -13,9 +13,9 @@ include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o: ../include/j
 include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o: ../include/json/test/thirdparty/catch/catch.hpp
 include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o: ../include/json/test/src/unit-capacity.cpp
 
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o: ../include/json/src/json.hpp
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o: ../include/json/test/thirdparty/catch/catch.hpp
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o: ../include/json/test/src/unit-cbor.cpp
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o: ../include/json/src/json.hpp
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o: ../include/json/test/thirdparty/catch/catch.hpp
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o: ../include/json/test/src/unit-serializer.cpp
 
 include/json/test/CMakeFiles/json_unit.dir/src/unit-class_const_iterator.cpp.o: ../include/json/src/json.hpp
 include/json/test/CMakeFiles/json_unit.dir/src/unit-class_const_iterator.cpp.o: ../include/json/test/thirdparty/catch/catch.hpp

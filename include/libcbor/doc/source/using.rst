@@ -29,28 +29,28 @@ namely
 Headers to include
 ---------------------
 
-The ``cbor.h`` header includes all the symbols. If, for any reason, you don't want to include all the exported symbols,
-feel free to use just some of the ``cbor/*.h`` headers:
+The ``serializer.h`` header includes all the symbols. If, for any reason, you don't want to include all the exported symbols,
+feel free to use just some of the ``serializer/*.h`` headers:
 
- - ``cbor/arrays.h`` - :doc:`api/type_4`
- - ``cbor/bytestrings.h`` - :doc:`api/type_2`
- - ``cbor/callbacks.h`` - Callbacks used for :doc:`streaming/decoding`
- - ``cbor/common.h`` - Common utilities - always transitively included
- - ``cbor/data.h`` - Data types definitions - always transitively included
- - ``cbor/encoding.h`` - Streaming encoders for :doc:`streaming/encoding`
- - ``cbor/floats_ctrls.h`` - :doc:`api/type_7`
- - ``cbor/ints.h`` - :doc:`api/type_0_1`
- - ``cbor/maps.h`` - :doc:`api/type_5`
- - ``cbor/serialization.h`` - High level serialization such as :func:`cbor_serialize`
- - ``cbor/streaming.h`` - Home of :func:`cbor_stream_decode`
- - ``cbor/strings.h`` - :doc:`api/type_3`
- - ``cbor/tags.h`` - :doc:`api/type_6`
+ - ``serializer/arrays.h`` - :doc:`api/type_4`
+ - ``serializer/bytestrings.h`` - :doc:`api/type_2`
+ - ``serializer/callbacks.h`` - Callbacks used for :doc:`streaming/decoding`
+ - ``serializer/common.h`` - Common utilities - always transitively included
+ - ``serializer/data.h`` - Data types definitions - always transitively included
+ - ``serializer/encoding.h`` - Streaming encoders for :doc:`streaming/encoding`
+ - ``serializer/floats_ctrls.h`` - :doc:`api/type_7`
+ - ``serializer/ints.h`` - :doc:`api/type_0_1`
+ - ``serializer/maps.h`` - :doc:`api/type_5`
+ - ``serializer/serialization.h`` - High level serialization such as :func:`cbor_serialize`
+ - ``serializer/streaming.h`` - Home of :func:`cbor_stream_decode`
+ - ``serializer/strings.h`` - :doc:`api/type_3`
+ - ``serializer/tags.h`` - :doc:`api/type_6`
 
 
 Using libcbor
 --------------
 
-If you want to get more familiar with CBOR, we recommend the `cbor.io <http://cbor.io/>`_ website. Once you get the grasp
+If you want to get more familiar with CBOR, we recommend the `serializer.io <http://serializer.io/>`_ website. Once you get the grasp
 of what is it CBOR does, the examples (located in the ``examples`` directory) should give you a good feel of the API. The
 :doc:`API documentation <api>` should then provide with all the information you may need.
 
@@ -59,7 +59,7 @@ of what is it CBOR does, the examples (located in the ``examples`` directory) sh
 
 .. code-block:: c
 
-    #include "cbor.h"
+    #include "serializer.h"
     #include <stdio.h>
 
     int main(int argc, char * argv[])
@@ -91,12 +91,12 @@ of what is it CBOR does, the examples (located in the ``examples`` directory) sh
 
 .. code-block:: c
 
-    #include "cbor.h"
+    #include "serializer.h"
     #include <stdio.h>
 
     /*
      * Reads data from a file. Example usage:
-     * $ ./examples/readfile examples/data/nested_array.cbor
+     * $ ./examples/readfile examples/data/nested_array.serializer
      */
 
     int main(int argc, char * argv[])
@@ -125,7 +125,7 @@ of what is it CBOR does, the examples (located in the ``examples`` directory) sh
 
 .. code-block:: c
 
-    #include "cbor.h"
+    #include "serializer.h"
     #include <stdio.h>
     #include <string.h>
 
@@ -133,7 +133,7 @@ of what is it CBOR does, the examples (located in the ``examples`` directory) sh
      * Illustrates how one might skim through a map (which is assumed to have
      * string keys and values only), looking for the value of a specific key
      *
-     * Use the examples/data/map.cbor input to test this.
+     * Use the examples/data/map.serializer input to test this.
      */
 
     const char * key = "a secret key";

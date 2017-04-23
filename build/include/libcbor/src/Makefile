@@ -179,19 +179,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-include/libcbor/src/CMakeFiles/cbor.dir/rule:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f CMakeFiles/Makefile2 include/libcbor/src/CMakeFiles/cbor.dir/rule
-.PHONY : include/libcbor/src/CMakeFiles/cbor.dir/rule
+include/libcbor/src/CMakeFiles/serializer.dir/rule:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f CMakeFiles/Makefile2 include/libcbor/src/CMakeFiles/serializer.dir/rule
+.PHONY : include/libcbor/src/CMakeFiles/serializer.dir/rule
 
 # Convenience name for target.
-cbor: include/libcbor/src/CMakeFiles/cbor.dir/rule
+serializer: include/libcbor/src/CMakeFiles/serializer.dir/rule
 
-.PHONY : cbor
+.PHONY : serializer
 
 # fast build rule for target.
-cbor/fast:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/build
-.PHONY : cbor/fast
+serializer/fast:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/build
+.PHONY : serializer/fast
 
 # Convenience name for target.
 include/libcbor/src/CMakeFiles/cbor_shared.dir/rule:
@@ -208,575 +208,575 @@ cbor_shared/fast:
 	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/build
 .PHONY : cbor_shared/fast
 
-cbor.o: cbor.c.o
+serializer.o: serializer.c.o
 
-.PHONY : cbor.o
-
-# target to build an object file
-cbor.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor.c.o
-.PHONY : cbor.c.o
-
-cbor.i: cbor.c.i
-
-.PHONY : cbor.i
-
-# target to preprocess a source file
-cbor.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor.c.i
-.PHONY : cbor.c.i
-
-cbor.s: cbor.c.s
-
-.PHONY : cbor.s
-
-# target to generate assembly for a file
-cbor.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor.c.s
-.PHONY : cbor.c.s
-
-cbor/arrays.o: cbor/arrays.c.o
-
-.PHONY : cbor/arrays.o
+.PHONY : serializer.o
 
 # target to build an object file
-cbor/arrays.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/arrays.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/arrays.c.o
-.PHONY : cbor/arrays.c.o
+serializer.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer.c.o
+.PHONY : serializer.c.o
 
-cbor/arrays.i: cbor/arrays.c.i
+serializer.i: serializer.c.i
 
-.PHONY : cbor/arrays.i
+.PHONY : serializer.i
 
 # target to preprocess a source file
-cbor/arrays.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/arrays.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/arrays.c.i
-.PHONY : cbor/arrays.c.i
+serializer.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer.c.i
+.PHONY : serializer.c.i
 
-cbor/arrays.s: cbor/arrays.c.s
+serializer.s: serializer.c.s
 
-.PHONY : cbor/arrays.s
+.PHONY : serializer.s
 
 # target to generate assembly for a file
-cbor/arrays.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/arrays.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/arrays.c.s
-.PHONY : cbor/arrays.c.s
+serializer.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer.c.s
+.PHONY : serializer.c.s
 
-cbor/bytestrings.o: cbor/bytestrings.c.o
+serializer/arrays.o: serializer/arrays.c.o
 
-.PHONY : cbor/bytestrings.o
+.PHONY : serializer/arrays.o
 
 # target to build an object file
-cbor/bytestrings.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/bytestrings.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/bytestrings.c.o
-.PHONY : cbor/bytestrings.c.o
+serializer/arrays.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/arrays.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/arrays.c.o
+.PHONY : serializer/arrays.c.o
 
-cbor/bytestrings.i: cbor/bytestrings.c.i
+serializer/arrays.i: serializer/arrays.c.i
 
-.PHONY : cbor/bytestrings.i
+.PHONY : serializer/arrays.i
 
 # target to preprocess a source file
-cbor/bytestrings.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/bytestrings.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/bytestrings.c.i
-.PHONY : cbor/bytestrings.c.i
+serializer/arrays.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/arrays.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/arrays.c.i
+.PHONY : serializer/arrays.c.i
 
-cbor/bytestrings.s: cbor/bytestrings.c.s
+serializer/arrays.s: serializer/arrays.c.s
 
-.PHONY : cbor/bytestrings.s
+.PHONY : serializer/arrays.s
 
 # target to generate assembly for a file
-cbor/bytestrings.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/bytestrings.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/bytestrings.c.s
-.PHONY : cbor/bytestrings.c.s
+serializer/arrays.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/arrays.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/arrays.c.s
+.PHONY : serializer/arrays.c.s
 
-cbor/callbacks.o: cbor/callbacks.c.o
+serializer/bytestrings.o: serializer/bytestrings.c.o
 
-.PHONY : cbor/callbacks.o
+.PHONY : serializer/bytestrings.o
 
 # target to build an object file
-cbor/callbacks.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/callbacks.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/callbacks.c.o
-.PHONY : cbor/callbacks.c.o
+serializer/bytestrings.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/bytestrings.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/bytestrings.c.o
+.PHONY : serializer/bytestrings.c.o
 
-cbor/callbacks.i: cbor/callbacks.c.i
+serializer/bytestrings.i: serializer/bytestrings.c.i
 
-.PHONY : cbor/callbacks.i
+.PHONY : serializer/bytestrings.i
 
 # target to preprocess a source file
-cbor/callbacks.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/callbacks.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/callbacks.c.i
-.PHONY : cbor/callbacks.c.i
+serializer/bytestrings.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/bytestrings.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/bytestrings.c.i
+.PHONY : serializer/bytestrings.c.i
 
-cbor/callbacks.s: cbor/callbacks.c.s
+serializer/bytestrings.s: serializer/bytestrings.c.s
 
-.PHONY : cbor/callbacks.s
+.PHONY : serializer/bytestrings.s
 
 # target to generate assembly for a file
-cbor/callbacks.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/callbacks.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/callbacks.c.s
-.PHONY : cbor/callbacks.c.s
+serializer/bytestrings.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/bytestrings.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/bytestrings.c.s
+.PHONY : serializer/bytestrings.c.s
 
-cbor/common.o: cbor/common.c.o
+serializer/callbacks.o: serializer/callbacks.c.o
 
-.PHONY : cbor/common.o
+.PHONY : serializer/callbacks.o
 
 # target to build an object file
-cbor/common.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/common.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/common.c.o
-.PHONY : cbor/common.c.o
+serializer/callbacks.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/callbacks.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/callbacks.c.o
+.PHONY : serializer/callbacks.c.o
 
-cbor/common.i: cbor/common.c.i
+serializer/callbacks.i: serializer/callbacks.c.i
 
-.PHONY : cbor/common.i
+.PHONY : serializer/callbacks.i
 
 # target to preprocess a source file
-cbor/common.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/common.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/common.c.i
-.PHONY : cbor/common.c.i
+serializer/callbacks.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/callbacks.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/callbacks.c.i
+.PHONY : serializer/callbacks.c.i
 
-cbor/common.s: cbor/common.c.s
+serializer/callbacks.s: serializer/callbacks.c.s
 
-.PHONY : cbor/common.s
+.PHONY : serializer/callbacks.s
 
 # target to generate assembly for a file
-cbor/common.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/common.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/common.c.s
-.PHONY : cbor/common.c.s
+serializer/callbacks.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/callbacks.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/callbacks.c.s
+.PHONY : serializer/callbacks.c.s
 
-cbor/encoding.o: cbor/encoding.c.o
+serializer/common.o: serializer/common.c.o
 
-.PHONY : cbor/encoding.o
+.PHONY : serializer/common.o
 
 # target to build an object file
-cbor/encoding.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/encoding.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/encoding.c.o
-.PHONY : cbor/encoding.c.o
+serializer/common.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/common.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/common.c.o
+.PHONY : serializer/common.c.o
 
-cbor/encoding.i: cbor/encoding.c.i
+serializer/common.i: serializer/common.c.i
 
-.PHONY : cbor/encoding.i
+.PHONY : serializer/common.i
 
 # target to preprocess a source file
-cbor/encoding.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/encoding.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/encoding.c.i
-.PHONY : cbor/encoding.c.i
+serializer/common.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/common.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/common.c.i
+.PHONY : serializer/common.c.i
 
-cbor/encoding.s: cbor/encoding.c.s
+serializer/common.s: serializer/common.c.s
 
-.PHONY : cbor/encoding.s
+.PHONY : serializer/common.s
 
 # target to generate assembly for a file
-cbor/encoding.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/encoding.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/encoding.c.s
-.PHONY : cbor/encoding.c.s
+serializer/common.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/common.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/common.c.s
+.PHONY : serializer/common.c.s
 
-cbor/floats_ctrls.o: cbor/floats_ctrls.c.o
+serializer/encoding.o: serializer/encoding.c.o
 
-.PHONY : cbor/floats_ctrls.o
+.PHONY : serializer/encoding.o
 
 # target to build an object file
-cbor/floats_ctrls.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/floats_ctrls.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/floats_ctrls.c.o
-.PHONY : cbor/floats_ctrls.c.o
+serializer/encoding.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/encoding.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/encoding.c.o
+.PHONY : serializer/encoding.c.o
 
-cbor/floats_ctrls.i: cbor/floats_ctrls.c.i
+serializer/encoding.i: serializer/encoding.c.i
 
-.PHONY : cbor/floats_ctrls.i
+.PHONY : serializer/encoding.i
 
 # target to preprocess a source file
-cbor/floats_ctrls.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/floats_ctrls.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/floats_ctrls.c.i
-.PHONY : cbor/floats_ctrls.c.i
+serializer/encoding.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/encoding.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/encoding.c.i
+.PHONY : serializer/encoding.c.i
 
-cbor/floats_ctrls.s: cbor/floats_ctrls.c.s
+serializer/encoding.s: serializer/encoding.c.s
 
-.PHONY : cbor/floats_ctrls.s
+.PHONY : serializer/encoding.s
 
 # target to generate assembly for a file
-cbor/floats_ctrls.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/floats_ctrls.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/floats_ctrls.c.s
-.PHONY : cbor/floats_ctrls.c.s
+serializer/encoding.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/encoding.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/encoding.c.s
+.PHONY : serializer/encoding.c.s
 
-cbor/internal/builder_callbacks.o: cbor/internal/builder_callbacks.c.o
+serializer/floats_ctrls.o: serializer/floats_ctrls.c.o
 
-.PHONY : cbor/internal/builder_callbacks.o
+.PHONY : serializer/floats_ctrls.o
 
 # target to build an object file
-cbor/internal/builder_callbacks.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/builder_callbacks.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/builder_callbacks.c.o
-.PHONY : cbor/internal/builder_callbacks.c.o
+serializer/floats_ctrls.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/floats_ctrls.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/floats_ctrls.c.o
+.PHONY : serializer/floats_ctrls.c.o
 
-cbor/internal/builder_callbacks.i: cbor/internal/builder_callbacks.c.i
+serializer/floats_ctrls.i: serializer/floats_ctrls.c.i
 
-.PHONY : cbor/internal/builder_callbacks.i
+.PHONY : serializer/floats_ctrls.i
 
 # target to preprocess a source file
-cbor/internal/builder_callbacks.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/builder_callbacks.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/builder_callbacks.c.i
-.PHONY : cbor/internal/builder_callbacks.c.i
+serializer/floats_ctrls.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/floats_ctrls.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/floats_ctrls.c.i
+.PHONY : serializer/floats_ctrls.c.i
 
-cbor/internal/builder_callbacks.s: cbor/internal/builder_callbacks.c.s
+serializer/floats_ctrls.s: serializer/floats_ctrls.c.s
 
-.PHONY : cbor/internal/builder_callbacks.s
+.PHONY : serializer/floats_ctrls.s
 
 # target to generate assembly for a file
-cbor/internal/builder_callbacks.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/builder_callbacks.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/builder_callbacks.c.s
-.PHONY : cbor/internal/builder_callbacks.c.s
+serializer/floats_ctrls.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/floats_ctrls.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/floats_ctrls.c.s
+.PHONY : serializer/floats_ctrls.c.s
 
-cbor/internal/encoders.o: cbor/internal/encoders.c.o
+serializer/internal/builder_callbacks.o: serializer/internal/builder_callbacks.c.o
 
-.PHONY : cbor/internal/encoders.o
+.PHONY : serializer/internal/builder_callbacks.o
 
 # target to build an object file
-cbor/internal/encoders.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/encoders.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/encoders.c.o
-.PHONY : cbor/internal/encoders.c.o
+serializer/internal/builder_callbacks.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/builder_callbacks.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/builder_callbacks.c.o
+.PHONY : serializer/internal/builder_callbacks.c.o
 
-cbor/internal/encoders.i: cbor/internal/encoders.c.i
+serializer/internal/builder_callbacks.i: serializer/internal/builder_callbacks.c.i
 
-.PHONY : cbor/internal/encoders.i
+.PHONY : serializer/internal/builder_callbacks.i
 
 # target to preprocess a source file
-cbor/internal/encoders.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/encoders.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/encoders.c.i
-.PHONY : cbor/internal/encoders.c.i
+serializer/internal/builder_callbacks.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/builder_callbacks.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/builder_callbacks.c.i
+.PHONY : serializer/internal/builder_callbacks.c.i
 
-cbor/internal/encoders.s: cbor/internal/encoders.c.s
+serializer/internal/builder_callbacks.s: serializer/internal/builder_callbacks.c.s
 
-.PHONY : cbor/internal/encoders.s
+.PHONY : serializer/internal/builder_callbacks.s
 
 # target to generate assembly for a file
-cbor/internal/encoders.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/encoders.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/encoders.c.s
-.PHONY : cbor/internal/encoders.c.s
+serializer/internal/builder_callbacks.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/builder_callbacks.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/builder_callbacks.c.s
+.PHONY : serializer/internal/builder_callbacks.c.s
 
-cbor/internal/loaders.o: cbor/internal/loaders.c.o
+serializer/internal/encoders.o: serializer/internal/encoders.c.o
 
-.PHONY : cbor/internal/loaders.o
+.PHONY : serializer/internal/encoders.o
 
 # target to build an object file
-cbor/internal/loaders.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/loaders.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/loaders.c.o
-.PHONY : cbor/internal/loaders.c.o
+serializer/internal/encoders.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/encoders.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/encoders.c.o
+.PHONY : serializer/internal/encoders.c.o
 
-cbor/internal/loaders.i: cbor/internal/loaders.c.i
+serializer/internal/encoders.i: serializer/internal/encoders.c.i
 
-.PHONY : cbor/internal/loaders.i
+.PHONY : serializer/internal/encoders.i
 
 # target to preprocess a source file
-cbor/internal/loaders.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/loaders.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/loaders.c.i
-.PHONY : cbor/internal/loaders.c.i
+serializer/internal/encoders.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/encoders.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/encoders.c.i
+.PHONY : serializer/internal/encoders.c.i
 
-cbor/internal/loaders.s: cbor/internal/loaders.c.s
+serializer/internal/encoders.s: serializer/internal/encoders.c.s
 
-.PHONY : cbor/internal/loaders.s
+.PHONY : serializer/internal/encoders.s
 
 # target to generate assembly for a file
-cbor/internal/loaders.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/loaders.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/loaders.c.s
-.PHONY : cbor/internal/loaders.c.s
+serializer/internal/encoders.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/encoders.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/encoders.c.s
+.PHONY : serializer/internal/encoders.c.s
 
-cbor/internal/memory_utils.o: cbor/internal/memory_utils.c.o
+serializer/internal/loaders.o: serializer/internal/loaders.c.o
 
-.PHONY : cbor/internal/memory_utils.o
+.PHONY : serializer/internal/loaders.o
 
 # target to build an object file
-cbor/internal/memory_utils.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/memory_utils.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/memory_utils.c.o
-.PHONY : cbor/internal/memory_utils.c.o
+serializer/internal/loaders.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/loaders.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/loaders.c.o
+.PHONY : serializer/internal/loaders.c.o
 
-cbor/internal/memory_utils.i: cbor/internal/memory_utils.c.i
+serializer/internal/loaders.i: serializer/internal/loaders.c.i
 
-.PHONY : cbor/internal/memory_utils.i
+.PHONY : serializer/internal/loaders.i
 
 # target to preprocess a source file
-cbor/internal/memory_utils.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/memory_utils.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/memory_utils.c.i
-.PHONY : cbor/internal/memory_utils.c.i
+serializer/internal/loaders.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/loaders.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/loaders.c.i
+.PHONY : serializer/internal/loaders.c.i
 
-cbor/internal/memory_utils.s: cbor/internal/memory_utils.c.s
+serializer/internal/loaders.s: serializer/internal/loaders.c.s
 
-.PHONY : cbor/internal/memory_utils.s
+.PHONY : serializer/internal/loaders.s
 
 # target to generate assembly for a file
-cbor/internal/memory_utils.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/memory_utils.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/memory_utils.c.s
-.PHONY : cbor/internal/memory_utils.c.s
+serializer/internal/loaders.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/loaders.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/loaders.c.s
+.PHONY : serializer/internal/loaders.c.s
 
-cbor/internal/stack.o: cbor/internal/stack.c.o
+serializer/internal/memory_utils.o: serializer/internal/memory_utils.c.o
 
-.PHONY : cbor/internal/stack.o
+.PHONY : serializer/internal/memory_utils.o
 
 # target to build an object file
-cbor/internal/stack.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/stack.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/stack.c.o
-.PHONY : cbor/internal/stack.c.o
+serializer/internal/memory_utils.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/memory_utils.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/memory_utils.c.o
+.PHONY : serializer/internal/memory_utils.c.o
 
-cbor/internal/stack.i: cbor/internal/stack.c.i
+serializer/internal/memory_utils.i: serializer/internal/memory_utils.c.i
 
-.PHONY : cbor/internal/stack.i
+.PHONY : serializer/internal/memory_utils.i
 
 # target to preprocess a source file
-cbor/internal/stack.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/stack.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/stack.c.i
-.PHONY : cbor/internal/stack.c.i
+serializer/internal/memory_utils.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/memory_utils.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/memory_utils.c.i
+.PHONY : serializer/internal/memory_utils.c.i
 
-cbor/internal/stack.s: cbor/internal/stack.c.s
+serializer/internal/memory_utils.s: serializer/internal/memory_utils.c.s
 
-.PHONY : cbor/internal/stack.s
+.PHONY : serializer/internal/memory_utils.s
 
 # target to generate assembly for a file
-cbor/internal/stack.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/stack.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/stack.c.s
-.PHONY : cbor/internal/stack.c.s
+serializer/internal/memory_utils.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/memory_utils.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/memory_utils.c.s
+.PHONY : serializer/internal/memory_utils.c.s
 
-cbor/internal/unicode.o: cbor/internal/unicode.c.o
+serializer/internal/stack.o: serializer/internal/stack.c.o
 
-.PHONY : cbor/internal/unicode.o
+.PHONY : serializer/internal/stack.o
 
 # target to build an object file
-cbor/internal/unicode.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/unicode.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/unicode.c.o
-.PHONY : cbor/internal/unicode.c.o
+serializer/internal/stack.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/stack.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/stack.c.o
+.PHONY : serializer/internal/stack.c.o
 
-cbor/internal/unicode.i: cbor/internal/unicode.c.i
+serializer/internal/stack.i: serializer/internal/stack.c.i
 
-.PHONY : cbor/internal/unicode.i
+.PHONY : serializer/internal/stack.i
 
 # target to preprocess a source file
-cbor/internal/unicode.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/unicode.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/unicode.c.i
-.PHONY : cbor/internal/unicode.c.i
+serializer/internal/stack.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/stack.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/stack.c.i
+.PHONY : serializer/internal/stack.c.i
 
-cbor/internal/unicode.s: cbor/internal/unicode.c.s
+serializer/internal/stack.s: serializer/internal/stack.c.s
 
-.PHONY : cbor/internal/unicode.s
+.PHONY : serializer/internal/stack.s
 
 # target to generate assembly for a file
-cbor/internal/unicode.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/internal/unicode.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/internal/unicode.c.s
-.PHONY : cbor/internal/unicode.c.s
+serializer/internal/stack.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/stack.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/stack.c.s
+.PHONY : serializer/internal/stack.c.s
 
-cbor/ints.o: cbor/ints.c.o
+serializer/internal/unicode.o: serializer/internal/unicode.c.o
 
-.PHONY : cbor/ints.o
+.PHONY : serializer/internal/unicode.o
 
 # target to build an object file
-cbor/ints.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/ints.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/ints.c.o
-.PHONY : cbor/ints.c.o
+serializer/internal/unicode.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/unicode.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/unicode.c.o
+.PHONY : serializer/internal/unicode.c.o
 
-cbor/ints.i: cbor/ints.c.i
+serializer/internal/unicode.i: serializer/internal/unicode.c.i
 
-.PHONY : cbor/ints.i
+.PHONY : serializer/internal/unicode.i
 
 # target to preprocess a source file
-cbor/ints.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/ints.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/ints.c.i
-.PHONY : cbor/ints.c.i
+serializer/internal/unicode.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/unicode.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/unicode.c.i
+.PHONY : serializer/internal/unicode.c.i
 
-cbor/ints.s: cbor/ints.c.s
+serializer/internal/unicode.s: serializer/internal/unicode.c.s
 
-.PHONY : cbor/ints.s
+.PHONY : serializer/internal/unicode.s
 
 # target to generate assembly for a file
-cbor/ints.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/ints.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/ints.c.s
-.PHONY : cbor/ints.c.s
+serializer/internal/unicode.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/internal/unicode.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/internal/unicode.c.s
+.PHONY : serializer/internal/unicode.c.s
 
-cbor/maps.o: cbor/maps.c.o
+serializer/ints.o: serializer/ints.c.o
 
-.PHONY : cbor/maps.o
+.PHONY : serializer/ints.o
 
 # target to build an object file
-cbor/maps.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/maps.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/maps.c.o
-.PHONY : cbor/maps.c.o
+serializer/ints.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/ints.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/ints.c.o
+.PHONY : serializer/ints.c.o
 
-cbor/maps.i: cbor/maps.c.i
+serializer/ints.i: serializer/ints.c.i
 
-.PHONY : cbor/maps.i
+.PHONY : serializer/ints.i
 
 # target to preprocess a source file
-cbor/maps.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/maps.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/maps.c.i
-.PHONY : cbor/maps.c.i
+serializer/ints.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/ints.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/ints.c.i
+.PHONY : serializer/ints.c.i
 
-cbor/maps.s: cbor/maps.c.s
+serializer/ints.s: serializer/ints.c.s
 
-.PHONY : cbor/maps.s
+.PHONY : serializer/ints.s
 
 # target to generate assembly for a file
-cbor/maps.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/maps.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/maps.c.s
-.PHONY : cbor/maps.c.s
+serializer/ints.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/ints.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/ints.c.s
+.PHONY : serializer/ints.c.s
 
-cbor/serialization.o: cbor/serialization.c.o
+serializer/maps.o: serializer/maps.c.o
 
-.PHONY : cbor/serialization.o
+.PHONY : serializer/maps.o
 
 # target to build an object file
-cbor/serialization.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/serialization.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/serialization.c.o
-.PHONY : cbor/serialization.c.o
+serializer/maps.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/maps.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/maps.c.o
+.PHONY : serializer/maps.c.o
 
-cbor/serialization.i: cbor/serialization.c.i
+serializer/maps.i: serializer/maps.c.i
 
-.PHONY : cbor/serialization.i
+.PHONY : serializer/maps.i
 
 # target to preprocess a source file
-cbor/serialization.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/serialization.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/serialization.c.i
-.PHONY : cbor/serialization.c.i
+serializer/maps.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/maps.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/maps.c.i
+.PHONY : serializer/maps.c.i
 
-cbor/serialization.s: cbor/serialization.c.s
+serializer/maps.s: serializer/maps.c.s
 
-.PHONY : cbor/serialization.s
+.PHONY : serializer/maps.s
 
 # target to generate assembly for a file
-cbor/serialization.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/serialization.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/serialization.c.s
-.PHONY : cbor/serialization.c.s
+serializer/maps.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/maps.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/maps.c.s
+.PHONY : serializer/maps.c.s
 
-cbor/streaming.o: cbor/streaming.c.o
+serializer/serialization.o: serializer/serialization.c.o
 
-.PHONY : cbor/streaming.o
+.PHONY : serializer/serialization.o
 
 # target to build an object file
-cbor/streaming.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/streaming.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/streaming.c.o
-.PHONY : cbor/streaming.c.o
+serializer/serialization.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/serialization.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/serialization.c.o
+.PHONY : serializer/serialization.c.o
 
-cbor/streaming.i: cbor/streaming.c.i
+serializer/serialization.i: serializer/serialization.c.i
 
-.PHONY : cbor/streaming.i
+.PHONY : serializer/serialization.i
 
 # target to preprocess a source file
-cbor/streaming.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/streaming.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/streaming.c.i
-.PHONY : cbor/streaming.c.i
+serializer/serialization.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/serialization.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/serialization.c.i
+.PHONY : serializer/serialization.c.i
 
-cbor/streaming.s: cbor/streaming.c.s
+serializer/serialization.s: serializer/serialization.c.s
 
-.PHONY : cbor/streaming.s
+.PHONY : serializer/serialization.s
 
 # target to generate assembly for a file
-cbor/streaming.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/streaming.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/streaming.c.s
-.PHONY : cbor/streaming.c.s
+serializer/serialization.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/serialization.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/serialization.c.s
+.PHONY : serializer/serialization.c.s
 
-cbor/strings.o: cbor/strings.c.o
+serializer/streaming.o: serializer/streaming.c.o
 
-.PHONY : cbor/strings.o
+.PHONY : serializer/streaming.o
 
 # target to build an object file
-cbor/strings.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/strings.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/strings.c.o
-.PHONY : cbor/strings.c.o
+serializer/streaming.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/streaming.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/streaming.c.o
+.PHONY : serializer/streaming.c.o
 
-cbor/strings.i: cbor/strings.c.i
+serializer/streaming.i: serializer/streaming.c.i
 
-.PHONY : cbor/strings.i
+.PHONY : serializer/streaming.i
 
 # target to preprocess a source file
-cbor/strings.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/strings.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/strings.c.i
-.PHONY : cbor/strings.c.i
+serializer/streaming.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/streaming.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/streaming.c.i
+.PHONY : serializer/streaming.c.i
 
-cbor/strings.s: cbor/strings.c.s
+serializer/streaming.s: serializer/streaming.c.s
 
-.PHONY : cbor/strings.s
+.PHONY : serializer/streaming.s
 
 # target to generate assembly for a file
-cbor/strings.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/strings.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/strings.c.s
-.PHONY : cbor/strings.c.s
+serializer/streaming.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/streaming.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/streaming.c.s
+.PHONY : serializer/streaming.c.s
 
-cbor/tags.o: cbor/tags.c.o
+serializer/strings.o: serializer/strings.c.o
 
-.PHONY : cbor/tags.o
+.PHONY : serializer/strings.o
 
 # target to build an object file
-cbor/tags.c.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/tags.c.o
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/tags.c.o
-.PHONY : cbor/tags.c.o
+serializer/strings.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/strings.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/strings.c.o
+.PHONY : serializer/strings.c.o
 
-cbor/tags.i: cbor/tags.c.i
+serializer/strings.i: serializer/strings.c.i
 
-.PHONY : cbor/tags.i
+.PHONY : serializer/strings.i
 
 # target to preprocess a source file
-cbor/tags.c.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/tags.c.i
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/tags.c.i
-.PHONY : cbor/tags.c.i
+serializer/strings.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/strings.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/strings.c.i
+.PHONY : serializer/strings.c.i
 
-cbor/tags.s: cbor/tags.c.s
+serializer/strings.s: serializer/strings.c.s
 
-.PHONY : cbor/tags.s
+.PHONY : serializer/strings.s
 
 # target to generate assembly for a file
-cbor/tags.c.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/cbor/tags.c.s
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/cbor/tags.c.s
-.PHONY : cbor/tags.c.s
+serializer/strings.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/strings.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/strings.c.s
+.PHONY : serializer/strings.c.s
+
+serializer/tags.o: serializer/tags.c.o
+
+.PHONY : serializer/tags.o
+
+# target to build an object file
+serializer/tags.c.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/tags.c.o
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/tags.c.o
+.PHONY : serializer/tags.c.o
+
+serializer/tags.i: serializer/tags.c.i
+
+.PHONY : serializer/tags.i
+
+# target to preprocess a source file
+serializer/tags.c.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/tags.c.i
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/tags.c.i
+.PHONY : serializer/tags.c.i
+
+serializer/tags.s: serializer/tags.c.s
+
+.PHONY : serializer/tags.s
+
+# target to generate assembly for a file
+serializer/tags.c.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/serializer/tags.c.s
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/libcbor/src/CMakeFiles/cbor_shared.dir/build.make include/libcbor/src/CMakeFiles/cbor_shared.dir/serializer/tags.c.s
+.PHONY : serializer/tags.c.s
 
 # Help Target
 help:
@@ -789,68 +789,68 @@ help:
 	@echo "... edit_cache"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... cbor"
+	@echo "... serializer"
 	@echo "... rebuild_cache"
 	@echo "... cbor_shared"
 	@echo "... package"
 	@echo "... package_source"
-	@echo "... cbor.o"
-	@echo "... cbor.i"
-	@echo "... cbor.s"
-	@echo "... cbor/arrays.o"
-	@echo "... cbor/arrays.i"
-	@echo "... cbor/arrays.s"
-	@echo "... cbor/bytestrings.o"
-	@echo "... cbor/bytestrings.i"
-	@echo "... cbor/bytestrings.s"
-	@echo "... cbor/callbacks.o"
-	@echo "... cbor/callbacks.i"
-	@echo "... cbor/callbacks.s"
-	@echo "... cbor/common.o"
-	@echo "... cbor/common.i"
-	@echo "... cbor/common.s"
-	@echo "... cbor/encoding.o"
-	@echo "... cbor/encoding.i"
-	@echo "... cbor/encoding.s"
-	@echo "... cbor/floats_ctrls.o"
-	@echo "... cbor/floats_ctrls.i"
-	@echo "... cbor/floats_ctrls.s"
-	@echo "... cbor/internal/builder_callbacks.o"
-	@echo "... cbor/internal/builder_callbacks.i"
-	@echo "... cbor/internal/builder_callbacks.s"
-	@echo "... cbor/internal/encoders.o"
-	@echo "... cbor/internal/encoders.i"
-	@echo "... cbor/internal/encoders.s"
-	@echo "... cbor/internal/loaders.o"
-	@echo "... cbor/internal/loaders.i"
-	@echo "... cbor/internal/loaders.s"
-	@echo "... cbor/internal/memory_utils.o"
-	@echo "... cbor/internal/memory_utils.i"
-	@echo "... cbor/internal/memory_utils.s"
-	@echo "... cbor/internal/stack.o"
-	@echo "... cbor/internal/stack.i"
-	@echo "... cbor/internal/stack.s"
-	@echo "... cbor/internal/unicode.o"
-	@echo "... cbor/internal/unicode.i"
-	@echo "... cbor/internal/unicode.s"
-	@echo "... cbor/ints.o"
-	@echo "... cbor/ints.i"
-	@echo "... cbor/ints.s"
-	@echo "... cbor/maps.o"
-	@echo "... cbor/maps.i"
-	@echo "... cbor/maps.s"
-	@echo "... cbor/serialization.o"
-	@echo "... cbor/serialization.i"
-	@echo "... cbor/serialization.s"
-	@echo "... cbor/streaming.o"
-	@echo "... cbor/streaming.i"
-	@echo "... cbor/streaming.s"
-	@echo "... cbor/strings.o"
-	@echo "... cbor/strings.i"
-	@echo "... cbor/strings.s"
-	@echo "... cbor/tags.o"
-	@echo "... cbor/tags.i"
-	@echo "... cbor/tags.s"
+	@echo "... serializer.o"
+	@echo "... serializer.i"
+	@echo "... serializer.s"
+	@echo "... serializer/arrays.o"
+	@echo "... serializer/arrays.i"
+	@echo "... serializer/arrays.s"
+	@echo "... serializer/bytestrings.o"
+	@echo "... serializer/bytestrings.i"
+	@echo "... serializer/bytestrings.s"
+	@echo "... serializer/callbacks.o"
+	@echo "... serializer/callbacks.i"
+	@echo "... serializer/callbacks.s"
+	@echo "... serializer/common.o"
+	@echo "... serializer/common.i"
+	@echo "... serializer/common.s"
+	@echo "... serializer/encoding.o"
+	@echo "... serializer/encoding.i"
+	@echo "... serializer/encoding.s"
+	@echo "... serializer/floats_ctrls.o"
+	@echo "... serializer/floats_ctrls.i"
+	@echo "... serializer/floats_ctrls.s"
+	@echo "... serializer/internal/builder_callbacks.o"
+	@echo "... serializer/internal/builder_callbacks.i"
+	@echo "... serializer/internal/builder_callbacks.s"
+	@echo "... serializer/internal/encoders.o"
+	@echo "... serializer/internal/encoders.i"
+	@echo "... serializer/internal/encoders.s"
+	@echo "... serializer/internal/loaders.o"
+	@echo "... serializer/internal/loaders.i"
+	@echo "... serializer/internal/loaders.s"
+	@echo "... serializer/internal/memory_utils.o"
+	@echo "... serializer/internal/memory_utils.i"
+	@echo "... serializer/internal/memory_utils.s"
+	@echo "... serializer/internal/stack.o"
+	@echo "... serializer/internal/stack.i"
+	@echo "... serializer/internal/stack.s"
+	@echo "... serializer/internal/unicode.o"
+	@echo "... serializer/internal/unicode.i"
+	@echo "... serializer/internal/unicode.s"
+	@echo "... serializer/ints.o"
+	@echo "... serializer/ints.i"
+	@echo "... serializer/ints.s"
+	@echo "... serializer/maps.o"
+	@echo "... serializer/maps.i"
+	@echo "... serializer/maps.s"
+	@echo "... serializer/serialization.o"
+	@echo "... serializer/serialization.i"
+	@echo "... serializer/serialization.s"
+	@echo "... serializer/streaming.o"
+	@echo "... serializer/streaming.i"
+	@echo "... serializer/streaming.s"
+	@echo "... serializer/strings.o"
+	@echo "... serializer/strings.i"
+	@echo "... serializer/strings.s"
+	@echo "... serializer/tags.o"
+	@echo "... serializer/tags.i"
+	@echo "... serializer/tags.s"
 .PHONY : help
 
 

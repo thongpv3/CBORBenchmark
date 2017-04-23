@@ -9,30 +9,30 @@
 #include <memory>
 #include <unordered_map>
 
-namespace cbor {
+namespace serializer {
 
-    class cbor_map;
-    class cbor_text;
+    class map;
+    class text;
 
-    class cbor_item {
+    class item {
     public:
         using string_type = std::string;
         //todo use other data structure preserves order of insertion
-        using map_type = std::map<string_type, std::shared_ptr<cbor_item>>;
+        using map_type = std::map<string_type, std::shared_ptr<item>>;
         using map_ptr = std::shared_ptr<map_type>;
-        using array_type = std::vector<std::shared_ptr<cbor_item>>;
+        using array_type = std::vector<std::shared_ptr<item>>;
         using array_ptr = std::shared_ptr<array_type>;
-        using item_ptr = std::shared_ptr<cbor_item>;
+        using item_ptr = std::shared_ptr<item>;
 
-        enum class cbor_type : int8_t {
-            /* arithmetic_type store in this format: [00xx][yyyy]
+        enum class item_type : int8_t {
+            /* arithmetic_type store in this types: [00xx][yyyy]
             * xx = 1,2,3,4 corresponding to bitwidth = 8,16,32, 64
             * yy = 0, 1, 7 corresponding too value of UINT, NEGINT, FLOAT in cbor_type
             * */
             UINT=0, NEGINT=1, BYTE_STRING=2, TEXT_STRING=3, ARRAY=4, MAP=5, TAGGING=6, FLOAT=7
         };
 
-        virtual cbor_type type() = 0;
+        virtual item_type type() = 0;
 
         map_ptr as_map();
 
@@ -52,7 +52,7 @@ namespace cbor {
         virtual std::string to_string() = 0;
     };
 
-    class cbor_map : public cbor_item {
+    class map : public item {
     public:
         using key_type = map_type::key_type;
         using value_type = map_type::value_type;
@@ -60,9 +60,9 @@ namespace cbor {
         map_ptr items = std::make_shared<map_type>();
         template <typename T, typename ...Args>
         void insert(key_type key, T value, Args &&...args) {
-            static_assert(std::is_base_of<cbor::cbor_item, T>::value, "T must derived from cbor::cbor_item");
-            insert(std::forward<Args>(args)...);
+            static_assert(std::is_base_of<item, T>::value, "T must derived from serializer::item");
             items->emplace(key, std::shared_ptr<T>(new T(value)));
+            insert(std::forward<Args>(args)...);
         };
 
         template <typename T>
@@ -75,15 +75,15 @@ namespace cbor {
         }
 
         template<typename T, typename ...Args>
-        cbor_map(key_type key, T value, Args &&...args) {
-            static_assert(std::is_base_of<cbor::cbor_item, T>::value, "T must derived from cbor::cbor_item");
+        map(key_type key, T value, Args &&...args) {
+            static_assert(std::is_base_of<item, T>::value, "T must derived from serializer::cbor_item");
             insert(key, value, std::forward<Args>(args)...);
         }
 
-        cbor_map() {}
+        map() {}
 
-        cbor_type type() override {
-            return cbor_type::MAP;
+        item_type type() override {
+            return item_type::MAP;
         }
 
         std::string to_string() override {
@@ -95,27 +95,27 @@ namespace cbor {
         }
 
     private:
-        map_ptr map() {
+        map_ptr value() {
             return std::shared_ptr<map_type>(items);
         }
-        friend class cbor_item;
+        friend class item;
     };
 
-    class cbor_text : public cbor_item {
+    class text : public item {
     private:
         string_type v;
 
     public:
         using value_type = string_type;
 
-        cbor_text(const value_type &value) : v(value) {}
+        text(const value_type &value) : v(value) {}
 
         value_type value() {
             return v;
         }
 
-        cbor_type type() override {
-            return cbor_type::TEXT_STRING;
+        item_type type() override {
+            return item_type::TEXT_STRING;
         }
 
         std::string to_string() override {
@@ -123,7 +123,7 @@ namespace cbor {
         }
     };
 
-    class cbor_negint : public cbor_item {
+    class negetive_int : public item {
     public:
         using value_type = unsigned long;
 
@@ -132,7 +132,7 @@ namespace cbor {
         uint8_t bw;
     public:
         template <typename T>
-        cbor_negint(T value) : v(value>0?value:-value), bw(sizeof(T)){
+        negetive_int(T value) : v(value>0?value:-value), bw(sizeof(T)){
             static_assert(std::is_integral<T>::value, "T must be a signed type");
         }
 
@@ -142,8 +142,8 @@ namespace cbor {
             return static_cast<T>(-v);
         }
 
-        cbor_type type() override {
-                return cbor_type::NEGINT;
+        item_type type() override {
+                return item_type::NEGINT;
         }
 
         uint8_t byte_width() {
@@ -155,7 +155,7 @@ namespace cbor {
         }
     };
 
-    class cbor_uint : public cbor_item {
+    class unsigned_int : public item {
     public:
         using value_type = unsigned long;
 
@@ -164,7 +164,7 @@ namespace cbor {
         uint8_t bw;
     public:
         template <typename T>
-        cbor_uint(T value) : v(value), bw(sizeof(T)){
+        unsigned_int(T value) : v(value), bw(sizeof(T)){
             static_assert(std::is_unsigned<T>::value, "T must be an unsigned type");
         }
 
@@ -174,8 +174,8 @@ namespace cbor {
             return static_cast<T>(v);
         }
 
-        cbor_type type() override {
-            return cbor_type::UINT;
+        item_type type() override {
+            return item_type::UINT;
         }
 
         uint8_t byte_width() {
@@ -187,7 +187,7 @@ namespace cbor {
         }
     };
 
-    class cbor_float : public cbor_item {
+    class floating_point : public item {
     public:
         using value_type = double;
 
@@ -196,7 +196,7 @@ namespace cbor {
         uint8_t bw;
     public:
         template <typename T>
-        cbor_float(T value) : v(value), bw(sizeof(T)){
+        floating_point(T value) : v(value), bw(sizeof(T)){
             static_assert(std::is_floating_point<T>::value, "T must be a floating point type");
         }
 
@@ -206,8 +206,8 @@ namespace cbor {
             return static_cast<T>(v);
         }
 
-        cbor_type type() override {
-            return cbor_type::FLOAT;
+        item_type type() override {
+            return item_type::FLOAT;
         }
 
         uint8_t byte_width() {
@@ -221,7 +221,7 @@ namespace cbor {
 
 
 
-    class cbor_array : public cbor_item {
+    class array : public item {
     public:
         using value_type = array_type::value_type;
 
@@ -231,8 +231,8 @@ namespace cbor {
     public:
         template <typename T, typename ...Args>
         void insert(T value, Args &&...args) {
-            static_assert(std::is_base_of<cbor_item, T>::value, "T must derived from cbor::cbor_item");
-            items->emplace_back(std::shared_ptr<cbor_item>(new T(value)));
+            static_assert(std::is_base_of<item, T>::value, "T must derived from serializer::cbor_item");
+            items->emplace_back(std::shared_ptr<item>(new T(value)));
             insert(std::forward<Args>(args)...);
         };
 
@@ -246,14 +246,14 @@ namespace cbor {
         }
 
         template <typename T, typename ...Args>
-        cbor_array(T value, Args&& ...args) {
+        array(T value, Args&& ...args) {
             insert(value, std::forward<Args>(args)...);
         };
 
-        cbor_array() {}
+        array() {}
 
-        cbor_type type() override {
-            return cbor_type::ARRAY;
+        item_type type() override {
+            return item_type::ARRAY;
         }
 
         std::string to_string() override {
@@ -265,40 +265,40 @@ namespace cbor {
         }
 
     private:
-        std::shared_ptr<array_type> array() {
+        std::shared_ptr<array_type> value() {
             return items;
         }
-        friend class cbor_item;
+        friend class item;
     };
 
-    cbor_item::map_ptr cbor_item::as_map()  {
-        return static_cast<cbor_map*>(this)->map();
+    item::map_ptr item::as_map()  {
+        return static_cast<map*>(this)->value();
     }
 
-    cbor_item::array_ptr cbor_item::as_array() {
-        return static_cast<cbor_array*>(this)->array();
+    item::array_ptr item::as_array() {
+        return static_cast<array *>(this)->value();
     }
 
     template<typename T>
-    T cbor_item::as_signed() {
+    T item::as_signed() {
         static_assert(std::is_signed<T>::value, "T must be a signed type");
-        return static_cast<T>(static_cast<cbor_negint*>(this)->value());
+        return static_cast<T>(static_cast<negetive_int*>(this)->value());
     }
 
     template<typename T>
-    T cbor_item::as_unsigned() {
+    T item::as_unsigned() {
         static_assert(std::is_unsigned<T>::value, "T must be an unsigned type");
-        return static_cast<T>(static_cast<cbor_uint*>(this)->value());
+        return static_cast<T>(static_cast<unsigned_int*>(this)->value());
     }
 
     template<typename T>
-    T cbor_item::as_floating_point() {
+    T item::as_floating_point() {
         static_assert(std::is_floating_point<T>::value, "T must be a floating point type");
-        return static_cast<T>(static_cast<cbor_float*>(this)->value());
+        return static_cast<T>(static_cast<floating_point*>(this)->value());
     }
 
-    cbor_item::string_type cbor_item::as_text() {
-        return static_cast<cbor_text*>(this)->value();
+    item::string_type item::as_text() {
+        return static_cast<text*>(this)->value();
     }
 
 }

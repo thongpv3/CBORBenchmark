@@ -16,7 +16,7 @@ void usage()
 
 /*
  * Reads data from a file. Example usage:
- * $ ./examples/readfile examples/data/nested_array.cbor
+ * $ ./examples/readfile examples/data/nested_array.serializer
  */
 
 int main(int argc, char * argv[])

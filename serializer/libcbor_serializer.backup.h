@@ -6,7 +6,7 @@
 
 #include <stack>
 #include "serializer.h"
-#include "cbor_item.h"
+#include "item.h"
 
 namespace cbor {
     template<>

@@ -129,28 +129,28 @@ include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o.provides: inc
 include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o.provides.build: include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o
 
 
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o: include/json/test/CMakeFiles/json_unit.dir/flags.make
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o: ../include/json/test/src/unit-cbor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thongpv3/CLionProjects/CBORBenchmark/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o"
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build/include/json/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o -c /home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-cbor.cpp
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o: include/json/test/CMakeFiles/json_unit.dir/flags.make
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o: ../include/json/test/src/unit-serializer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thongpv3/CLionProjects/CBORBenchmark/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o"
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build/include/json/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o -c /home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-serializer.cpp
 
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/json_unit.dir/src/unit-cbor.cpp.i"
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build/include/json/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-cbor.cpp > CMakeFiles/json_unit.dir/src/unit-cbor.cpp.i
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/json_unit.dir/src/unit-serializer.cpp.i"
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build/include/json/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-serializer.cpp > CMakeFiles/json_unit.dir/src/unit-serializer.cpp.i
 
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/json_unit.dir/src/unit-cbor.cpp.s"
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build/include/json/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-cbor.cpp -o CMakeFiles/json_unit.dir/src/unit-cbor.cpp.s
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/json_unit.dir/src/unit-serializer.cpp.s"
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build/include/json/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thongpv3/CLionProjects/CBORBenchmark/include/json/test/src/unit-serializer.cpp -o CMakeFiles/json_unit.dir/src/unit-serializer.cpp.s
 
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o.requires:
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o.requires:
 
-.PHONY : include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o.requires
+.PHONY : include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o.requires
 
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o.provides: include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o.requires
-	$(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o.provides.build
-.PHONY : include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o.provides
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o.provides: include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o.requires
+	$(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o.provides.build
+.PHONY : include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o.provides
 
-include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o.provides.build: include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o
+include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o.provides.build: include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o
 
 
 include/json/test/CMakeFiles/json_unit.dir/src/unit-class_const_iterator.cpp.o: include/json/test/CMakeFiles/json_unit.dir/flags.make
@@ -902,7 +902,7 @@ json_unit_OBJECTS = \
 "CMakeFiles/json_unit.dir/src/unit-algorithms.cpp.o" \
 "CMakeFiles/json_unit.dir/src/unit-allocator.cpp.o" \
 "CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o" \
-"CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o" \
+"CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o" \
 "CMakeFiles/json_unit.dir/src/unit-class_const_iterator.cpp.o" \
 "CMakeFiles/json_unit.dir/src/unit-class_iterator.cpp.o" \
 "CMakeFiles/json_unit.dir/src/unit-class_lexer.cpp.o" \
@@ -942,7 +942,7 @@ json_unit_EXTERNAL_OBJECTS = \
 include/json/test/json_unit: include/json/test/CMakeFiles/json_unit.dir/src/unit-algorithms.cpp.o
 include/json/test/json_unit: include/json/test/CMakeFiles/json_unit.dir/src/unit-allocator.cpp.o
 include/json/test/json_unit: include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o
-include/json/test/json_unit: include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o
+include/json/test/json_unit: include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o
 include/json/test/json_unit: include/json/test/CMakeFiles/json_unit.dir/src/unit-class_const_iterator.cpp.o
 include/json/test/json_unit: include/json/test/CMakeFiles/json_unit.dir/src/unit-class_iterator.cpp.o
 include/json/test/json_unit: include/json/test/CMakeFiles/json_unit.dir/src/unit-class_lexer.cpp.o
@@ -988,7 +988,7 @@ include/json/test/CMakeFiles/json_unit.dir/build: include/json/test/json_unit
 include/json/test/CMakeFiles/json_unit.dir/requires: include/json/test/CMakeFiles/json_unit.dir/src/unit-algorithms.cpp.o.requires
 include/json/test/CMakeFiles/json_unit.dir/requires: include/json/test/CMakeFiles/json_unit.dir/src/unit-allocator.cpp.o.requires
 include/json/test/CMakeFiles/json_unit.dir/requires: include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.o.requires
-include/json/test/CMakeFiles/json_unit.dir/requires: include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o.requires
+include/json/test/CMakeFiles/json_unit.dir/requires: include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o.requires
 include/json/test/CMakeFiles/json_unit.dir/requires: include/json/test/CMakeFiles/json_unit.dir/src/unit-class_const_iterator.cpp.o.requires
 include/json/test/CMakeFiles/json_unit.dir/requires: include/json/test/CMakeFiles/json_unit.dir/src/unit-class_iterator.cpp.o.requires
 include/json/test/CMakeFiles/json_unit.dir/requires: include/json/test/CMakeFiles/json_unit.dir/src/unit-class_lexer.cpp.o.requires

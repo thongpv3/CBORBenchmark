@@ -7,12 +7,12 @@
 #include <vector>
 #include <memory>
 
-namespace cbor {
+namespace serializer {
     struct libcbor_serializer;
     struct tinycbor_serializer;
 
     template<typename T>
-    class serializer;
+    class serializer_lib;
 
     using bytes = std::vector<char>;
 }

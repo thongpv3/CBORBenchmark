@@ -17,7 +17,7 @@ target_link_libraries(hello cbor)
 #
 # if(cJSON_FOUND)
 #     add_executable(cjson2cbor cjson2cbor.c)
-#     target_link_libraries(cjson2cbor cbor cjson)
+#     target_link_libraries(cjson2cbor serializer cjson)
 # endif()
 
 file(COPY data DESTINATION .)

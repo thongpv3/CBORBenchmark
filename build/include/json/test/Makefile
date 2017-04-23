@@ -289,32 +289,32 @@ src/unit-capacity.cpp.s:
 	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-capacity.cpp.s
 .PHONY : src/unit-capacity.cpp.s
 
-src/unit-cbor.o: src/unit-cbor.cpp.o
+src/unit-serializer.o: src/unit-serializer.cpp.o
 
-.PHONY : src/unit-cbor.o
+.PHONY : src/unit-serializer.o
 
 # target to build an object file
-src/unit-cbor.cpp.o:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.o
-.PHONY : src/unit-cbor.cpp.o
+src/unit-serializer.cpp.o:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.o
+.PHONY : src/unit-serializer.cpp.o
 
-src/unit-cbor.i: src/unit-cbor.cpp.i
+src/unit-serializer.i: src/unit-serializer.cpp.i
 
-.PHONY : src/unit-cbor.i
+.PHONY : src/unit-serializer.i
 
 # target to preprocess a source file
-src/unit-cbor.cpp.i:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.i
-.PHONY : src/unit-cbor.cpp.i
+src/unit-serializer.cpp.i:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.i
+.PHONY : src/unit-serializer.cpp.i
 
-src/unit-cbor.s: src/unit-cbor.cpp.s
+src/unit-serializer.s: src/unit-serializer.cpp.s
 
-.PHONY : src/unit-cbor.s
+.PHONY : src/unit-serializer.s
 
 # target to generate assembly for a file
-src/unit-cbor.cpp.s:
-	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-cbor.cpp.s
-.PHONY : src/unit-cbor.cpp.s
+src/unit-serializer.cpp.s:
+	cd /home/thongpv3/CLionProjects/CBORBenchmark/build && $(MAKE) -f include/json/test/CMakeFiles/json_unit.dir/build.make include/json/test/CMakeFiles/json_unit.dir/src/unit-serializer.cpp.s
+.PHONY : src/unit-serializer.cpp.s
 
 src/unit-class_const_iterator.o: src/unit-class_const_iterator.cpp.o
 
@@ -1205,9 +1205,9 @@ help:
 	@echo "... src/unit-capacity.o"
 	@echo "... src/unit-capacity.i"
 	@echo "... src/unit-capacity.s"
-	@echo "... src/unit-cbor.o"
-	@echo "... src/unit-cbor.i"
-	@echo "... src/unit-cbor.s"
+	@echo "... src/unit-serializer.o"
+	@echo "... src/unit-serializer.i"
+	@echo "... src/unit-serializer.s"
 	@echo "... src/unit-class_const_iterator.o"
 	@echo "... src/unit-class_const_iterator.i"
 	@echo "... src/unit-class_const_iterator.s"

@@ -6,49 +6,49 @@
 
 #IncludeRegexTransform: 
 
-../include/libcbor/src/cbor.h
-cbor/data.h
-../include/libcbor/src/cbor/data.h
-cbor/common.h
-../include/libcbor/src/cbor/common.h
-cbor/arrays.h
-../include/libcbor/src/cbor/arrays.h
-cbor/bytestrings.h
-../include/libcbor/src/cbor/bytestrings.h
-cbor/floats_ctrls.h
-../include/libcbor/src/cbor/floats_ctrls.h
-cbor/ints.h
-../include/libcbor/src/cbor/ints.h
-cbor/maps.h
-../include/libcbor/src/cbor/maps.h
-cbor/strings.h
-../include/libcbor/src/cbor/strings.h
-cbor/tags.h
-../include/libcbor/src/cbor/tags.h
-cbor/encoding.h
-../include/libcbor/src/cbor/encoding.h
-cbor/serialization.h
-../include/libcbor/src/cbor/serialization.h
-cbor/callbacks.h
-../include/libcbor/src/cbor/callbacks.h
-cbor/streaming.h
-../include/libcbor/src/cbor/streaming.h
+../include/libcbor/src/serializer.h
+serializer/data.h
+../include/libcbor/src/serializer/data.h
+serializer/common.h
+../include/libcbor/src/serializer/common.h
+serializer/arrays.h
+../include/libcbor/src/serializer/arrays.h
+serializer/bytestrings.h
+../include/libcbor/src/serializer/bytestrings.h
+serializer/floats_ctrls.h
+../include/libcbor/src/serializer/floats_ctrls.h
+serializer/ints.h
+../include/libcbor/src/serializer/ints.h
+serializer/maps.h
+../include/libcbor/src/serializer/maps.h
+serializer/strings.h
+../include/libcbor/src/serializer/strings.h
+serializer/tags.h
+../include/libcbor/src/serializer/tags.h
+serializer/encoding.h
+../include/libcbor/src/serializer/encoding.h
+serializer/serialization.h
+../include/libcbor/src/serializer/serialization.h
+serializer/callbacks.h
+../include/libcbor/src/serializer/callbacks.h
+serializer/streaming.h
+../include/libcbor/src/serializer/streaming.h
 stdio.h
 -
 
-../include/libcbor/src/cbor/arrays.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/arrays.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/bytestrings.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/bytestrings.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/callbacks.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/callbacks.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/common.h
+../include/libcbor/src/serializer/common.h
 stdlib.h
 -
 stddef.h
@@ -60,13 +60,13 @@ stdbool.h
 assert.h
 -
 data.h
-../include/libcbor/src/cbor/data.h
-cbor/configuration.h
-../include/libcbor/src/cbor/cbor/configuration.h
+../include/libcbor/src/serializer/data.h
+serializer/configuration.h
+../include/libcbor/src/serializer/serializer/configuration.h
 stdio.h
 -
 
-../include/libcbor/src/cbor/data.h
+../include/libcbor/src/serializer/data.h
 stdlib.h
 -
 stddef.h
@@ -76,47 +76,47 @@ stdint.h
 stdbool.h
 -
 
-../include/libcbor/src/cbor/encoding.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/encoding.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/floats_ctrls.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/floats_ctrls.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/ints.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/ints.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/maps.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/maps.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/serialization.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/serialization.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/streaming.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/streaming.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 callbacks.h
-../include/libcbor/src/cbor/callbacks.h
+../include/libcbor/src/serializer/callbacks.h
 
-../include/libcbor/src/cbor/strings.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/strings.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
-../include/libcbor/src/cbor/tags.h
-cbor/common.h
-../include/libcbor/src/cbor/cbor/common.h
+../include/libcbor/src/serializer/tags.h
+serializer/common.h
+../include/libcbor/src/serializer/serializer/common.h
 
 /home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/examples/streaming_parser.c
-cbor.h
-/home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/examples/cbor.h
+serializer.h
+/home/thongpv3/CLionProjects/CBORBenchmark/include/libcbor/examples/serializer.h
 stdio.h
 -
 string.h
 -
 
-include/libcbor/cbor/configuration.h
+include/libcbor/serializer/configuration.h
 

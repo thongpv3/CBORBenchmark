@@ -7,14 +7,14 @@
 #include <stack>
 #include <xen/xen.h>
 #include "serializer.h"
-#include "cbor_item.h"
+#include "item.h"
 #include <cbor.h>
 
-namespace cbor {
+namespace serializer {
     template<>
-    class serializer<libcbor_serializer> {
-        using cbor_type = cbor_item::cbor_type;
-        using cbor_item_ptr = std::shared_ptr<cbor_item>;
+    class serializer_lib<libcbor_serializer> {
+        using cbor_type = item::item_type;
+        using cbor_item_ptr = std::shared_ptr<item>;
     private:
         struct map_tag_type{};
         struct array_tag_type{};
@@ -28,7 +28,7 @@ namespace cbor {
                     break;
                 }
                 case cbor_type::NEGINT: {
-                    auto&& int_ptr = std::static_pointer_cast<cbor_negint>(item);
+                    auto&& int_ptr = std::static_pointer_cast<negetive_int>(item);
                     switch (int_ptr->byte_width()) {
                         case 4: {
                             _cbor_map_add_value(root, cbor_move(cbor_build_negint32(int_ptr->value())));
@@ -51,7 +51,7 @@ namespace cbor {
                     break;
                 }
                 case cbor_type::UINT: {
-                    auto&& int_ptr = std::static_pointer_cast<cbor_uint>(item);
+                    auto&& int_ptr = std::static_pointer_cast<unsigned_int>(item);
                     switch (int_ptr->byte_width()) {
                         case 4: {
                             _cbor_map_add_value(root, cbor_move(cbor_build_uint32(int_ptr->value())));
@@ -74,7 +74,7 @@ namespace cbor {
                     break;
                 }
                 case cbor_type::FLOAT: {
-                    auto&& int_ptr = std::static_pointer_cast<cbor_float>(item);
+                    auto&& int_ptr = std::static_pointer_cast<floating_point>(item);
                     switch (int_ptr->byte_width()) {
                         case 8: {
                             _cbor_map_add_value(root, cbor_move(cbor_build_uint32(int_ptr->value())));
@@ -116,7 +116,7 @@ namespace cbor {
                     break;
                 }
                 case cbor_type::NEGINT: {
-                    auto&& int_ptr = std::static_pointer_cast<cbor_negint>(item);
+                    auto&& int_ptr = std::static_pointer_cast<negetive_int>(item);
                     switch (int_ptr->byte_width()) {
                         case 4: {
                             cbor_array_push(root, cbor_move(cbor_build_negint32(int_ptr->value())));
@@ -139,7 +139,7 @@ namespace cbor {
                     break;
                 }
                 case cbor_type::UINT: {
-                    auto&& int_ptr = std::static_pointer_cast<cbor_uint>(item);
+                    auto&& int_ptr = std::static_pointer_cast<unsigned_int>(item);
                     switch (int_ptr->byte_width()) {
                         case 4: {
                             cbor_array_push(root, cbor_move(cbor_build_uint32(int_ptr->value())));
@@ -162,7 +162,7 @@ namespace cbor {
                     break;
                 }
                 case cbor_type::FLOAT: {
-                    auto&& int_ptr = std::static_pointer_cast<cbor_float>(item);
+                    auto&& int_ptr = std::static_pointer_cast<floating_point>(item);
                     switch (int_ptr->byte_width()) {
                         case 8: {
                             cbor_array_push(root, cbor_move(cbor_build_uint32(int_ptr->value())));
@@ -248,14 +248,14 @@ namespace cbor {
             std::string key;
         };
 
-        static std::shared_ptr<cbor_item> deserialize_helper(std::shared_ptr<cbor_item> ptr_item, cbor_item_t *item, parse_state state) {
+        static std::shared_ptr<item> deserialize_helper(std::shared_ptr<item> ptr_item, cbor_item_t *cbor_it, parse_state state) {
             using tag_type = parse_state::tag_type;
-            std::shared_ptr<cbor_item> new_item;
-            switch(::cbor_typeof(item)) {
+            std::shared_ptr<item> new_item;
+            switch(::cbor_typeof(cbor_it)) {
                 case ::cbor_type::CBOR_TYPE_MAP: {
-                    new_item = std::make_shared<cbor_map>();
-                    cbor_pair* pairs = cbor_map_handle(item);
-                    for (size_t i=0; i<cbor_map_size(item); i++) {
+                    new_item = std::make_shared<map>();
+                    cbor_pair* pairs = cbor_map_handle(cbor_it);
+                    for (size_t i=0; i<cbor_map_size(cbor_it); i++) {
                         //We only support key in string type
                         state.key = std::string((const char*)cbor_string_handle(pairs[i].key), cbor_string_length(pairs[i].key));
                         deserialize_helper(new_item, pairs[i].value, state);
@@ -263,74 +263,74 @@ namespace cbor {
                     break;
                 }
                 case ::cbor_type::CBOR_TYPE_ARRAY: {
-                    new_item = std::make_shared<cbor_array>();
-                    cbor_item_t** items = cbor_array_handle(item);
-                    for (size_t i=0; i<cbor_array_size(item); i++) {
+                    new_item = std::make_shared<array>();
+                    cbor_item_t** items = cbor_array_handle(cbor_it);
+                    for (size_t i=0; i<cbor_array_size(cbor_it); i++) {
                         state.tag = tag_type::ARRAY;
                         deserialize_helper(new_item, items[i], state);
                     }
                     break;
                 }
                 case ::cbor_type::CBOR_TYPE_STRING: {
-                    new_item = std::make_shared<cbor_text>(std::string((const char*)cbor_string_handle(item), cbor_string_length(item)));
+                    new_item = std::make_shared<text>(std::string((const char*)cbor_string_handle(cbor_it), cbor_string_length(cbor_it)));
                     break;
                 }
                 case ::cbor_type::CBOR_TYPE_UINT: {
-                    uint8_t bw = cbor_int_get_width(item)<<2;
-                    unsigned long value= cbor_get_int(item);
+                    uint8_t bw = cbor_int_get_width(cbor_it)<<2;
+                    unsigned long value= cbor_get_int(cbor_it);
                     switch (bw) {
                         case 4: {
-                            new_item = std::make_shared<cbor_uint>(value);
+                            new_item = std::make_shared<unsigned_int>(value);
                             break;
                         }
                         case 1: {
-                            new_item = std::make_shared<cbor_uint>((uint8_t)value);
+                            new_item = std::make_shared<unsigned_int>((uint8_t)value);
                             break;
                         }
                         case 2: {
-                            new_item = std::make_shared<cbor_uint>((uint16_t)value);
+                            new_item = std::make_shared<unsigned_int>((uint16_t)value);
                             break;
                         }
                         case 8: {
-                            new_item = std::make_shared<cbor_uint>((uint64_t)value);
+                            new_item = std::make_shared<unsigned_int>((uint64_t)value);
                             break;
                         }
                     }
                     break;
                 }
                 case ::cbor_type::CBOR_TYPE_NEGINT: {
-                    unsigned long value = cbor_get_int(item);
-                    uint8_t bw = cbor_int_get_width(item)<<2;
+                    unsigned long value = cbor_get_int(cbor_it);
+                    uint8_t bw = cbor_int_get_width(cbor_it)<<2;
                     switch (bw) {
                         case 4: {
-                            new_item = std::make_shared<cbor_negint>(value);
+                            new_item = std::make_shared<negetive_int>(value);
                             break;
                         }
                         case 1: {
-                            new_item = std::make_shared<cbor_negint>((uint8_t)value);
+                            new_item = std::make_shared<negetive_int>((uint8_t)value);
                             break;
                         }
                         case 2: {
-                            new_item = std::make_shared<cbor_negint>((uint16_t)value);
+                            new_item = std::make_shared<negetive_int>((uint16_t)value);
                             break;
                         }
                         case 8: {
-                            new_item = std::make_shared<cbor_negint>((uint64_t)value);
+                            new_item = std::make_shared<negetive_int>((uint64_t)value);
                             break;
                         }
                     }
                     break;
                 }
                 case ::cbor_type::CBOR_TYPE_FLOAT_CTRL: {
-                    uint8_t bw = cbor_float_get_width(item)<<2;
+                    uint8_t bw = cbor_float_get_width(cbor_it)<<2;
                     switch (bw) {
                         //We must use exactly API because of floating point represent precision
                         case 8: {
-                            new_item = std::make_shared<cbor_float>(cbor_float_get_float8(item));
+                            new_item = std::make_shared<floating_point>(cbor_float_get_float8(cbor_it));
                             break;
                         }
                         case 4: {
-                            new_item = std::make_shared<cbor_float>(cbor_float_get_float4(item));
+                            new_item = std::make_shared<floating_point>(cbor_float_get_float4(cbor_it));
                             break;
                         }
                     }
@@ -341,11 +341,11 @@ namespace cbor {
             if (ptr_item != nullptr) {
                 switch (ptr_item->type()) {
                     case cbor_type::MAP: {
-                        std::static_pointer_cast<cbor_map>(ptr_item)->insert(state.key, new_item);
+                        std::static_pointer_cast<map>(ptr_item)->insert(state.key, new_item);
                         break;
                     }
                     case cbor_type::ARRAY: {
-                        std::static_pointer_cast<cbor_array>(ptr_item)->insert(new_item);
+                        std::static_pointer_cast<array>(ptr_item)->insert(new_item);
                         break;
                     }
                     default: {
@@ -357,10 +357,10 @@ namespace cbor {
             return ptr_item;
         }
     public:
-        std::shared_ptr<cbor_item> static deserialize(const bytes& buffer) {
+        std::shared_ptr<item> static deserialize(const bytes& buffer) {
             cbor_load_result result;
             cbor_item_t *root = cbor_load((unsigned char*)buffer.data(), buffer.size(), &result);
-            std::shared_ptr<cbor_item> ptr_item;
+            std::shared_ptr<item> ptr_item;
             parse_state state;
 
             return deserialize_helper(nullptr, root, state);

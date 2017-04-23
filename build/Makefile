@@ -582,17 +582,17 @@ ContinuousUpdate/fast:
 .PHONY : ContinuousUpdate/fast
 
 #=============================================================================
-# Target rules for targets named cbor
+# Target rules for targets named serializer
 
 # Build rule for target.
-cbor: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cbor
-.PHONY : cbor
+serializer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 serializer
+.PHONY : serializer
 
 # fast build rule for target.
-cbor/fast:
-	$(MAKE) -f include/libcbor/src/CMakeFiles/cbor.dir/build.make include/libcbor/src/CMakeFiles/cbor.dir/build
-.PHONY : cbor/fast
+serializer/fast:
+	$(MAKE) -f include/libcbor/src/CMakeFiles/serializer.dir/build.make include/libcbor/src/CMakeFiles/serializer.dir/build
+.PHONY : serializer/fast
 
 #=============================================================================
 # Target rules for targets named cbor_shared
@@ -730,7 +730,7 @@ help:
 	@echo "... ExperimentalSubmit"
 	@echo "... ContinuousStart"
 	@echo "... ContinuousUpdate"
-	@echo "... cbor"
+	@echo "... serializer"
 	@echo "... cbor_shared"
 	@echo "... streaming_parser"
 	@echo "... create_items"
