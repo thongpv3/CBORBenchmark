@@ -1,1 +1,0 @@
-/usr/bin/c++    -flto -O3 -DNDEBUG   CMakeFiles/dummy.dir/main.cpp.o  -o dummy 

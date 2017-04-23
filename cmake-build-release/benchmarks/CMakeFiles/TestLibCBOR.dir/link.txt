@@ -1,1 +1,0 @@
-/usr/bin/c++    -flto -O3 -DNDEBUG   CMakeFiles/TestLibCBOR.dir/tests/test_libcbor.cpp.o  -o TestLibCBOR ../include/libcbor/src/libcbor.a ../include/libcbor/src/libcbor.a -I/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor/src -L/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor/lib -ltinycbor 

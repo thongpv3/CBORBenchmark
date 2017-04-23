@@ -10,5 +10,5 @@
 
 int main(int argc, char * argv[])
 {
-  printf("Hello from libcbor %s\n", CBOR_VERSION);
+  printf("Hello from tests %s\n", CBOR_VERSION);
 }

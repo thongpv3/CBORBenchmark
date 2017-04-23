@@ -9,6 +9,7 @@
 #include <item.h>
 #include "../data_generator.h"
 
+using namespace serializer;
 
 void test_tinycbor_serialize_simple() {
     using namespace serializer;

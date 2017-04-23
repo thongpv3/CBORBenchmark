@@ -6,9 +6,8 @@
 
 #include "item.h"
 
-using namespace serializer;
-
-std::shared_ptr<item> create_map() {
+std::shared_ptr<serializer::item> create_map() {
+    using namespace serializer;
     std::shared_ptr<map> item = std::make_shared<map>("_id", text("58f5f672cac5799a4fe2e414"));
     item->insert(
         "index", unsigned_int(0u),
@@ -43,7 +42,8 @@ std::shared_ptr<item> create_map() {
     return item;
 }
 
-std::shared_ptr<map> create_student_info() {
+std::shared_ptr<serializer::map> create_student_info() {
+    using namespace serializer;
     return std::make_shared<map>(
             "id", unsigned_int(20136495u),
             "name", text("Pham Van Thong"),
@@ -59,4 +59,14 @@ std::shared_ptr<map> create_student_info() {
                              "birthyear", unsigned_int(1995u))
             )
     );
+}
+
+std::shared_ptr<serializer::array> create_big_array() {
+    using namespace serializer;
+    auto&& m = create_map();
+    std::shared_ptr<array> arr = std::make_shared<array>();
+    for (int i=1; i<100; i++) {
+        arr->insert(m);
+    }
+    return arr;
 }

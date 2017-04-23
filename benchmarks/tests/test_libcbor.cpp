@@ -9,8 +9,7 @@
 #include <libcbor_serializer.h>
 #include "../data_generator.h"
 
-template <typename T>
-struct serialize;
+using namespace serializer;
 
 void test_cbor_item() {
     using namespace serializer;

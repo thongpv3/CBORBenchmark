@@ -1,1 +1,0 @@
-/usr/bin/cc   -flto -std=c99 -O3 -flto -Wall -pedantic -DNDEBUG  -flto CMakeFiles/create_items.dir/create_items.c.o  -o create_items -rdynamic ../src/libcbor.a 

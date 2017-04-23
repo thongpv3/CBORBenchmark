@@ -10,6 +10,6 @@
 
 int main()
 {
-	std::cout << "Hello from libcbor " << CBOR_VERSION << std::endl;
+	std::cout << "Hello from tests " << CBOR_VERSION << std::endl;
 }
 

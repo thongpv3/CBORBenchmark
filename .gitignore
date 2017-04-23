@@ -131,3 +131,5 @@ fabric.properties
 
 /cmake-build-debug/*
 .idea/*
+/build/
+/cmake-build-release/

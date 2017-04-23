@@ -1,1 +1,0 @@
-/usr/bin/cc   -flto -std=c99 -O3 -flto -Wall -pedantic -DNDEBUG  -flto CMakeFiles/readfile.dir/readfile.c.o  -o readfile -rdynamic ../src/libcbor.a 

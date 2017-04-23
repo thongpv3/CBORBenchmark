@@ -1,0 +1,4 @@
+execute this first before you can build anything
+
+$ cd include/tinycbor
+$ make

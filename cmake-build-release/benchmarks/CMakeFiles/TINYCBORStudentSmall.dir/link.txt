@@ -1,1 +1,0 @@
-/usr/bin/c++    -flto -O3 -DNDEBUG   CMakeFiles/TINYCBORStudentSmall.dir/tinycbor/student_small.cpp.o  -o TINYCBORStudentSmall -I/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor/src -L/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor/lib -ltinycbor ../include/libcbor/src/libcbor.a -lpthread 

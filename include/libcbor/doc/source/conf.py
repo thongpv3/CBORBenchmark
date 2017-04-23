@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# libcbor documentation build configuration file, created by
+# tests documentation build configuration file, created by
 # sphinx-quickstart on Sun Jun  8 13:27:19 2014.
 #
 # This file is execfile()d with the current directory set to its
@@ -48,10 +48,10 @@ print os.getcwd()
 print os.getcwd() + '/../build/doxygen/xml'
 
 breathe_projects = {
-    'libcbor': '../build/doxygen/xml'
+    'tests': '../build/doxygen/xml'
 }
 
-breathe_default_project = "libcbor"
+breathe_default_project = "tests"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -66,7 +66,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'libcbor'
+project = u'tests'
 copyright = u'2014 - 2017, Pavel Kalvoda'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -223,7 +223,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'libcbor.tex', u'libcbor Documentation',
+  ('index', 'tests.tex', u'tests Documentation',
    u'Pavel Kalvoda', 'manual'),
 ]
 
@@ -253,7 +253,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'libcbor', u'libcbor Documentation',
+    ('index', 'tests', u'tests Documentation',
      [u'Pavel Kalvoda'], 1)
 ]
 
@@ -267,8 +267,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'libcbor', u'libcbor Documentation',
-   u'Pavel Kalvoda', 'libcbor', 'C library for parsing and generating CBOR.',
+  ('index', 'tests', u'tests Documentation',
+   u'Pavel Kalvoda', 'tests', 'C library for parsing and generating CBOR.',
    'Miscellaneous'),
 ]
 
