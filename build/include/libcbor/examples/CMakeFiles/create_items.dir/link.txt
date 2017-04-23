@@ -1,1 +1,0 @@
-/usr/bin/cc  -std=c99  -rdynamic CMakeFiles/create_items.dir/create_items.c.o  -o create_items ../src/libcbor.a 
