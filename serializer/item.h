@@ -136,7 +136,7 @@ namespace serializer {
             static_assert(std::is_integral<T>::value, "T must be a signed type");
         }
 
-        template <typename T = int>
+        template <typename T = uint32_t>
         T value() {
             static_assert(std::is_arithmetic<T>::value, "T must be an arithmetic type");
             return static_cast<T>(-v);

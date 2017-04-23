@@ -8,6 +8,7 @@
 #include <fstream>
 #include <libcbor_serializer.h>
 #include "../data_generator.h"
+#include "../utils.h"
 
 using namespace serializer;
 
@@ -116,8 +117,28 @@ void test_deser_simple() {
     std::cout << "DESER: \n" << cbor_it->to_string() << std::endl;
 }
 
+void test_serialize_big_array() {
+    auto&& it = create_big_array();
+    bytes&& buffer = serializer_lib<libcbor_serializer>::serialize(it);
+    write_bytes_to_file("test_libcbor_serialize_big_array.cbor", buffer);
+}
+
+void test_deserialize_big_array() {
+//    auto&& data = read_data_from_file("test_tinycbor_serialize_big_array.cbor");
+//    auto&& data = read_data_from_file("test_libcbor_serialize_big_array.cbor");
+    auto&& data = serializer_lib<libcbor_serializer>::serialize(create_map());
+    write_bytes_to_file("test_libcbor_serialize_small_map.cbor", data);
+    auto&& it = serializer_lib<libcbor_serializer>::deserialize(data);
+    std::cout << it->to_string() << std::endl;
+}
 int main() {
     using namespace serializer;
+    auto&& data = serializer_lib<libcbor_serializer>::serialize(create_map());
+    write_bytes_to_file("small_map.cbor", data);
+    data = serializer_lib<libcbor_serializer>::serialize(create_big_array());
+    write_bytes_to_file("big_array.cbor", data);
+//    test_serialize_big_array();
+//    test_deserialize_big_array();
     /*TINYCBOR*/
 
 
@@ -125,7 +146,7 @@ int main() {
 //    test_deser_simple();
 //    test_libcbor_deserializer_map();
 //    test_libcbor_serializer_map();
-    test_libcbor_serializer_array();
+//    test_libcbor_serializer_array();
 
 
 //    char buf[20];
@@ -137,5 +158,6 @@ int main() {
 //    auto && item = serializer<libcbor_serializer>::deserialize(buffer);
 //    std::cout << item->to_string() << std::endl;
 //    inf.close();
+
     return 0;
 }

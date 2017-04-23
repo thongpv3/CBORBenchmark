@@ -42,7 +42,7 @@ std::shared_ptr<serializer::item> create_map() {
     return item;
 }
 
-std::shared_ptr<serializer::map> create_student_info() {
+std::shared_ptr<serializer::item> create_student_info() {
     using namespace serializer;
     return std::make_shared<map>(
             "id", unsigned_int(20136495u),
@@ -61,11 +61,31 @@ std::shared_ptr<serializer::map> create_student_info() {
     );
 }
 
-std::shared_ptr<serializer::array> create_big_array() {
+std::shared_ptr<serializer::item> create_big_array() {
     using namespace serializer;
     auto&& m = create_map();
     std::shared_ptr<array> arr = std::make_shared<array>();
     for (int i=1; i<100; i++) {
+        arr->insert(m);
+    }
+    return arr;
+}
+
+std::shared_ptr<serializer::item> create_small_array() {
+    using namespace serializer;
+    auto&& m = create_map();
+    std::shared_ptr<array> arr = std::make_shared<array>();
+    for (int i=1; i<2; i++) {
+        arr->insert(m);
+    }
+    return arr;
+}
+
+std::shared_ptr<serializer::item> create_medium_array() {
+    using namespace serializer;
+    auto&& m = create_student_info();
+    std::shared_ptr<array> arr = std::make_shared<array>();
+    for (int i=1; i<50; i++) {
         arr->insert(m);
     }
     return arr;

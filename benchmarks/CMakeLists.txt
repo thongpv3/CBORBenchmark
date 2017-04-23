@@ -1,5 +1,5 @@
 add_executable(TestLibCBOR tests/test_libcbor.cpp)
-target_link_libraries(TestLibCBOR PRIVATE cbor cbor_serializer)
+target_link_libraries(TestLibCBOR PRIVATE cbor cbor_shared cbor_serializer)
 
 add_executable(TestTinyCBOR tests/test_tinycbor.cpp)
 target_link_libraries(TestTinyCBOR PRIVATE tinycbor cbor_serializer)
