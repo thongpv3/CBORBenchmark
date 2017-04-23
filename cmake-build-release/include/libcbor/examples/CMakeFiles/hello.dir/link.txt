@@ -1,0 +1,1 @@
+/usr/bin/cc   -flto -std=c99 -O3 -flto -Wall -pedantic -DNDEBUG  -flto CMakeFiles/hello.dir/hello.c.o  -o hello -rdynamic ../src/libcbor.a 

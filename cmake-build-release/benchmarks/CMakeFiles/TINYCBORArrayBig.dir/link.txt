@@ -1,0 +1,1 @@
+/usr/bin/c++    -flto -O3 -DNDEBUG   CMakeFiles/TINYCBORArrayBig.dir/tinycbor/array_big.cpp.o  -o TINYCBORArrayBig -I/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor/src -L/home/thongpv87/CLionProjects/CBORBenchmark/include/tinycbor/lib -ltinycbor ../include/libcbor/src/libcbor.a -lpthread 

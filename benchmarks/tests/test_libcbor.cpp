@@ -36,7 +36,7 @@ void test_libcbor_serializer_map() {
             )
     );
     bytes buffer = serializer_lib<libcbor_serializer>::serialize(item_ptr);
-    std::ofstream of("test_libcbor_serializer_map.serializer");
+    std::ofstream of("test_libcbor_serializer_map.cbor");
     of.write(buffer.data(), buffer.size());
     of.close();
 }
@@ -75,7 +75,7 @@ void test_libcbor_serializer_array() {
             )
     );
     bytes buffer = serializer_lib<libcbor_serializer>::serialize(item_ptr);
-    std::ofstream of("test_libcbor_serializer_array.serializer");
+    std::ofstream of("test_libcbor_serializer_array.cbor");
     of.write(buffer.data(), buffer.size());
     of.close();
 }
@@ -97,7 +97,7 @@ void test_libcbor_deserializer_map() {
             )
     );
     bytes buffer = serializer_lib<libcbor_serializer>::serialize(item_ptr);
-    std::ofstream of("test_libcbor_deserializer_map.serializer");
+    std::ofstream of("test_libcbor_deserializer_map.cbor");
     of.write(buffer.data(), buffer.size());
     of.close();
 //    cbor_load_result result;
@@ -124,14 +124,14 @@ int main() {
 
     /*LIBCBOR*/
 //    test_deser_simple();
-    test_libcbor_deserializer_map();
+//    test_libcbor_deserializer_map();
 //    test_libcbor_serializer_map();
-//    test_libcbor_serializer_array();
+    test_libcbor_serializer_array();
 
 
 //    char buf[20];
 //    memset(buf, 0, 20);
-//    std::ifstream inf("test_tinycbor.serializer");
+//    std::ifstream inf("test_tinycbor.cbor");
 //    inf.read(buf, 16);
 //    bytes buffer;
 //    buffer.assign(buf, buf+6);

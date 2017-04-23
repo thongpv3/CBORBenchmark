@@ -1,0 +1,4 @@
+/opt/clion-2017.1.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/thongpv87/CLionProjects/CBORBenchmark
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/thongpv87/CLionProjects/CBORBenchmark/cmake-build-release

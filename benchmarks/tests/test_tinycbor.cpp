@@ -43,9 +43,18 @@ void test_tinycbor_desialize_student() {
     std::cout << it->to_string() << std::endl;
 }
 
+void test_tinycbor_read_libcbor() {
+    std::ifstream istr("test_libcbor_serializer_array.cbor");
+    std::string str((std::istreambuf_iterator<char>(istr)),
+                    std::istreambuf_iterator<char>());
+    bytes b;
+    b.assign(str.data(), str.data() + str.size());
+    std::cout << serializer_lib<tinycbor_serializer>::deserialize(b)->to_string() << std::endl;
+}
 int main() {
 //    test_tinycbor_serialize_simple();
 //    test_tinycbor_serialize_student();
+    test_tinycbor_read_libcbor();
     test_tinycbor_desialize_student();
     return 0;
 }
